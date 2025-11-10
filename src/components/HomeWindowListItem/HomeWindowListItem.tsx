@@ -5,12 +5,12 @@
 
 import type { ReactNode } from "react";
 
-type HomeDesktopWindowListItemProps = {
+type HomeWindowListItemProps = {
   children: ReactNode;
   startAdornment?: ReactNode;
 };
 
-const HomeDesktopWindowListItem = ({ children, startAdornment }: HomeDesktopWindowListItemProps) => {
+const HomeWindowListItem = ({ children, startAdornment }: HomeWindowListItemProps) => {
   return (
     <div className="flex items-start gap-2">
       {startAdornment ? <div>{startAdornment}</div> : null}
@@ -19,4 +19,4 @@ const HomeDesktopWindowListItem = ({ children, startAdornment }: HomeDesktopWind
   );
 };
 
-export default HomeDesktopWindowListItem;
+export default HomeWindowListItem;

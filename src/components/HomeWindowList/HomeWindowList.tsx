@@ -9,9 +9,9 @@ import { useTranslations } from "next-intl";
 import { Typography } from "@/components/Typography";
 import { SvgIconFlash, SvgIconLamp, SvgIconTools } from "@/components/SvgIcon";
 
-import { HomeDesktopWindowListItem } from "@/components/HomeDesktop";
+import { HomeWindowListItem } from "@/components/HomeWindowListItem";
 
-const HomeDesktopWindowList = () => {
+const HomeWindowList = () => {
   const t = useTranslations();
 
   const renderers = {
@@ -20,31 +20,31 @@ const HomeDesktopWindowList = () => {
 
   return (
     <div className="flex flex-col gap-6">
-      <HomeDesktopWindowListItem startAdornment={<SvgIconLamp size="small" />}>
+      <HomeWindowListItem startAdornment={<SvgIconLamp size="small" />}>
         <Typography variant="body2" uppercase>
           {t("desktop.window.everyoneShouldShipIdeas")}
         </Typography>
         <Typography variant="body2" color="muted">
           {t("desktop.window.notWaitForSprints")}
         </Typography>
-      </HomeDesktopWindowListItem>
+      </HomeWindowListItem>
 
-      <HomeDesktopWindowListItem startAdornment={<SvgIconFlash size="small" />}>
+      <HomeWindowListItem startAdornment={<SvgIconFlash size="small" />}>
         <Typography variant="body2" uppercase>
           {t.rich("desktop.window.twoWeeksAnIdea", renderers)}
         </Typography>
-      </HomeDesktopWindowListItem>
+      </HomeWindowListItem>
 
-      <HomeDesktopWindowListItem startAdornment={<SvgIconTools size="small" />}>
+      <HomeWindowListItem startAdornment={<SvgIconTools size="small" />}>
         <Typography variant="body2" uppercase>
           {t("desktop.window.weAreBuildingTools")}
         </Typography>
         <Typography variant="body2" color="muted">
           {t("desktop.window.thatLetYouPrototype")}
         </Typography>
-      </HomeDesktopWindowListItem>
+      </HomeWindowListItem>
     </div>
   );
 };
 
-export default HomeDesktopWindowList;
+export default HomeWindowList;

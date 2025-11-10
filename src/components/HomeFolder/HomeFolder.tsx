@@ -10,7 +10,7 @@ import { useTranslations } from "next-intl";
 import { Typography } from "@/components/Typography";
 import { SvgIconFolder, SvgIconFolderOpen } from "@/components/SvgIcon";
 
-const HomeDesktopFolder = () => {
+const HomeFolder = () => {
   const t = useTranslations("desktop.folder");
 
   const ref = useRef<HTMLDivElement>(null as never);
@@ -27,4 +27,4 @@ const HomeDesktopFolder = () => {
   );
 };
 
-export default HomeDesktopFolder;
+export default HomeFolder;

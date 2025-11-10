@@ -5,7 +5,7 @@
 
 import { SvgIconStar } from "@/components/SvgIcon";
 
-const HomeDesktopWindowDivider = () => {
+const HomeWindowDivider = () => {
   return (
     <div className="flex items-center justify-center gap-3 w-full">
       <div className="flex-1 border-t border-blue-400" />
@@ -15,4 +15,4 @@ const HomeDesktopWindowDivider = () => {
   );
 };
 
-export default HomeDesktopWindowDivider;
+export default HomeWindowDivider;

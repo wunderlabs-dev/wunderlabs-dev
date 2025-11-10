@@ -6,6 +6,7 @@ export { default as SvgIconFolder } from "./SvgIconFolder";
 export { default as SvgIconFolderOpen } from "./SvgIconFolderOpen";
 export { default as SvgIconFolderXs } from "./SvgIconFolderXs";
 export { default as SvgIconLamp } from "./SvgIconLamp";
+export { default as SvgIconLogo } from "./SvgIconLogo";
 export { default as SvgIconMinimize } from "./SvgIconMinimize";
 export { default as SvgIconShrink } from "./SvgIconShrink";
 export { default as SvgIconStar } from "./SvgIconStar";
