@@ -20,20 +20,11 @@ const HomeFolder = () => {
   const ref = useRef<HTMLDivElement>(null as never);
   const hover = useHover<HTMLDivElement>(ref);
 
-  const handleFolderClick = () => {
-    if (state === "MINIMIZED") {
-      setState("OPEN");
-    }
-    if (state === "OPEN") {
-      setState("MINIMIZED");
-    }
-  };
-
   return (
     <div
       ref={ref}
       className="flex flex-col items-center justify-center gap-1 py-1 px-2 cursor-pointer"
-      onClick={handleFolderClick}
+      onClick={() => setState("OPEN")}
     >
       {hover || state === "OPEN" ? <SvgIconFolderOpen size="large" /> : <SvgIconFolder size="large" />}
 

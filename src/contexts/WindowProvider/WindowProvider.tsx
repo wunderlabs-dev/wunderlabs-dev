@@ -4,7 +4,7 @@
 
 import { createContext, useState, useContext, ReactNode } from "react";
 
-type WindowState = "OPEN" | "CLOSED" | "MINIMIZED";
+type WindowState = "OPEN" | "CLOSED";
 
 type WindowContextType = {
   state: WindowState;

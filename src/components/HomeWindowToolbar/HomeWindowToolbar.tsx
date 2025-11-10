@@ -41,7 +41,7 @@ const HomeWindowToolbar = ({ listeners, attributes }: HomeWindowToolbarProps) =>
         <Button variant="transparent">
           <SvgIconExpand size="small" />
         </Button>
-        <Button variant="transparent" onClick={() => setState("MINIMIZED")}>
+        <Button variant="transparent" onClick={() => setState("CLOSED")}>
           <SvgIconMinimize size="small" />
         </Button>
         <Button variant="transparent" onClick={() => setState("CLOSED")}>

@@ -15,15 +15,6 @@ const HomeToolbar = () => {
 
   const { state, setState } = useWindowState();
 
-  const handleFolderClick = () => {
-    if (state === "MINIMIZED") {
-      setState("OPEN");
-    }
-    if (state === "OPEN") {
-      setState("MINIMIZED");
-    }
-  };
-
   return (
     <footer className="bg-beige-200 border border-t-blue-900 grid grid-cols-12 items-center px-4">
       <div className="col-span-3">
@@ -32,10 +23,10 @@ const HomeToolbar = () => {
 
       <div className="col-span-6 flex justify-center">
         <Button
-          variant={state === "MINIMIZED" ? "contained" : "default"}
+          variant={state === "OPEN" ? "default" : "contained"}
           className="border-y-0 border-r-0"
           startAdornment={<SvgIconFolderXs size="small" />}
-          onClick={handleFolderClick}
+          onClick={() => setState("OPEN")}
         >
           <Typography variant="body2" uppercase>
             {t("desktop.folder.wunder")}
