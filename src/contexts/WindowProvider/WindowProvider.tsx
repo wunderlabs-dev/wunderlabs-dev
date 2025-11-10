@@ -2,7 +2,7 @@
 // ABOUTME: Provides window state and actions
 "use client";
 
-import { createContext, useState, useContext, ReactNode } from "react";
+import { createContext, useState, useContext, type ReactNode } from "react";
 import { useDebounceCallback } from "usehooks-ts";
 
 import { DROP_ANIMATION_DURATION } from "@/utils/const";

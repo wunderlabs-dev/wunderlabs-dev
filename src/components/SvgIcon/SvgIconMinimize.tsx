@@ -3,7 +3,7 @@
  * ABOUTME: Pixel-style minimize icon with consistent styling
  */
 
-import { HTMLAttributes } from "react";
+import type { HTMLAttributes } from "react";
 
 import { SvgIcon, type SvgIconSize } from "@/components/SvgIcon";
 

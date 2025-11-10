@@ -21,9 +21,14 @@ const HomeWindowMarquee = () => {
 
       <Marquee pauseOnHover>
         {Array.from({ length: MARQUEE_ITEMS }).map((_, index) => (
-          <Typography variant="body1" className="px-2" uppercase key={index}>
-            {t("desktop.window.whyWeBuild")}
-          </Typography>
+          <div className="flex items-center gap-2" key={index}>
+            <Typography variant="body1" className="px-2" uppercase>
+              {t("desktop.window.whyWeBuild")}
+            </Typography>
+            <Typography variant="body1" className="px-2" uppercase>
+              {t("desktop.window.title")}
+            </Typography>
+          </div>
         ))}
       </Marquee>
     </div>

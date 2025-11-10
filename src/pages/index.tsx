@@ -4,7 +4,7 @@ import { useState } from "react";
 import Head from "next/head";
 import type { GetStaticProps } from "next";
 import { AnimatePresence } from "framer-motion";
-import { DndContext, DragEndEvent } from "@dnd-kit/core";
+import { DndContext, type DragEndEvent } from "@dnd-kit/core";
 
 import copy from "@/copy/en-EN.json";
 

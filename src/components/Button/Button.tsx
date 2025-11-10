@@ -3,11 +3,11 @@
  * ABOUTME: Simple button with customizable styling and adornments
  */
 
-import { type ButtonHTMLAttributes, type ReactNode } from "react";
+import type { ButtonHTMLAttributes, ReactNode } from "react";
 
 import { cn } from "@/utils/helpers";
 
-import { type ButtonVariant } from "@/components/Button";
+import type { ButtonVariant } from "@/components/Button";
 
 export type ButtonProps = {
   children: ReactNode;
