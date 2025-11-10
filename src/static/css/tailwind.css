@@ -39,6 +39,9 @@
 }
 
 @layer utilities {
+  .max-h-window {
+    height: var(--container-md);
+  }
   .font-handjet {
     font-family: var(--font-handjet);
   }

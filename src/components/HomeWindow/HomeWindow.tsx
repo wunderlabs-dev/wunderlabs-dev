@@ -5,7 +5,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { EMAIL_ADDRESS } from "@/utils/const";
+import { MAILTO_ADDRESS } from "@/utils/const";
 
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
@@ -23,7 +23,7 @@ const HomeWindow = () => {
     <div className="absolute left-64 top-16 bg-beige-100 outline outline-blue-400">
       <HomeWindowToolbar />
 
-      <div className="flex flex-col w-xl gap-16 px-8 py-24">
+      <div className="flex flex-col w-xl gap-16 px-8 py-24 max-h-window overflow-y-auto">
         <Link href="/">
           <SvgIconLogo className="w-44 mx-auto" />
         </Link>
@@ -40,7 +40,7 @@ const HomeWindow = () => {
             <HomeWindowDivider />
           </div>
 
-          <Link href={EMAIL_ADDRESS}>
+          <Link href={MAILTO_ADDRESS}>
             <Button endAdornment={<SvgIconChat size="small" />}>
               <Typography variant="body2" uppercase>
                 {t("toolbar.letsTalk")}

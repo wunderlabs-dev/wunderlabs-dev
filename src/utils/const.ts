@@ -7,4 +7,4 @@ export const MARQUEE_ITEMS = 5;
 export const INITIAL_WINDOW_POSITION_X = 256;
 export const INITIAL_WINDOW_POSITION_Y = 64;
 
-export const EMAIL_ADDRESS = "mailto:office@wunderlabs.dev";
+export const MAILTO_ADDRESS = "mailto:office@wunderlabs.dev";

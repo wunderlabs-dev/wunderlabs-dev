@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { EMAIL_ADDRESS } from "@/utils/const";
+import { MAILTO_ADDRESS } from "@/utils/const";
 
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
@@ -24,7 +24,7 @@ const HomeToolbar = () => {
             {t("desktop.folder.wunder")}
           </Typography>
         </Button>
-        <Link href={EMAIL_ADDRESS}>
+        <Link href={MAILTO_ADDRESS}>
           <Button endAdornment={<SvgIconChat size="small" />} className="border-y-0">
             <Typography variant="body2" uppercase>
               {t("toolbar.letsTalk")}

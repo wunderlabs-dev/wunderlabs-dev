@@ -1,4 +1,6 @@
 export { default as SvgIcon, type SvgIconProps } from "./SvgIcon";
+export { default as SvgIconArrowDown } from "./SvgIconArrowDown";
+export { default as SvgIconArrowUp } from "./SvgIconArrowUp";
 export { default as SvgIconChat } from "./SvgIconChat";
 export { default as SvgIconExpand } from "./SvgIconExpand";
 export { default as SvgIconFlash } from "./SvgIconFlash";
