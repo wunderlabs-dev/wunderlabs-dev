@@ -46,6 +46,9 @@
   .h-window {
     height: var(--container-xl);
   }
+  .h-window-2xl {
+    height: var(--container-3xl);
+  }
   .font-handjet {
     font-family: var(--font-handjet);
   }

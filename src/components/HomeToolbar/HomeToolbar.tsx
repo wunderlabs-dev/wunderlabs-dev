@@ -2,6 +2,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 
 import { MAILTO_ADDRESS } from "@/utils/const";
+import { useWindowState } from "@/contexts/WindowProvider";
 
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
@@ -12,6 +13,17 @@ import { HomeToolbarClock } from "@/components/HomeToolbar";
 const HomeToolbar = () => {
   const t = useTranslations();
 
+  const { state, setState } = useWindowState();
+
+  const handleFolderClick = () => {
+    if (state === "MINIMIZED") {
+      setState("OPEN");
+    }
+    if (state === "OPEN") {
+      setState("MINIMIZED");
+    }
+  };
+
   return (
     <footer className="bg-beige-200 border border-t-blue-900 grid grid-cols-12 items-center px-4">
       <div className="col-span-3">
@@ -19,7 +31,12 @@ const HomeToolbar = () => {
       </div>
 
       <div className="col-span-6 flex justify-center">
-        <Button startAdornment={<SvgIconFolderXs size="small" />} className="border-y-0 border-r-0">
+        <Button
+          variant={state === "MINIMIZED" ? "contained" : "default"}
+          className="border-y-0 border-r-0"
+          startAdornment={<SvgIconFolderXs size="small" />}
+          onClick={handleFolderClick}
+        >
           <Typography variant="body2" uppercase>
             {t("desktop.folder.wunder")}
           </Typography>

@@ -7,6 +7,7 @@ import { DndContext, DragEndEvent } from "@dnd-kit/core";
 
 import copy from "@/copy/en-EN.json";
 
+import { useWindowState } from "@/contexts/WindowProvider";
 import { INITIAL_WINDOW_POSITION_X, INITIAL_WINDOW_POSITION_Y, DROP_ANIMATION_DURATION } from "@/utils/const";
 
 import { HomeFolder } from "@/components/HomeFolder";
@@ -14,6 +15,8 @@ import { HomeWindow } from "@/components/HomeWindow";
 import { HomeToolbar } from "@/components/HomeToolbar";
 
 const Home = () => {
+  const { state } = useWindowState();
+
   const [position, setPosition] = useState({
     x: INITIAL_WINDOW_POSITION_X,
     y: INITIAL_WINDOW_POSITION_Y,
@@ -38,7 +41,7 @@ const Home = () => {
         <DndContext onDragEnd={handleDragEnd}>
           <main className="flex flex-1 items-end justify-start gap-4 px-12 py-12">
             <HomeFolder />
-            <HomeWindow position={position} />
+            {state === "OPEN" ? <HomeWindow position={position} /> : null}
           </main>
         </DndContext>
 

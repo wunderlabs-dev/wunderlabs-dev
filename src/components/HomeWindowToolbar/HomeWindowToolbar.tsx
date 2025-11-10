@@ -6,7 +6,9 @@ import { useTranslations } from "next-intl";
 import type { DraggableAttributes } from "@dnd-kit/core";
 import type { SyntheticListenerMap } from "@dnd-kit/core/dist/hooks/utilities";
 
-import { SvgIconX, SvgIconExpand, SvgIconMinimize } from "@/components/SvgIcon";
+import { useWindowState } from "@/contexts/WindowProvider";
+
+import { SvgIconX, SvgIconExpand, SvgIconMinimize, SvgIconShrink } from "@/components/SvgIcon";
 
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
@@ -16,12 +18,17 @@ type HomeWindowToolbarProps = {
   listeners?: SyntheticListenerMap;
 } & React.HTMLAttributes<HTMLDivElement>;
 
-const HomeWindowToolbar = ({ listeners, attributes, ...props }: HomeWindowToolbarProps) => {
+const HomeWindowToolbar = ({ listeners, attributes }: HomeWindowToolbarProps) => {
   const t = useTranslations();
+
+  const { setState } = useWindowState();
+
+  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    event.stopPropagation();
+  };
 
   return (
     <div
-      {...props}
       {...listeners}
       {...attributes}
       className="flex items-center justify-between pl-3 pr-1 py-1 bg-beige-200 outline outline-blue-400 cursor-grab"
@@ -30,14 +37,14 @@ const HomeWindowToolbar = ({ listeners, attributes, ...props }: HomeWindowToolba
         {t("desktop.window.title")}
       </Typography>
 
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1" onPointerDown={handlePointerDown}>
         <Button variant="transparent">
           <SvgIconExpand size="small" />
         </Button>
-        <Button variant="transparent">
+        <Button variant="transparent" onClick={() => setState("MINIMIZED")}>
           <SvgIconMinimize size="small" />
         </Button>
-        <Button variant="transparent">
+        <Button variant="transparent" onClick={() => setState("CLOSED")}>
           <SvgIconX size="small" />
         </Button>
       </div>

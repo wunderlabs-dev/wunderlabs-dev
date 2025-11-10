@@ -7,18 +7,35 @@ import { useRef } from "react";
 import { useHover } from "usehooks-ts";
 import { useTranslations } from "next-intl";
 
+import { useWindowState } from "@/contexts/WindowProvider";
+
 import { Typography } from "@/components/Typography";
 import { SvgIconFolder, SvgIconFolderOpen } from "@/components/SvgIcon";
 
 const HomeFolder = () => {
   const t = useTranslations("desktop.folder");
 
+  const { state, setState } = useWindowState();
+
   const ref = useRef<HTMLDivElement>(null as never);
   const hover = useHover<HTMLDivElement>(ref);
 
+  const handleFolderClick = () => {
+    if (state === "MINIMIZED") {
+      setState("OPEN");
+    }
+    if (state === "OPEN") {
+      setState("MINIMIZED");
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center justify-center gap-1 py-1 px-2 cursor-pointer" ref={ref}>
-      {hover ? <SvgIconFolderOpen size="large" /> : <SvgIconFolder size="large" />}
+    <div
+      ref={ref}
+      className="flex flex-col items-center justify-center gap-1 py-1 px-2 cursor-pointer"
+      onClick={handleFolderClick}
+    >
+      {hover || state === "OPEN" ? <SvgIconFolderOpen size="large" /> : <SvgIconFolder size="large" />}
 
       <Typography variant="body2" uppercase>
         {t("wunder")}
