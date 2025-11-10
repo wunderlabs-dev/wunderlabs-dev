@@ -8,7 +8,6 @@ import { HomeWindow } from "@/components/HomeWindow";
 import { HomeToolbar } from "@/components/HomeToolbar";
 
 const Home = () => {
-
   return (
     <>
       <Head>
@@ -20,6 +19,7 @@ const Home = () => {
           <HomeFolder />
           <HomeWindow />
         </main>
+
         <HomeToolbar />
       </div>
     </>

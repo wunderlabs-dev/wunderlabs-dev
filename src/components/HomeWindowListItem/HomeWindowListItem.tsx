@@ -14,7 +14,7 @@ const HomeWindowListItem = ({ children, startAdornment }: HomeWindowListItemProp
   return (
     <div className="flex items-start gap-2">
       {startAdornment ? <div>{startAdornment}</div> : null}
-      <div className="flex flex-col">{children}</div>
+      <div className="flex flex-1 flex-col">{children}</div>
     </div>
   );
 };

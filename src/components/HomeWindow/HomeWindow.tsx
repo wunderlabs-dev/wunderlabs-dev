@@ -18,10 +18,6 @@ import { HomeWindowToolbar } from "@/components/HomeWindowToolbar";
 const HomeWindow = () => {
   const t = useTranslations();
 
-  const renderers = {
-    color: (chunks: ReactNode) => <span className="text-cyan-500">{chunks}</span>,
-  };
-
   return (
     <div className="absolute left-64 top-16 bg-beige-100 outline outline-blue-400">
       <HomeWindowToolbar />
@@ -31,7 +27,9 @@ const HomeWindow = () => {
           <SvgIconLogo className="w-44 mx-auto" />
         </Link>
 
-        <Typography variant="title">{t.rich("desktop.window.description", renderers)}</Typography>
+        <Typography variant="title" className="text-center">
+          {t("desktop.window.description")}
+        </Typography>
 
         <div className="flex flex-col items-center gap-12 max-w-full">
           <HomeWindowMarquee />

@@ -10,7 +10,7 @@ const HomeToolbar = () => {
   const t = useTranslations();
 
   return (
-    <footer className="bg-beige-200 outline outline-blue-900 grid grid-cols-12 items-center px-4">
+    <footer className="bg-beige-200 border border-t-blue-900 grid grid-cols-12 items-center px-4">
       <div className="col-span-3">
         <SvgIconWunderlabs className="w-8" />
       </div>

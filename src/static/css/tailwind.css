@@ -35,6 +35,7 @@
    * Dither pattern image
    */
   --background-image-dither: url(/images/bg-1@2x.png);
+  --background-image-dialup: url(/images/bg-2@2x.png);
 }
 
 @layer utilities {

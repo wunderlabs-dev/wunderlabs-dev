@@ -9,6 +9,7 @@ import { useTranslations } from "next-intl";
 import { Typography } from "@/components/Typography";
 import { SvgIconFlash, SvgIconLamp, SvgIconTools } from "@/components/SvgIcon";
 
+import { HomeWindowDialup } from "@/components/HomeWindowDialup";
 import { HomeWindowListItem } from "@/components/HomeWindowListItem";
 
 const HomeWindowList = () => {
@@ -33,6 +34,7 @@ const HomeWindowList = () => {
         <Typography variant="body2" uppercase>
           {t.rich("desktop.window.twoWeeksAnIdea", renderers)}
         </Typography>
+        <HomeWindowDialup />
       </HomeWindowListItem>
 
       <HomeWindowListItem startAdornment={<SvgIconTools size="small" />}>
