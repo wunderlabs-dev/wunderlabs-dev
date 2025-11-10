@@ -4,35 +4,40 @@
  */
 import type { ReactNode } from "react";
 import { useTranslations } from "next-intl";
+import { useDraggable } from "@dnd-kit/core";
+import { CSS } from "@dnd-kit/utilities";
 
 import { Button } from "@/components/Button";
 import { Typography } from "@/components/Typography";
-import { SvgIconX, SvgIconExpand, SvgIconMinimize, SvgIconChat, SvgIconLogo } from "@/components/SvgIcon";
+import { SvgIconChat, SvgIconLogo } from "@/components/SvgIcon";
 
 import { HomeWindowList } from "@/components/HomeWindowList";
 import { HomeWindowDivider } from "@/components/HomeWindowDivider";
 import { HomeWindowMarquee } from "@/components/HomeWindowMarquee";
+import { HomeWindowToolbar } from "@/components/HomeWindowToolbar";
 
-const HomeWindow = () => {
+type HomeWindowProps = {
+  position: { x: number; y: number };
+};
+
+const HomeWindow = ({ position }: HomeWindowProps) => {
   const t = useTranslations();
+
+  const { attributes, listeners, setNodeRef, transform } = useDraggable({ id: WINDOW_ID });
+
+  const style = {
+    transform: CSS.Translate.toString(transform),
+    // left: `${position.x}px`,
+    // top: `${position.y}px`,
+  };
 
   const renderers = {
     color: (chunks: ReactNode) => <span className="text-cyan-500">{chunks}</span>,
   };
 
   return (
-    <div className="absolute left-64 top-16 bg-beige-100 outline outline-blue-400">
-      <div className="flex items-center justify-end gap-1 px-1 py-1 bg-beige-200 outline outline-blue-400">
-        <Button variant="transparent">
-          <SvgIconExpand size="small" />
-        </Button>
-        <Button variant="transparent">
-          <SvgIconMinimize size="small" />
-        </Button>
-        <Button variant="transparent">
-          <SvgIconX size="small" />
-        </Button>
-      </div>
+    <div ref={setNodeRef} style={style} className="absolute bg-beige-100 outline outline-blue-400">
+      <HomeWindowToolbar listeners={listeners} attributes={attributes} />
 
       <div className="flex flex-col w-xl gap-16 px-8 py-24">
         <SvgIconLogo className="w-44 mx-auto" />

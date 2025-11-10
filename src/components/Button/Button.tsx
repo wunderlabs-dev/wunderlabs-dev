@@ -21,6 +21,7 @@ const Button = ({ children, variant = "default", startAdornment, endAdornment, c
     <button
       className={cn(
         "flex items-center justify-center cursor-pointer",
+        variant === "default" ? "h-8" : "h-auto",
         variant === "default" ? "border border-blue-900" : "border-0",
         variant === "default" ? "hover:bg-blue-900 hover:text-white" : null,
         className
