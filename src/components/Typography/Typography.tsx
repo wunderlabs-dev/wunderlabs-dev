@@ -32,8 +32,8 @@ const typographyVariantMapping: TypographyVariantMapping = {
 const typographyVariantClassNames: TypographyVariantMapping = {
   body1: "text-base leading-5 font-space-grotesk",
   body2: "text-xs leading-4 font-space-grotesk",
-  caption: "text-xs leading-4 font-handjet",
-  title: "text-2xl font-medium font-handjet",
+  caption: "text-xs leading-4 font-handjet font-light tracking-wide",
+  title: "text-2xl font-normal font-handjet",
 };
 
 const typographyColorClassNames: TypographyColorMapping = {
