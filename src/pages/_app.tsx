@@ -9,11 +9,13 @@ import { cn } from "@/utils/helpers";
 
 const handjet = Handjet({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-handjet",
 });
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-space-grotesk",
 });
 
