@@ -8,7 +8,14 @@
       "wunder": "Wunder"
     },
     "window": {
-      "title": "Wunderlabs"
+      "title": "Wunderlabs",
+      "description": "<color>Wunderlabs:~</color> Rewriting the rules of how software get built_",
+      "whyWeBuild": "Why we build?!",
+      "everyoneShouldShipIdeas": "Everyone should ship ideas",
+      "notWaitForSprints": "not wait for sprints.",
+      "twoWeeksAnIdea": "2 weeks to test an idea is too <animation>SLOOOOOW</animation>",
+      "weAreBuildingTools": "We're building tools that let you prototype",
+      "thatLetYouPrototype": "that let you prototype on your actual codebase, see live previews instantly, and deploy with confidence."
     }
   },
   "toolbar": {
