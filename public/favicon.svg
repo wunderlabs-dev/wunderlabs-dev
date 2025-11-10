@@ -1,13 +1,32 @@
-<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.25586 6.68652H4.8916L4.2168 7.7832H3.83691L4.8916 9.77246L7.42188 5H9.7832L6.07227 12H3.71094L0 5H2.36133L3.25586 6.68652ZM12.2891 12H9.92773L8.91602 10.2285H10.8672L12.7441 6.68652H15.1055L12.2891 12ZM15.2627 6.3916H12.9004L13.6387 5H16L15.2627 6.3916Z" fill="url(#paint0_radial_63_3453)"/>
-<defs>
-<radialGradient id="paint0_radial_63_3453" cx="0" cy="0" r="1" gradientTransform="matrix(10.1818 -3.21 3.38636 9.65155 11.9091 4.71993)" gradientUnits="userSpaceOnUse">
-<stop stop-color="#62BB47"/>
-<stop offset="0.2" stop-color="#FCB828"/>
-<stop offset="0.4" stop-color="#F6821E"/>
-<stop offset="0.6" stop-color="#E1393E"/>
-<stop offset="0.8" stop-color="#963E97"/>
-<stop offset="1" stop-color="#009DDD"/>
-</radialGradient>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.6.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" enable-background="new 0 0 16 16" xml:space="preserve">
+<path fill="#090D56" d="M5.7,14.9c0,0.1-0.1,0.1-0.2,0.1H1.9c-0.1,0-0.2-0.1-0.2-0.2l-0.1-0.6h4.2L5.7,14.9z"/>
+<path fill="#090D56" d="M14.2,14.9c0,0.1-0.1,0.2-0.2,0.2h-3.6c-0.1,0-0.1-0.1-0.2-0.1l-0.2-0.7h4.2L14.2,14.9z"/>
+<polygon fill="#090D56" points="6,13.9 1.6,13.9 1.5,12.9 6.3,12.9 "/>
+<polygon fill="#090D56" points="14.4,13.9 10,13.9 9.7,12.9 14.5,12.9 "/>
+<polygon fill="#090D56" points="6.4,12.6 1.5,12.6 1.3,11.6 6.7,11.6 "/>
+<polygon fill="#090D56" points="14.5,12.6 9.6,12.6 9.3,11.6 14.7,11.6 "/>
+<polygon fill="#090D56" points="6.8,11.3 1.3,11.3 1.2,10.3 7.1,10.3 "/>
+<polygon fill="#090D56" points="14.7,11.3 9.2,11.3 8.8,10.3 14.8,10.3 "/>
+<polygon fill="#090D56" points="7.2,9.9 1.1,9.9 1,8.9 7.5,8.9 "/>
+<polygon fill="#090D56" points="14.9,9.9 8.7,9.9 8.4,8.9 15,8.9 "/>
+<path fill="#090D56" d="M15.1,8.5H8.3L8.1,7.9c-0.1-0.2-0.3-0.2-0.3,0L7.7,8.5H0.9L0.8,7.6h3.2l0.1,0.6c0,0.2,0.3,0.2,0.3,0l0.2-0.7
+	h6.7l0.2,0.7c0.1,0.2,0.3,0.1,0.3,0l0.1-0.6h3.2L15.1,8.5z"/>
+<polygon fill="#090D56" points="4,7.1 0.8,7.1 0.7,6.2 3.9,6.2 "/>
+<polygon fill="#090D56" points="11.2,6.9 4.8,6.9 5.1,6.2 10.9,6.2 "/>
+<polygon fill="#090D56" points="15.2,7.1 12,7.1 12.1,6.2 15.3,6.2 "/>
+<polygon fill="#090D56" points="3.9,5.7 0.6,5.7 0.5,4.8 3.8,4.8 "/>
+<polygon fill="#090D56" points="10.7,5.7 5.3,5.7 5.6,4.8 10.4,4.8 "/>
+<polygon fill="#090D56" points="15.4,5.7 12.1,5.7 12.2,4.8 15.5,4.8 "/>
+<polygon fill="#090D56" points="3.8,4.3 0.4,4.3 0.3,3.6 3.7,3.6 "/>
+<polygon fill="#090D56" points="10.3,4.3 5.7,4.3 6,3.6 10,3.6 "/>
+<polygon fill="#090D56" points="15.6,4.3 12.2,4.3 12.3,3.6 15.7,3.6 "/>
+<polygon fill="#090D56" points="3.6,3 0.2,3 0.1,2.2 3.6,2.2 "/>
+<polygon fill="#090D56" points="9.8,3 6.2,3 6.4,2.2 9.6,2.2 "/>
+<polygon fill="#090D56" points="15.8,3 12.4,3 12.4,2.2 15.9,2.2 "/>
+<path fill="#090D56" d="M3.3,0.9c0.1,0,0.2,0.1,0.2,0.1l0,0.5H0.1L0,1.1C0,1,0.1,0.9,0.2,0.9H3.3z"/>
+<path fill="#090D56" d="M9.1,0.9c0.1,0,0.1,0,0.2,0.1l0.2,0.5H6.6l0.2-0.5c0-0.1,0.1-0.1,0.2-0.1H9.1z"/>
+<path fill="#090D56" d="M15.8,0.9C15.9,0.9,16,1,16,1.1l-0.1,0.4h-3.5l0-0.5c0-0.1,0.1-0.1,0.2-0.1H15.8z"/>
 </svg>
