@@ -16,12 +16,12 @@ const HomeToolbar = () => {
       </div>
 
       <div className="col-span-6 flex justify-center">
-        <Button startAdornment={<SvgIconFolderXs size="small" />} className="border-y-0 border-r-0">
+        <Button startAdornment={<SvgIconFolderXs size="small" />}>
           <Typography variant="body2" uppercase>
             {t("desktop.folder.wunder")}
           </Typography>
         </Button>
-        <Button endAdornment={<SvgIconChat size="small" />} className="border-y-0">
+        <Button endAdornment={<SvgIconChat size="small" />}>
           <Typography variant="body2" uppercase>
             {t("toolbar.letsTalk")}
           </Typography>
