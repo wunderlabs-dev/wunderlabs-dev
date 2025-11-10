@@ -3,6 +3,9 @@
 "use client";
 
 import { createContext, useState, useContext, ReactNode } from "react";
+import { useDebounceCallback } from "usehooks-ts";
+
+import { DROP_ANIMATION_DURATION } from "@/utils/const";
 
 type WindowState = "OPEN" | "CLOSED";
 type WindowSize = "DEFAULT" | "ENLARGED";
@@ -35,7 +38,7 @@ export const WindowProvider = ({ children }: WindowProviderProps) => {
         state,
         size,
         setState,
-        setSize,
+        setSize: useDebounceCallback(setSize, DROP_ANIMATION_DURATION),
       }}
     >
       {children}
