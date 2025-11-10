@@ -16,8 +16,14 @@ const HomeWindowMarquee = () => {
 
   return (
     <div className="relative w-full border-y border-y-blue-400 py-1">
-      <SvgIconStar size="small" className="absolute left-0 top-1/2 -translate-y-1/2" />
-      <SvgIconStar size="small" className="absolute right-0 top-1/2 -translate-y-1/2" />
+      <SvgIconStar
+        size="small"
+        className="absolute top-1/2 left-0 -translate-y-1/2"
+      />
+      <SvgIconStar
+        size="small"
+        className="absolute top-1/2 right-0 -translate-y-1/2"
+      />
 
       <Marquee pauseOnHover>
         {Array.from({ length: MARQUEE_ITEMS }).map((_, index) => (

@@ -7,7 +7,7 @@ import { SvgIconStar } from "@/components/SvgIcon";
 
 const HomeWindowDivider = () => {
   return (
-    <div className="flex items-center justify-center gap-3 w-full">
+    <div className="flex w-full items-center justify-center gap-3">
       <div className="flex-1 border-t border-blue-400" />
       <SvgIconStar size="small" />
       <div className="flex-1 border-t border-blue-400" />

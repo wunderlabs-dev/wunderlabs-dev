@@ -12,11 +12,16 @@ import { SvgIconFrame } from "@/components/SvgIcon";
 
 const HomeWindowFrame = () => {
   return (
-    <motion.div className="mt-1" initial="hidden" whileInView="visible" viewport={frameFadeIn.viewport}>
+    <motion.div
+      className="mt-1"
+      initial="hidden"
+      whileInView="visible"
+      viewport={frameFadeIn.viewport}
+    >
       <motion.div
         variants={frameFadeIn.variants}
         transition={frameFadeIn.transition}
-        className="w-52 h-32 px-2 py-2 border border-blue-200"
+        className="h-32 w-52 border border-blue-200 px-2 py-2"
       >
         <SvgIconFrame size="medium" />
       </motion.div>
@@ -24,7 +29,7 @@ const HomeWindowFrame = () => {
       <motion.div
         variants={frameClipPath.variants}
         transition={frameClipPath.transition}
-        className="w-52 h-32 bg-dialup bg-contain bg-no-repeat bg-blend-multiply"
+        className="bg-dialup h-32 w-52 bg-contain bg-no-repeat bg-blend-multiply"
       />
     </motion.div>
   );

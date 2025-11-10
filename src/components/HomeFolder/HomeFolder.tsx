@@ -23,10 +23,14 @@ const HomeFolder = () => {
   return (
     <div
       ref={ref}
-      className="flex flex-col items-center justify-center gap-1 py-1 px-2 cursor-pointer"
+      className="flex cursor-pointer flex-col items-center justify-center gap-1 px-2 py-1"
       onClick={() => setState("OPEN")}
     >
-      {hover || state === "OPEN" ? <SvgIconFolderOpen size="large" /> : <SvgIconFolder size="large" />}
+      {hover || state === "OPEN" ? (
+        <SvgIconFolderOpen size="large" />
+      ) : (
+        <SvgIconFolder size="large" />
+      )}
 
       <Typography variant="body2" uppercase>
         {t("wunder")}

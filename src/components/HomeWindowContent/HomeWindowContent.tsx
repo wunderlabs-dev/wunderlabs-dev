@@ -19,19 +19,19 @@ const HomeWindowContent = () => {
   const t = useTranslations();
 
   return (
-    <div className="flex flex-col gap-16 px-8 py-24 overflow-y-auto">
+    <div className="flex flex-col gap-8 overflow-y-auto px-4 py-12 md:gap-16 md:px-8 md:py-24">
       <Link href="/">
-        <SvgIconLogo className="w-64 mx-auto" />
+        <SvgIconLogo className="mx-auto w-64" />
       </Link>
 
       <Typography variant="title" className="text-center">
         {t("desktop.window.description")}
       </Typography>
 
-      <div className="flex flex-col items-center gap-12 max-w-full">
+      <div className="flex max-w-full flex-col items-center gap-6 md:gap-12">
         <HomeWindowMarquee />
 
-        <div className="flex flex-col max-w-sm gap-24 mx-auto">
+        <div className="mx-auto flex max-w-sm flex-col gap-12 md:gap-24">
           <HomeWindowList />
           <HomeWindowDivider />
         </div>

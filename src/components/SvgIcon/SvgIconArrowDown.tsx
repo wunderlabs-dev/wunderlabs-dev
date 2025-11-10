@@ -7,7 +7,11 @@ type SvgIconArrowDownProps = {
   className?: HTMLAttributes<SVGSVGElement>["className"];
 } & HTMLAttributes<SVGSVGElement>;
 
-const SvgIconArrowDown = ({ className, size = "inherit", ...props }: SvgIconArrowDownProps) => {
+const SvgIconArrowDown = ({
+  className,
+  size = "inherit",
+  ...props
+}: SvgIconArrowDownProps) => {
   return (
     <SvgIcon className={className} size={size} {...props}>
       <path d="M8 12L12 8H9V4H7V8H4L8 12Z" />

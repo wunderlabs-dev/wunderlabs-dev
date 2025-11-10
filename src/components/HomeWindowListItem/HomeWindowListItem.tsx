@@ -10,7 +10,10 @@ type HomeWindowListItemProps = {
   startAdornment?: ReactNode;
 };
 
-const HomeWindowListItem = ({ children, startAdornment }: HomeWindowListItemProps) => {
+const HomeWindowListItem = ({
+  children,
+  startAdornment,
+}: HomeWindowListItemProps) => {
   return (
     <div className="flex items-start gap-2">
       {startAdornment ? <div>{startAdornment}</div> : null}

@@ -7,7 +7,11 @@ type SvgIconWunderlabsProps = {
   className?: HTMLAttributes<SVGSVGElement>["className"];
 } & HTMLAttributes<SVGSVGElement>;
 
-const SvgIconWunderlabs = ({ className, size = "inherit", ...props }: SvgIconWunderlabsProps) => {
+const SvgIconWunderlabs = ({
+  className,
+  size = "inherit",
+  ...props
+}: SvgIconWunderlabsProps) => {
   return (
     <SvgIcon className={className} size={size} viewBox="0 0 30 14" {...props}>
       <path d="M5.7,14.9c0,0.1-0.1,0.1-0.2,0.1H1.9c-0.1,0-0.2-0.1-0.2-0.2l-0.1-0.6h4.2L5.7,14.9z" />

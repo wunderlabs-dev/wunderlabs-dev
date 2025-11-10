@@ -22,7 +22,7 @@ const Document = () => {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" sizes="any" />
       </Head>
 
-      <body className="bg-beige-100 bg-dither bg-blend-overlay bg-cover bg-center bg-no-repeat antialiased select-none overscroll-none">
+      <body className="bg-beige-100 bg-dither overscroll-none bg-cover bg-center bg-no-repeat antialiased bg-blend-overlay select-none">
         <Main />
         <NextScript />
       </body>
