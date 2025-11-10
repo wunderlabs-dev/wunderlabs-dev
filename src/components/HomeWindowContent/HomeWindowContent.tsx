@@ -21,7 +21,7 @@ const HomeWindowContent = () => {
   return (
     <div className="flex flex-col gap-16 px-8 py-24 overflow-y-auto">
       <Link href="/">
-        <SvgIconLogo className="w-44 mx-auto" />
+        <SvgIconLogo className="w-64 mx-auto" />
       </Link>
 
       <Typography variant="title" className="text-center">

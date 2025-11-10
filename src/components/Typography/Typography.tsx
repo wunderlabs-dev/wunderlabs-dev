@@ -57,7 +57,7 @@ const Typography = ({
         typographyVariantClassNames[variant],
         typographyColorClassNames[color],
         uppercase ? "uppercase" : null,
-        className
+        className,
       )}
       {...props}
     >

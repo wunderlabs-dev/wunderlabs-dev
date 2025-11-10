@@ -12,7 +12,11 @@ type SvgIconExpandProps = {
   className?: HTMLAttributes<SVGSVGElement>["className"];
 } & HTMLAttributes<SVGSVGElement>;
 
-const SvgIconExpand = ({ className, size = "inherit", ...props }: SvgIconExpandProps) => {
+const SvgIconExpand = ({
+  className,
+  size = "inherit",
+  ...props
+}: SvgIconExpandProps) => {
   return (
     <SvgIcon className={className} size={size} {...props}>
       <polygon points="10.9,2.9 8.9,2.9 8.9,4.9 10.9,4.9 10.9,6.9 12.9,6.9 12.9,4.9 12.9,2.9" />
