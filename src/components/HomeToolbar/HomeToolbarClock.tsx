@@ -20,7 +20,7 @@ const HomeToolbarClock = () => {
 
   return (
     <time suppressHydrationWarning>
-      <Typography variant="body2" uppercase>
+      <Typography variant="body2" uppercase suppressHydrationWarning>
         {format(time, "EEE d MMM HH:mm")}
       </Typography>
     </time>
