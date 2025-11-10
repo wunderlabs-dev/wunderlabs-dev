@@ -4,7 +4,8 @@
  */
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback } from "react";
+import { useEventListener } from "usehooks-ts";
 
 const HomeSelection = () => {
   const [isSelecting, setIsSelecting] = useState(false);
@@ -33,17 +34,9 @@ const HomeSelection = () => {
     setIsSelecting(false);
   }, []);
 
-  useEffect(() => {
-    document.addEventListener("mousedown", handleMouseDown);
-    document.addEventListener("mousemove", handleMouseMove);
-    document.addEventListener("mouseup", handleMouseUp);
-
-    return () => {
-      document.removeEventListener("mousedown", handleMouseDown);
-      document.removeEventListener("mousemove", handleMouseMove);
-      document.removeEventListener("mouseup", handleMouseUp);
-    };
-  }, [handleMouseDown, handleMouseMove, handleMouseUp]);
+  useEventListener("mousedown", handleMouseDown);
+  useEventListener("mousemove", handleMouseMove);
+  useEventListener("mouseup", handleMouseUp);
 
   if (!isSelecting) return null;
 
