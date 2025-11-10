@@ -5,9 +5,6 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
-import { cn } from "@/utils/helpers";
-import { useWindowState } from "@/contexts/WindowProvider";
-
 import { MAILTO_ADDRESS } from "@/utils/const";
 
 import { Button } from "@/components/Button";
@@ -21,15 +18,8 @@ import { HomeWindowMarquee } from "@/components/HomeWindowMarquee";
 const HomeWindowContent = () => {
   const t = useTranslations();
 
-  const { size } = useWindowState();
-
   return (
-    <div
-      className={cn(
-        "flex flex-col gap-16 px-8 py-24 w-window  overflow-y-auto",
-        size === "ENLARGED" ? "h-window-2xl" : "h-window"
-      )}
-    >
+    <div className="flex flex-col gap-16 px-8 py-24 overflow-y-auto">
       <Link href="/">
         <SvgIconLogo className="w-44 mx-auto" />
       </Link>
