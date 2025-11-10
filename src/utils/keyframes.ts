@@ -23,7 +23,6 @@ export const windowClipPath = {
     ],
     transition: {
       duration: 0.15,
-      ease: "linear",
       times: [0, 0.33, 0.34, 0.5, 0.51, 0.84, 1],
     },
   },
@@ -38,7 +37,6 @@ export const windowClipPath = {
     ],
     transition: {
       duration: 0.15,
-      ease: "linear",
       times: [0, 0.33, 0.34, 0.66, 0.67, 1],
     },
   },
@@ -112,7 +110,6 @@ export const frameClipPath = {
       transition: {
         delay: 1,
         duration: 12,
-        ease: "linear",
         times: [
           0, 0.001, 0.05, 0.08, 0.12, 0.15, 0.18, 0.24, 0.27, 0.32, 0.35, 0.38,
           0.41, 0.46, 0.5, 0.53, 0.56, 0.62, 0.65, 0.7, 0.73, 0.76, 0.81, 0.84,
