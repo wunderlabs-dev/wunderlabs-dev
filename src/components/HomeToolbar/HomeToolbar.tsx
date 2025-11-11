@@ -18,7 +18,7 @@ const HomeToolbar = () => {
   const startAdornment = state === "OPEN" ? <SvgIconFolderOpenXs size="small" /> : <SvgIconFolderXs size="small" />;
 
   return (
-    <footer className="bg-beige-200 relative z-10 grid grid-cols-12 items-center border border-t-blue-900 px-4">
+    <footer className="bg-beige-200 grid grid-cols-12 items-center border border-t-blue-900 px-4">
       <div className="col-span-3">
         <SvgIconWunderlabs className="w-8" />
       </div>
