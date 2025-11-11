@@ -17,6 +17,7 @@ import { HomeFolder } from "@/components/HomeFolder";
 import { HomeWindow } from "@/components/HomeWindow";
 import { HomeToolbar } from "@/components/HomeToolbar";
 import { HomeWindowContent } from "@/components/HomeWindowContent";
+import { HomeSelection } from "@/components/HomeSelection";
 
 const Home = () => {
   const client = useIsClient();
@@ -52,7 +53,8 @@ const Home = () => {
                 <HomeWindowContent />
               </main>
             ) : (
-              <main className="flex flex-1 items-end justify-start gap-4 px-12 py-12">
+              <main className="relative flex flex-1 items-end justify-start gap-4 px-12 py-12">
+                <HomeSelection />
                 <HomeFolder />
                 <AnimatePresence>{state === "OPEN" ? <HomeWindow position={position} /> : null}</AnimatePresence>
               </main>

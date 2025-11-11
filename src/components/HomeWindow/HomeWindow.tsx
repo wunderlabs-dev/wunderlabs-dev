@@ -39,7 +39,7 @@ const HomeWindow = ({ position }: HomeWindowProps) => {
         initial={windowClipPath.initial}
         animate={windowClipPath.animate}
         exit={windowClipPath.exit}
-        className="bg-beige-100 absolute border border-blue-400"
+        className="bg-beige-100 absolute z-10 border border-blue-400"
       >
         <div className={cn("bg-beige-100 w-window flex flex-col", size === "ENLARGED" ? "h-window-2xl" : "h-window")}>
           <HomeWindowToolbar listeners={listeners} attributes={attributes} />
