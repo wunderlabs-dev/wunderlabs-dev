@@ -1,0 +1,21 @@
+export { default as SvgIcon, type SvgIconProps } from "./svg-icon";
+export { default as SvgIconArrowDown } from "./svg-icon-arrow-down";
+export { default as SvgIconArrowUp } from "./svg-icon-arrow-up";
+export { default as SvgIconChat } from "./svg-icon-chat";
+export { default as SvgIconExpand } from "./svg-icon-expand";
+export { default as SvgIconFlash } from "./svg-icon-flash";
+export { default as SvgIconFolder } from "./svg-icon-folder";
+export { default as SvgIconFolderOpen } from "./svg-icon-folder-open";
+export { default as SvgIconFolderOpenXs } from "./svg-icon-folder-open-xs";
+export { default as SvgIconFolderXs } from "./svg-icon-folder-xs";
+export { default as SvgIconFrame } from "./svg-icon-frame";
+export { default as SvgIconLamp } from "./svg-icon-lamp";
+export { default as SvgIconLogo } from "./svg-icon-logo";
+export { default as SvgIconMinimize } from "./svg-icon-minimize";
+export { default as SvgIconShrink } from "./svg-icon-shrink";
+export { default as SvgIconStar } from "./svg-icon-star";
+export { default as SvgIconTools } from "./svg-icon-tools";
+export { default as SvgIconWunderlabs } from "./svg-icon-wunderlabs";
+export { default as SvgIconX } from "./svg-icon-x";
+
+export * from "./types";

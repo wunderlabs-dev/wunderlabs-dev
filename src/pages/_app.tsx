@@ -6,7 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
 
-import { WindowProvider } from "@/contexts/WindowProvider";
+import { WindowProvider } from "@/contexts/window-provider";
 
 const handjet = Handjet({
   subsets: ["latin"],

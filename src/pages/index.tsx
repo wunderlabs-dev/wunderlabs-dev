@@ -11,12 +11,13 @@ import copy from "@/copy/en-EN.json";
 
 import { INITIAL_WINDOW_POSITION_X, INITIAL_WINDOW_POSITION_Y, DROP_ANIMATION_DURATION } from "@/utils/const";
 
-import { useWindowState } from "@/contexts/WindowProvider";
+import { useWindowState } from "@/contexts/window-provider";
 
-import { HomeFolder } from "@/components/HomeFolder";
-import { HomeWindow } from "@/components/HomeWindow";
-import { HomeToolbar } from "@/components/HomeToolbar";
-import { HomeWindowContent } from "@/components/HomeWindowContent";
+import { HomeFolder } from "@/components/home-folder";
+import HomeFolderLink from "@/components/home-folder-link";
+import { HomeWindow } from "@/components/home-window";
+import { HomeToolbar } from "@/components/home-toolbar";
+import { HomeWindowContent } from "@/components/home-window-content";
 
 const Home = () => {
   const client = useIsClient();
@@ -53,7 +54,10 @@ const Home = () => {
               </main>
             ) : (
               <main className="flex flex-1 items-end justify-start gap-4 px-12 py-12">
-                <HomeFolder />
+                <div className="flex flex-col items-center gap-4">
+                  <HomeFolderLink href="https://claudebin.com" label="claudebin.com" />
+                  <HomeFolder />
+                </div>
                 <AnimatePresence>{state === "OPEN" ? <HomeWindow position={position} /> : null}</AnimatePresence>
               </main>
             )}
