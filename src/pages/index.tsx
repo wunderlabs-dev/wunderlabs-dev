@@ -56,6 +56,7 @@ const Home = () => {
               <main className="flex flex-1 items-end justify-start gap-4 px-12 py-12">
                 <div className="flex flex-col items-center gap-4">
                   <HomeFolderLink href="https://claudebin.com" label="claudebin.com" />
+                  <HomeFolderLink href="https://openable.dev" label="openable.dev" />
                   <HomeFolder />
                 </div>
                 <AnimatePresence>{state === "OPEN" ? <HomeWindow position={position} /> : null}</AnimatePresence>
