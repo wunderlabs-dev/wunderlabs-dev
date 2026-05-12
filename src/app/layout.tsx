@@ -2,6 +2,7 @@ import "@/static/css/globals.css";
 
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import { NextIntlClientProvider } from "next-intl";
 
 const APP_URL = "https://wunderlabs.dev";
 
@@ -31,7 +32,9 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" className="scroll-smooth">
-      <body>{children}</body>
+      <body>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+      </body>
     </html>
   );
 };

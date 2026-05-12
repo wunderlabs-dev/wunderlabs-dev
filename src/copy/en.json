@@ -1,0 +1,15 @@
+{
+  "site": {
+    "domain": "wunderlabs.dev",
+    "label": "Software lab"
+  },
+  "home": {
+    "kicker": "Wunderlabs",
+    "title": "Focused software products.",
+    "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
+  },
+  "footer": {
+    "description": "Independent product studio",
+    "email": "hello@wunderlabs.dev"
+  }
+}
