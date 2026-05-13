@@ -4,7 +4,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
-import { SvgIconArrowLink } from "@/components/ui/svg-icon";
+import { SvgIconArrowLink, SvgIconStatus } from "@/components/ui/svg-icon";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/helpers";
 
@@ -30,13 +30,18 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
 
       <Container variant="5xl">
         <Card>
+          <div className="flex items-center gap-4">
+            <SvgIconStatus size="xs" />
+            <Typography variant="code">{t("projects.cards.claudebin.status")}</Typography>
+          </div>
+
           <Typography variant="heading" as="h3">
             {t("projects.cards.claudebin.title")}
           </Typography>
-          <Typography variant="body" className="text-gray-250">
+          <Typography variant="body" className=" text-gray-250">
             {t("projects.cards.claudebin.description")}
           </Typography>
-          <Typography variant="code" className="text-gray-250">
+          <Typography variant="code" className=" text-gray-250">
             {t("projects.cards.claudebin.tags")}
           </Typography>
 

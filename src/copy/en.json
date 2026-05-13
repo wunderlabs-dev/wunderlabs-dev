@@ -32,7 +32,7 @@
     "title": "<muted>From research</muted> to production.",
     "cards": {
       "claudebin": {
-        "status": "Deployed",
+        "status": "All systems operational",
         "title": "Claudebin",
         "description": "Share Claude conversations with syntax highlighting, version control, and permanent links. Built for debugging, collaboration, and reproducible agent workflows.",
         "tags": "SHARE / DEBUG / REPRODUCE",
