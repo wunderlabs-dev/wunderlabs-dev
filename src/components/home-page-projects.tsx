@@ -20,7 +20,8 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
     <section
       id="projects"
       className={cn(
-        "relative flex flex-col gap-24 px-12 before:absolute before:inset-y-0 before:left-1/2 before:z-0 before:w-px before:bg-gray-100/50",
+        "relative flex flex-col gap-24 px-12",
+        "before:absolute before:inset-y-0 before:left-1/2 before:z-0 before:w-px before:bg-gray-100/50",
         className,
       )}
       {...props}
@@ -31,7 +32,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
         title={t.rich("projects.title", renderers)}
       />
 
-      <Container variant="5xl" className="relative z-10">
+      <Container variant="5xl" className="relative z-10 flex flex-col gap-6">
         <Card>
           <div className="flex items-center gap-4">
             <SvgIconStatus size="xs" />
@@ -52,6 +53,30 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             </Button>
             <Button type="button" variant="outlined">
               {t("projects.cards.claudebin.githubLabel")}
+            </Button>
+          </div>
+        </Card>
+
+        <Card>
+          <div className="flex items-center gap-4">
+            <SvgIconStatus size="xs" />
+            <Typography variant="code">{t("projects.cards.openable.status")}</Typography>
+          </div>
+
+          <Typography variant="h2">{t("projects.cards.openable.title")}</Typography>
+          <Typography variant="body" className="text-gray-250">
+            {t("projects.cards.openable.description")}
+          </Typography>
+          <Typography variant="code" className="text-gray-250">
+            {t("projects.cards.openable.tags")}
+          </Typography>
+
+          <div className="flex flex-wrap items-center gap-3">
+            <Button type="button" startAdornment={<SvgIconArrowLink className="size-5" />}>
+              {t("projects.cards.openable.launchLabel")}
+            </Button>
+            <Button type="button" variant="outlined">
+              {t("projects.cards.openable.githubLabel")}
             </Button>
           </div>
         </Card>

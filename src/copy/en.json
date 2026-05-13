@@ -42,6 +42,14 @@
         "tags": "SHARE / DEBUG / REPRODUCE",
         "launchLabel": "Launch Claudebin",
         "githubLabel": "GitHub"
+      },
+      "openable": {
+        "status": "All systems operational",
+        "title": "Openable.dev",
+        "description": "Eval framework for agent reliability. Run structured tests against LLM outputs, track regressions, and ship with confidence that your prompts still work.",
+        "tags": "TEST / TRACK / SHIP",
+        "launchLabel": "Launch Openable",
+        "githubLabel": "GitHub"
       }
     }
   },
