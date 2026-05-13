@@ -84,6 +84,10 @@ If class merging becomes necessary, use a small shared helper in `src/utils/help
 
 Never concatenate class names with template literals or `+`. Use `cn(...)` for composed or conditional `className` values.
 
+For conditional values, do not use boolean short-circuit expressions like `condition && value`; use an explicit ternary, such as `condition ? value : undefined`.
+
+Do not use Tailwind slash shorthands except for opacity modifiers, such as `bg-red-100/10`. Write typography and line-height as separate classes, such as `text-base leading-6` instead of `text-base/6`.
+
 ### Import Order
 
 Use the `@/*` path alias for source imports.

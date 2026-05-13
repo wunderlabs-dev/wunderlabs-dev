@@ -9,6 +9,38 @@
     "title": "Focused software products.",
     "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
   },
+  "lab": {
+    "kicker": "The lab",
+    "title": "<muted>We are focus on</muted> reliable AI infrastructure",
+    "pillars": {
+      "eval": {
+        "title": "Eval-Driven Development",
+        "description": "You can't ship agents without knowing when they regress. Most teams run evals once, manually, then iterate blind. We're building eval infrastructure that runs in CI, surfaces failures early, and makes quality gates enforceable."
+      },
+      "execution": {
+        "title": "Execution Environments",
+        "description": "Long-running agents need sandboxes that don't leak state, can snapshot mid-execution, and recover from failure without losing context. We're focused on the runtime layer that makes multi-step workflows deterministic."
+      },
+      "telemetry": {
+        "title": "Runtime Telemetry",
+        "description": "When an agent fails in production, you need the state trace, not a log line. We're building tooling for inspecting tool calls, prompt histories, and decision trees at the granularity that actually helps you fix the problem."
+      }
+    }
+  },
+  "projects": {
+    "kicker": "Projects",
+    "title": "<muted>From research</muted> to production.",
+    "cards": {
+      "claudebin": {
+        "status": "Deployed",
+        "title": "Claudebin",
+        "description": "Share Claude conversations with syntax highlighting, version control, and permanent links. Built for debugging, collaboration, and reproducible agent workflows.",
+        "tags": "SHARE / DEBUG / REPRODUCE",
+        "launchLabel": "Launch Claudebin",
+        "githubLabel": "GitHub"
+      }
+    }
+  },
   "appBar": {
     "wunderlabs": "Wunderlabs",
     "lab": "The Lab",
@@ -16,6 +48,14 @@
     "backedBy": "Backed by",
     "community": "Community",
     "cta": "Get in touch"
+  },
+  "contact": {
+    "kicker": "Let’s build together",
+    "title": "<muted>Building with the open.</muted> Ship with us.",
+    "description": "Looking for engineers, researchers, and investors who believe AI infrastructure must be serious, reliable, and production-ready.",
+    "cta": "Contact us",
+    "email": "contact@wunderlabs.dev",
+    "location": "Based in Europe"
   },
   "footer": {
     "copyright": "© {year} Wunderlabs. All rights reserved.",

@@ -4,9 +4,11 @@ import { cn } from "@/utils/helpers";
 
 const typographyVariantClassNames: TypographyVariantClassNames = {
   title: "font-sans text-5xl leading-13 font-extrabold",
+  heading: "font-sans text-3xl leading-8 font-semibold",
   body: "font-sans text-base leading-6",
   code: "font-mono text-sm leading-5 font-normal",
   body2: "font-sans text-2xl leading-6 font-semibold",
+  caption: "font-sans text-xs leading-[18px]",
 } as const;
 
 const Typography = <TElement extends TypographyElement = "p">({

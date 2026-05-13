@@ -1,5 +1,10 @@
 export { default as SvgIcon } from "./svg-icon";
+export { default as SvgIconArrowLink } from "./svg-icon-arrow-link";
+export { default as SvgIconBull } from "./svg-icon-bull";
 export { default as SvgIconContact } from "./svg-icon-contact";
+export { default as SvgIconFile } from "./svg-icon-file";
+export { default as SvgIconPlay } from "./svg-icon-play";
+export { default as SvgIconStatus } from "./svg-icon-status";
 export { default as SvgIconSymbol } from "./svg-icon-symbol";
 export { default as SvgIconWunderlabs } from "./svg-icon-wunderlabs";
 export * from "./types";
