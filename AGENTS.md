@@ -82,6 +82,8 @@ Prefer existing design tokens over arbitrary values. Keep class lists readable; 
 
 If class merging becomes necessary, use a small shared helper in `src/utils/helpers.ts` built from `classnames` and `tailwind-merge`.
 
+Never concatenate class names with template literals or `+`. Use `cn(...)` for composed or conditional `className` values.
+
 ### Import Order
 
 Use the `@/*` path alias for source imports.
