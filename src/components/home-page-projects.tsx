@@ -17,10 +17,21 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   const t = useTranslations();
 
   return (
-    <section id="projects" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
-      <TitleGroup subtitle={t("projects.kicker")} title={t.rich("projects.title", renderers)} />
+    <section
+      id="projects"
+      className={cn(
+        "relative flex flex-col gap-24 px-12 before:absolute before:inset-y-0 before:left-1/2 before:z-0 before:w-px before:bg-gray-100/50",
+        className,
+      )}
+      {...props}
+    >
+      <TitleGroup
+        className="relative z-10"
+        subtitle={t("projects.kicker")}
+        title={t.rich("projects.title", renderers)}
+      />
 
-      <Container variant="5xl">
+      <Container variant="5xl" className="relative z-10">
         <Card>
           <div className="flex items-center gap-4">
             <SvgIconStatus size="xs" />
