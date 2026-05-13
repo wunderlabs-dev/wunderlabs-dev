@@ -9,6 +9,14 @@
     "title": "Focused software products.",
     "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
   },
+  "appBar": {
+    "wunderlabs": "Wunderlabs",
+    "lab": "The Lab",
+    "projects": "Projects",
+    "backedBy": "Backed by",
+    "community": "Community",
+    "cta": "Get in touch"
+  },
   "footer": {
     "copyright": "© {year} Wunderlabs. All rights reserved.",
     "description": "Independent product studio",
