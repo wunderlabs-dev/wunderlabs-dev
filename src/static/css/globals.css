@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme inline {
+  --font-sans: var(--font-host-grotesk);
+  --font-mono: var(--font-jetbrains-mono);
+
   --color-gray-50: #ffffff;
   --color-gray-100: #b5b5b5;
   --color-gray-150: #999793;
