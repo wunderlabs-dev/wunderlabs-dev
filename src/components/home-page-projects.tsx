@@ -31,9 +31,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             <Typography variant="code">{t("projects.cards.claudebin.status")}</Typography>
           </div>
 
-          <Typography variant="heading" as="h3">
-            {t("projects.cards.claudebin.title")}
-          </Typography>
+          <Typography variant="h2">{t("projects.cards.claudebin.title")}</Typography>
           <Typography variant="body" className="text-gray-250">
             {t("projects.cards.claudebin.description")}
           </Typography>

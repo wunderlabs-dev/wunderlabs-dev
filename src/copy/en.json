@@ -44,6 +44,11 @@
   "community": {
     "kicker": "Community",
     "title": "<muted>We are more than a lab</muted> we are a community.",
+    "through": "Through <link>agentic.tm</link>",
+    "stat": {
+      "value": "200+",
+      "description": "engineers, researchers and academics working on agent-driven development"
+    },
     "join": "Join the movement",
     "events": "Check our events",
     "github": "GitHub",

@@ -2,6 +2,7 @@ export { default as SvgIcon } from "./svg-icon";
 export { default as SvgIconArrowLink } from "./svg-icon-arrow-link";
 export { default as SvgIconBull } from "./svg-icon-bull";
 export { default as SvgIconContact } from "./svg-icon-contact";
+export { default as SvgIconExternalLink } from "./svg-icon-external-link";
 export { default as SvgIconFile } from "./svg-icon-file";
 export { default as SvgIconGlobe } from "./svg-icon-globe";
 export { default as SvgIconPlay } from "./svg-icon-play";
