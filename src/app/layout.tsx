@@ -1,15 +1,15 @@
-import "@/static/css/globals.css";
-
 import type { Metadata } from "next";
 import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 
-import { HomePageAppBar } from "@/components/home-page-app-bar";
-import { HomePageFooter } from "@/components/home-page-footer";
 import { cn } from "@/utils/helpers";
 
+import { HomePageAppBar } from "@/components/home-page-app-bar";
+import { HomePageFooter } from "@/components/home-page-footer";
+
 import copy from "@/copy/en.json";
+import "@/static/css/globals.css";
 
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],

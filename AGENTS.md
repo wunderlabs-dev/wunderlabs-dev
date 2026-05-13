@@ -96,8 +96,17 @@ Use the `@/*` path alias for source imports.
 2. React and Next.js imports.
 3. External libraries.
 4. Type imports from `@/` using `import type`.
-5. App, component, section, or lib imports from `@/`.
-6. Utility and CSS imports from `@/`.
+5. Utility imports from `@/utils`, such as `import { cn } from "@/utils/helpers";`.
+6. App, component, section, or lib imports from `@/`.
+7. CSS imports from `@/`.
+
+Separate utility imports from component imports with a blank line. For example:
+
+```ts
+import { cn } from "@/utils/helpers";
+
+import { Button } from "@/components/ui/button";
+```
 
 ### i18n
 

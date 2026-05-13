@@ -1,7 +1,8 @@
 import type { ComponentProps, ReactNode } from "react";
 
-import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/helpers";
+
+import { Typography } from "@/components/ui/typography";
 
 type HomePageLabItemProps = ComponentProps<"article"> & {
   description: string;

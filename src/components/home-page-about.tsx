@@ -1,9 +1,10 @@
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
-import { TitleGroup } from "@/components/ui/title-group";
 import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
+
+import { TitleGroup } from "@/components/ui/title-group";
 
 type HomePageAboutProps = ComponentProps<"section">;
 const HomePageAbout = ({ className, ...props }: HomePageAboutProps) => {

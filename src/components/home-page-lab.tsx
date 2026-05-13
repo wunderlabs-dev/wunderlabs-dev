@@ -1,12 +1,13 @@
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
+import { cn } from "@/utils/helpers";
+import { renderers } from "@/utils/renderers";
+
 import { HomePageLabItem } from "@/components/home-page-lab-item";
 import { Container } from "@/components/ui/container";
 import { SvgIconBull, SvgIconFile, SvgIconPlay } from "@/components/ui/svg-icon";
 import { TitleGroup } from "@/components/ui/title-group";
-import { cn } from "@/utils/helpers";
-import { renderers } from "@/utils/renderers";
 
 type HomePageLabProps = ComponentProps<"section">;
 

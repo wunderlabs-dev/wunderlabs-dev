@@ -4,10 +4,11 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
+import { cn } from "@/utils/helpers";
+
 import { Container } from "@/components/ui/container";
 import { SvgIconWunderlabs } from "@/components/ui/svg-icon";
 import { Typography } from "@/components/ui/typography";
-import { cn } from "@/utils/helpers";
 
 type HomePageFooterProps = ComponentProps<"footer">;
 

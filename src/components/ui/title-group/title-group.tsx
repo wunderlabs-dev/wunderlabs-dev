@@ -1,8 +1,9 @@
 import type { TitleGroupProps } from "./types";
 
+import { cn } from "@/utils/helpers";
+
 import { Container } from "@/components/ui/container";
 import { Typography } from "@/components/ui/typography";
-import { cn } from "@/utils/helpers";
 
 const TitleGroup = ({ className, subtitle, title, variant = "h1", ...props }: TitleGroupProps) => {
   return (

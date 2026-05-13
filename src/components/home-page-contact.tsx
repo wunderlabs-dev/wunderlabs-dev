@@ -1,13 +1,14 @@
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
+import { cn } from "@/utils/helpers";
+import { renderers } from "@/utils/renderers";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SvgIconContact } from "@/components/ui/svg-icon";
 import { TitleGroup } from "@/components/ui/title-group";
 import { Typography } from "@/components/ui/typography";
-import { cn } from "@/utils/helpers";
-import { renderers } from "@/utils/renderers";
 
 type HomePageContactProps = ComponentProps<"section">;
 

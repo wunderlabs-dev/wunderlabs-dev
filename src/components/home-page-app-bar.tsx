@@ -2,10 +2,11 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
+import { cn } from "@/utils/helpers";
+
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
-import { cn } from "@/utils/helpers";
 
 const links = [
   { href: "/", labelKey: "appBar.wunderlabs" },

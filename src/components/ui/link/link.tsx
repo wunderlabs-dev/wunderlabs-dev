@@ -2,8 +2,9 @@ import NextLink from "next/link";
 
 import type { LinkProps } from "./types";
 
-import { SvgIconExternalLink } from "@/components/ui/svg-icon";
 import { cn } from "@/utils/helpers";
+
+import { SvgIconExternalLink } from "@/components/ui/svg-icon";
 
 const Link = ({ children, className, endAdornment, ...props }: LinkProps) => {
   const adornment =
