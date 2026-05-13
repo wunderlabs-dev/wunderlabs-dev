@@ -4,7 +4,7 @@ import type { ComponentProps, ReactNode } from "react";
 import { HomePageLabItem } from "@/components/home-page-lab-item";
 import { Container } from "@/components/ui/container";
 import { SvgIconBull, SvgIconFile, SvgIconPlay } from "@/components/ui/svg-icon";
-import { Typography } from "@/components/ui/typography";
+import { TitleGroup } from "@/components/ui/title-group";
 import { cn } from "@/utils/helpers";
 
 type HomePageLabProps = ComponentProps<"section">;
@@ -37,12 +37,7 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
   return (
     <section id="lab" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
       <Container variant="4xl">
-        <div className="flex flex-col gap-3">
-          <Typography variant="code">{t("lab.kicker")}</Typography>
-          <Typography variant="title" as="h2">
-            {t.rich("lab.title", renderers)}
-          </Typography>
-        </div>
+        <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
       </Container>
 
       <Container variant="7xl" className="border-b border-gray-100/30">

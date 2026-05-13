@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Container } from "@/components/ui/container";
 import { SvgIconArrowLink, SvgIconStatus } from "@/components/ui/svg-icon";
+import { TitleGroup } from "@/components/ui/title-group";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/helpers";
 
@@ -20,12 +21,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   return (
     <section id="projects" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
       <Container variant="4xl">
-        <div className="flex flex-col gap-3">
-          <Typography variant="code">{t("projects.kicker")}</Typography>
-          <Typography variant="title" as="h2">
-            {t.rich("projects.title", renderers)}
-          </Typography>
-        </div>
+        <TitleGroup subtitle={t("projects.kicker")} title={t.rich("projects.title", renderers)} />
       </Container>
 
       <Container variant="5xl">
@@ -38,10 +34,10 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
           <Typography variant="heading" as="h3">
             {t("projects.cards.claudebin.title")}
           </Typography>
-          <Typography variant="body" className=" text-gray-250">
+          <Typography variant="body" className="text-gray-250">
             {t("projects.cards.claudebin.description")}
           </Typography>
-          <Typography variant="code" className=" text-gray-250">
+          <Typography variant="code" className="text-gray-250">
             {t("projects.cards.claudebin.tags")}
           </Typography>
 

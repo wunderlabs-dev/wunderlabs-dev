@@ -1,4 +1,5 @@
 import { HomePageContact } from "@/components/home-page-contact";
+import { HomePageCommunity } from "@/components/home-page-community";
 import { HomePageLab } from "@/components/home-page-lab";
 import { HomePageProjects } from "@/components/home-page-projects";
 
@@ -7,6 +8,7 @@ const Home = () => {
     <main>
       <HomePageLab />
       <HomePageProjects />
+      <HomePageCommunity />
       <HomePageContact />
     </main>
   );

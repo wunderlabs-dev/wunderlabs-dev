@@ -41,6 +41,15 @@
       }
     }
   },
+  "community": {
+    "kicker": "Community",
+    "title": "<muted>We are more than a lab</muted> we are a community.",
+    "join": "Join the movement",
+    "events": "Check our events",
+    "github": "GitHub",
+    "agentic": "Agentic.tm",
+    "wunderlabsX": "X @wunderlabs"
+  },
   "appBar": {
     "wunderlabs": "Wunderlabs",
     "lab": "The Lab",
