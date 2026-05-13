@@ -8,6 +8,7 @@ import type {
 import { cn } from "@/utils/helpers";
 
 const typographyVariantClassNames: TypographyVariantClassNames = {
+  display: "font-sans text-7xl font-extrabold",
   h1: "font-sans text-5xl leading-13 font-extrabold",
   h2: "font-sans text-3xl leading-8 font-semibold",
   h3: "font-sans text-4xl leading-10 font-semibold",
@@ -18,6 +19,7 @@ const typographyVariantClassNames: TypographyVariantClassNames = {
 } as const;
 
 const typographyVariantElements: TypographyVariantElements = {
+  display: "h1",
   h1: "h1",
   h2: "h2",
   h3: "h3",

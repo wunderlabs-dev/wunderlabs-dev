@@ -36,9 +36,7 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
 
   return (
     <section id="lab" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
-      <Container variant="4xl">
-        <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
-      </Container>
+      <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
 
       <Container variant="7xl" className="border-b border-gray-100/30">
         <div className="grid grid-cols-1 md:grid-cols-3">

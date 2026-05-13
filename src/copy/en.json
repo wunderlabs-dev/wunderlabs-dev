@@ -9,6 +9,10 @@
     "title": "Focused software products.",
     "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
   },
+  "about": {
+    "kicker": "Wunderlabs",
+    "title": "<muted>We build tools agents</muted> use to ship reliable systems."
+  },
   "lab": {
     "kicker": "The lab",
     "title": "<muted>We are focus on</muted> reliable AI infrastructure",
@@ -52,7 +56,7 @@
     "join": "Join the movement",
     "events": "Check our events",
     "github": "GitHub",
-    "agentic": "Agentic.tm",
+    "agentic": "agentic.tm",
     "wunderlabsX": "X @wunderlabs"
   },
   "appBar": {

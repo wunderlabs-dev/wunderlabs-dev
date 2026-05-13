@@ -20,9 +20,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
 
   return (
     <section id="projects" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
-      <Container variant="4xl">
-        <TitleGroup subtitle={t("projects.kicker")} title={t.rich("projects.title", renderers)} />
-      </Container>
+      <TitleGroup subtitle={t("projects.kicker")} title={t.rich("projects.title", renderers)} />
 
       <Container variant="5xl">
         <Card>

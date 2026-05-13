@@ -21,9 +21,9 @@ const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
 
   return (
     <section id="community" className={cn("px-12", className)} {...props}>
-      <Container variant="4xl" className="flex flex-col gap-16">
-        <TitleGroup subtitle={t("community.kicker")} title={t.rich("community.title", renderers)} />
+      <TitleGroup subtitle={t("community.kicker")} title={t.rich("community.title", renderers)} />
 
+      <Container variant="4xl" className="flex flex-col gap-16">
         <Typography variant="body">{t.rich("community.through", renderers)}</Typography>
 
         <div className="flex items-center gap-4">

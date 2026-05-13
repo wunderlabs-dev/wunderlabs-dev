@@ -1,6 +1,6 @@
 import type { ComponentPropsWithoutRef, ElementType } from "react";
 
-export const TypographyVariants = ["h1", "h2", "h3", "body", "code", "body2", "caption"] as const;
+export const TypographyVariants = ["display", "h1", "h2", "h3", "body", "code", "body2", "caption"] as const;
 
 export type TypographyElement = ElementType;
 export type TypographyVariant = (typeof TypographyVariants)[number];
