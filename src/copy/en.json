@@ -10,7 +10,15 @@
     "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
   },
   "footer": {
+    "copyright": "© {year} Wunderlabs. All rights reserved.",
     "description": "Independent product studio",
-    "email": "hello@wunderlabs.dev"
+    "email": "hello@wunderlabs.dev",
+    "product": "Product",
+    "claudebin": "Claudebin",
+    "openable": "Openable",
+    "community": "Community",
+    "github": "GitHub",
+    "agentic": "Agentic.tm",
+    "wunderlabsX": "X @wunderlabs"
   }
 }

@@ -13,6 +13,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "@base-ui/react": "^1.4.1",
     "classnames": "^2.5.1",
     "es-toolkit": "^1.46.1",
     "next": "^16.2.6",

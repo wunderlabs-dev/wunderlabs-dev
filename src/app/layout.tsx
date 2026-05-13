@@ -5,6 +5,7 @@ import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
 import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 
+import { HomePageFooter } from "@/components/home-page-footer";
 import { cn } from "@/utils/helpers";
 
 import copy from "@/copy/en.json";
@@ -41,7 +42,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       )}
     >
       <body className="min-h-dvh">
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          {children}
+          <HomePageFooter />
+        </NextIntlClientProvider>
       </body>
     </html>
   );
