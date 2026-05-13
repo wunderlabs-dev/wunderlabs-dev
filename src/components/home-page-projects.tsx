@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import type { ComponentProps, ReactNode } from "react";
+import type { ComponentProps } from "react";
 
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -8,12 +8,9 @@ import { SvgIconArrowLink, SvgIconStatus } from "@/components/ui/svg-icon";
 import { TitleGroup } from "@/components/ui/title-group";
 import { Typography } from "@/components/ui/typography";
 import { cn } from "@/utils/helpers";
+import { renderers } from "@/utils/renderers";
 
 type HomePageProjectsProps = ComponentProps<"section">;
-
-const renderers = {
-  muted: (chunks: ReactNode) => <span className="block text-gray-200">{chunks}</span>,
-};
 
 const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   const t = useTranslations();

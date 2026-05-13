@@ -1,14 +1,13 @@
 "use client";
 
-import type { ComponentProps } from "react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-
-import { cn } from "@/utils/helpers";
+import type { ComponentProps } from "react";
 
 import { Container } from "@/components/ui/container";
-import { Typography } from "@/components/ui/typography";
 import { SvgIconWunderlabs } from "@/components/ui/svg-icon";
+import { Typography } from "@/components/ui/typography";
+import { cn } from "@/utils/helpers";
 
 type HomePageFooterProps = ComponentProps<"footer">;
 
@@ -53,7 +52,7 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
               </Typography>
 
               {section.links.map((item) => (
-                <Link key={item.href} href={item.href} className="text-gray-400">
+                <Link key={item.href} href={item.href} className="text-gray-400" target="_blank">
                   <Typography variant="body" as="span" className="whitespace-nowrap">
                     {t(item.labelKey)}
                   </Typography>
