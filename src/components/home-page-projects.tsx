@@ -4,21 +4,23 @@ import type { ComponentProps } from "react";
 import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { HomePageProjectsItem } from "@/components/home-page-projects-item";
 import { Container } from "@/components/ui/container";
-import { SvgIconArrowLink, SvgIconStatus } from "@/components/ui/svg-icon";
+import { Section } from "@/components/ui/section";
 import { TitleGroup } from "@/components/ui/title-group";
-import { Typography } from "@/components/ui/typography";
 
 type HomePageProjectsProps = ComponentProps<"section">;
+
+const projectColumnClassName =
+  "flex min-w-0 items-start before:mt-12 before:w-16 before:shrink-0 before:border-t before:border-gray-100/50";
 
 const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   const t = useTranslations();
 
   return (
-    <section
+    <Section
       id="projects"
+      pb="default"
       className={cn(
         "relative flex flex-col gap-24 px-12",
         "before:absolute before:inset-y-0 before:left-1/2 before:z-0 before:w-px before:bg-gray-100/50",
@@ -32,56 +34,30 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
         title={t.rich("projects.title", renderers)}
       />
 
-      <Container variant="5xl" className="relative z-10 flex flex-col gap-6">
-        <Card>
-          <div className="flex items-center gap-4">
-            <SvgIconStatus size="xs" />
-            <Typography variant="code">{t("projects.cards.claudebin.status")}</Typography>
-          </div>
+      <Container variant="5xl" className="relative z-10 grid grid-cols-1 md:grid-cols-2">
+        <div className={cn(projectColumnClassName, "flex-row-reverse")}>
+          <HomePageProjectsItem
+            status={t("projects.cards.claudebin.status")}
+            title={t("projects.cards.claudebin.title")}
+            description={t("projects.cards.claudebin.description")}
+            tags={t("projects.cards.claudebin.tags")}
+            launchLabel={t("projects.cards.claudebin.launchLabel")}
+            githubLabel={t("projects.cards.claudebin.githubLabel")}
+          />
+        </div>
 
-          <Typography variant="h2">{t("projects.cards.claudebin.title")}</Typography>
-          <Typography variant="body" className="text-gray-250">
-            {t("projects.cards.claudebin.description")}
-          </Typography>
-          <Typography variant="code" className="text-gray-250">
-            {t("projects.cards.claudebin.tags")}
-          </Typography>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <Button type="button" startAdornment={<SvgIconArrowLink className="size-5" />}>
-              {t("projects.cards.claudebin.launchLabel")}
-            </Button>
-            <Button type="button" variant="outlined">
-              {t("projects.cards.claudebin.githubLabel")}
-            </Button>
-          </div>
-        </Card>
-
-        <Card>
-          <div className="flex items-center gap-4">
-            <SvgIconStatus size="xs" />
-            <Typography variant="code">{t("projects.cards.openable.status")}</Typography>
-          </div>
-
-          <Typography variant="h2">{t("projects.cards.openable.title")}</Typography>
-          <Typography variant="body" className="text-gray-250">
-            {t("projects.cards.openable.description")}
-          </Typography>
-          <Typography variant="code" className="text-gray-250">
-            {t("projects.cards.openable.tags")}
-          </Typography>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <Button type="button" startAdornment={<SvgIconArrowLink className="size-5" />}>
-              {t("projects.cards.openable.launchLabel")}
-            </Button>
-            <Button type="button" variant="outlined">
-              {t("projects.cards.openable.githubLabel")}
-            </Button>
-          </div>
-        </Card>
+        <div className={cn(projectColumnClassName, "pt-48")}>
+          <HomePageProjectsItem
+            status={t("projects.cards.openable.status")}
+            title={t("projects.cards.openable.title")}
+            description={t("projects.cards.openable.description")}
+            tags={t("projects.cards.openable.tags")}
+            launchLabel={t("projects.cards.openable.launchLabel")}
+            githubLabel={t("projects.cards.openable.githubLabel")}
+          />
+        </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 

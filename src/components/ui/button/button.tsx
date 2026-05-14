@@ -13,7 +13,7 @@ const buttonVariantClassNames: ButtonVariantClassNames = {
 } as const;
 
 const buttonBaseClassName =
-  "inline-flex shrink-0 items-center justify-center gap-3 overflow-hidden rounded-4xl border px-5 py-3 text-center text-base leading-6 font-semibold whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50";
+  "inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-4xl border px-5 py-3 text-center text-base leading-6 font-semibold whitespace-nowrap transition-colors disabled:pointer-events-none disabled:opacity-50";
 
 const Button = ({ children, className, startAdornment, variant = "contained", ...props }: ButtonProps) => {
   return (

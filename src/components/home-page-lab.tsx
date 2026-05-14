@@ -6,6 +6,7 @@ import { renderers } from "@/utils/renderers";
 
 import { HomePageLabItem } from "@/components/home-page-lab-item";
 import { Container } from "@/components/ui/container";
+import { Section } from "@/components/ui/section";
 import { SvgIconBull, SvgIconFile, SvgIconPlay } from "@/components/ui/svg-icon";
 import { TitleGroup } from "@/components/ui/title-group";
 
@@ -33,7 +34,7 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
   const t = useTranslations();
 
   return (
-    <section id="lab" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
+    <Section id="lab" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
       <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
 
       <Container variant="7xl" className="border-b border-gray-100/30">
@@ -49,7 +50,7 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
           ))}
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 

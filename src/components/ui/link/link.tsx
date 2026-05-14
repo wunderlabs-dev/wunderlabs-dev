@@ -4,12 +4,9 @@ import type { LinkProps } from "./types";
 
 import { cn } from "@/utils/helpers";
 
-import { SvgIconExternalLink } from "@/components/ui/svg-icon";
+import { SvgIconArrowLink } from "@/components/ui/svg-icon";
 
-const Link = ({ children, className, endAdornment, ...props }: LinkProps) => {
-  const adornment =
-    endAdornment === undefined ? <SvgIconExternalLink className="size-5 text-gray-400" /> : endAdornment;
-
+const Link = ({ children, className, ...props }: LinkProps) => {
   return (
     <NextLink
       data-slot="link"
@@ -20,7 +17,7 @@ const Link = ({ children, className, endAdornment, ...props }: LinkProps) => {
       {...props}
     >
       {children}
-      {adornment}
+      <SvgIconArrowLink size="md" className="text-gray-400" />
     </NextLink>
   );
 };

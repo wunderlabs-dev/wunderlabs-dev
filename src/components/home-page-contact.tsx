@@ -6,6 +6,7 @@ import { renderers } from "@/utils/renderers";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { Section } from "@/components/ui/section";
 import { SvgIconContact } from "@/components/ui/svg-icon";
 import { TitleGroup } from "@/components/ui/title-group";
 import { Typography } from "@/components/ui/typography";
@@ -16,7 +17,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
   const t = useTranslations();
 
   return (
-    <section id="contact" className={cn("px-12", className)} {...props}>
+    <Section id="contact" className={cn("px-12", className)} {...props}>
       <Container variant="2xl">
         <div className="flex flex-col justify-between gap-16 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white">
           <div className="flex flex-col gap-4">
@@ -36,7 +37,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 

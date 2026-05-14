@@ -21,7 +21,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
   const t = useTranslations();
 
   return (
-    <header className={cn("sticky top-4", className)} {...props}>
+    <header className={cn("sticky top-4 z-50", className)} {...props}>
       <Container variant="4xl" className="flex items-center justify-center gap-3">
         <Link href="/" className="rounded-4xl bg-gray-150/10 px-6 py-4 backdrop-blur-2xl">
           <SvgIconSymbol className="h-6 text-gray-400" />
