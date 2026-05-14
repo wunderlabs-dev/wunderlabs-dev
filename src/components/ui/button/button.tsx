@@ -20,7 +20,7 @@ const buttonClassNames = cva(
     variants: {
       variant: {
         contained:
-          "border-gray-300 bg-gray-350 text-white before:bg-linear-to-br before:from-gray-350 before:to-gray-400",
+          "border-gray-350 bg-gray-350 text-white before:bg-linear-to-br before:from-gray-350 before:to-gray-400",
         outlined: "border-gray-300 bg-transparent text-gray-400 before:bg-gray-150/10",
         secondary:
           "border-gray-300 bg-gray-300 text-white before:bg-linear-to-br before:from-gray-300 before:to-gray-250 hover:border-gray-250",
