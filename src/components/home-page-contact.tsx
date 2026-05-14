@@ -17,7 +17,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="contact" className={cn("px-12", className)} {...props}>
+    <Section id="contact" className={cn("relative px-12", className)} {...props}>
       <Container variant="2xl">
         <div className="flex flex-col justify-between gap-16 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white">
           <div className="flex flex-col gap-4">
