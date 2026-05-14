@@ -41,7 +41,6 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             status={t("projects.cards.claudebin.status")}
             title={t("projects.cards.claudebin.title")}
             description={t("projects.cards.claudebin.description")}
-            tags={t("projects.cards.claudebin.tags")}
             launchLabel={t("projects.cards.claudebin.launchLabel")}
             githubLabel={t("projects.cards.claudebin.githubLabel")}
           />
@@ -53,7 +52,6 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             status={t("projects.cards.openable.status")}
             title={t("projects.cards.openable.title")}
             description={t("projects.cards.openable.description")}
-            tags={t("projects.cards.openable.tags")}
             launchLabel={t("projects.cards.openable.launchLabel")}
             githubLabel={t("projects.cards.openable.githubLabel")}
           />

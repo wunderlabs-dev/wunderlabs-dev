@@ -14,7 +14,6 @@ type HomePageProjectsItemProps = ComponentProps<typeof Card> & {
   githubLabel: string;
   launchLabel: string;
   status: string;
-  tags: string;
   title: string;
 };
 
@@ -25,7 +24,6 @@ const HomePageProjectsItem = ({
   githubLabel,
   launchLabel,
   status,
-  tags,
   title,
   ...props
 }: HomePageProjectsItemProps) => {
@@ -45,10 +43,6 @@ const HomePageProjectsItem = ({
             {description}
           </Typography>
         </div>
-
-        <Typography variant="code" className="text-gray-250">
-          {tags}
-        </Typography>
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
