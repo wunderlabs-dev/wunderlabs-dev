@@ -4,6 +4,8 @@
   --font-sans: var(--font-host-grotesk);
   --font-mono: var(--font-jetbrains-mono);
 
+  --container-8xl: 1440px;
+
   --color-gray-50: #ffffff;
   --color-gray-100: #b5b5b5;
   --color-gray-150: #999793;
