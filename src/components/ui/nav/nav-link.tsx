@@ -5,15 +5,17 @@ import { isNil } from "es-toolkit";
 
 import { cn } from "@/utils/helpers";
 
-type NavLinkProps = Omit<ComponentProps<"button">, "type"> & {
-  href: string;
+type NavLinkProps = ComponentProps<"span"> & {
+  href?: `#${string}`;
 };
 
+const SCROLL_CENTER_DIVISOR = 2;
+
 const NavLink = ({ className, href, onClick, ...props }: NavLinkProps) => {
-  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+  const handleClick = (event: MouseEvent<HTMLSpanElement>) => {
     onClick?.(event);
 
-    if (event.defaultPrevented) {
+    if (event.defaultPrevented || isNil(href)) {
       return;
     }
 
@@ -23,13 +25,23 @@ const NavLink = ({ className, href, onClick, ...props }: NavLinkProps) => {
       return;
     }
 
-    target.scrollIntoView({
-      behavior: "smooth",
-      block: "center",
-    });
+    const targetRect = target.getBoundingClientRect();
+    const top = window.scrollY + targetRect.top - (window.innerHeight - targetRect.height) / SCROLL_CENTER_DIVISOR;
+
+    window.scrollTo({ top, behavior: "smooth" });
   };
 
-  return <button type="button" data-slot="nav-link" className={cn(className)} onClick={handleClick} {...props} />;
+  return (
+    <span
+      data-slot="nav-link"
+      className={cn(
+        "inline-flex cursor-pointer select-none items-center rounded-4xl text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out hover:text-gray-400",
+        className,
+      )}
+      onClick={handleClick}
+      {...props}
+    />
+  );
 };
 
 export { NavLink };
