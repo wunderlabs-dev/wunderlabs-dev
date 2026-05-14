@@ -17,7 +17,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
 
   return (
     <Section id="contact" className={className} {...props}>
-      {/* <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-5xl -translate-x-1/2 rounded-full border border-gray-100/50" /> */}
+      <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-5xl -translate-x-1/2 rounded-full border border-gray-100/50" />
 
       <Container variant="2xl">
         <div className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
