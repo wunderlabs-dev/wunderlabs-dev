@@ -1,11 +1,15 @@
 import type { ComponentProps } from "react";
 
+import { cn } from "@/utils/helpers";
+
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { SvgIconArrowLink, SvgIconStatus } from "@/components/ui/svg-icon";
 import { Typography } from "@/components/ui/typography";
 
 type HomePageProjectsItemProps = ComponentProps<typeof Card> & {
+  badge: string;
   description: string;
   githubLabel: string;
   launchLabel: string;
@@ -15,6 +19,8 @@ type HomePageProjectsItemProps = ComponentProps<typeof Card> & {
 };
 
 const HomePageProjectsItem = ({
+  badge,
+  className,
   description,
   githubLabel,
   launchLabel,
@@ -24,7 +30,9 @@ const HomePageProjectsItem = ({
   ...props
 }: HomePageProjectsItemProps) => {
   return (
-    <Card {...props}>
+    <Card className={cn("relative", className)} {...props}>
+      <Badge className="absolute top-0 right-0 -translate-y-1/2 -translate-x-12">{badge}</Badge>
+
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">
           <SvgIconStatus size="xs" />

@@ -120,6 +120,8 @@ const t = useTranslations();
 return <h1>{t("home.title")}</h1>;
 ```
 
+All visible UI copy must come from translations with `t(...)` or `t.rich(...)`; do not hardcode user-facing strings in components.
+
 For rich text, define renderers inline in the consuming component:
 
 ```tsx

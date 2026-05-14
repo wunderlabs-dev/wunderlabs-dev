@@ -34,6 +34,7 @@
   "projects": {
     "kicker": "Projects",
     "title": "<muted>From research</muted> to production.",
+    "badge": "Open Source",
     "cards": {
       "claudebin": {
         "status": "All systems operational",

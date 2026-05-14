@@ -37,6 +37,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
       <Container variant="5xl" className="relative z-10 grid grid-cols-1 md:grid-cols-2">
         <div className={cn(projectColumnClassName, "flex-row-reverse")}>
           <HomePageProjectsItem
+            badge={t("projects.badge")}
             status={t("projects.cards.claudebin.status")}
             title={t("projects.cards.claudebin.title")}
             description={t("projects.cards.claudebin.description")}
@@ -48,6 +49,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
 
         <div className={cn(projectColumnClassName, "pt-48")}>
           <HomePageProjectsItem
+            badge={t("projects.badge")}
             status={t("projects.cards.openable.status")}
             title={t("projects.cards.openable.title")}
             description={t("projects.cards.openable.description")}
