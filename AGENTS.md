@@ -82,6 +82,8 @@ Prefer existing design tokens over arbitrary values. Keep class lists readable; 
 
 If class merging becomes necessary, use a small shared helper in `src/utils/helpers.ts` built from `classnames` and `tailwind-merge`.
 
+Do not extract tiny static class lists into constants such as `navLinkClassName`. Keep simple Tailwind classes inline at the call site. Extract classes only for real variants, conditional branches, or substantial repeated patterns.
+
 Never concatenate class names with template literals or `+`. Use `cn(...)` for composed or conditional `className` values.
 
 For conditional values, do not use boolean short-circuit expressions like `condition && value`; use an explicit ternary, such as `condition ? value : undefined`.

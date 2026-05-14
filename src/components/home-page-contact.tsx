@@ -28,9 +28,11 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
           </div>
 
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
-            <Button type="button" variant="secondary" startAdornment={<SvgIconContact className="size-5" />}>
-              {t("contact.cta")}
-            </Button>
+            <a href="mailto:contact@wunderlabs.dev">
+              <Button type="button" variant="secondary" startAdornment={<SvgIconContact className="size-5" />}>
+                {t("contact.cta")}
+              </Button>
+            </a>
 
             <div className="flex flex-col gap-2 md:items-end">
               <Typography variant="code">{t("contact.email")}</Typography>
