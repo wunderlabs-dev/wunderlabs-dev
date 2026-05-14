@@ -6,7 +6,7 @@ import { HomePageProjects } from "@/components/home-page-projects";
 
 const Home = () => {
   return (
-    <main>
+    <main className="overflow-hidden">
       <HomePageAbout />
       <HomePageLab />
       <HomePageProjects />
