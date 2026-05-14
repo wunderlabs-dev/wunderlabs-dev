@@ -34,18 +34,18 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
   const t = useTranslations();
 
   return (
-    <footer data-slot="footer" className={cn("px-12 pt-6 pb-12", className)} {...props}>
+    <footer data-slot="footer" className={cn("px-6 pt-6 pb-12 lg:px-12", className)} {...props}>
       <Container className="flex w-full flex-col-reverse justify-between gap-12 lg:flex-row">
-        <div className="flex min-w-px flex-1 flex-col items-start justify-between gap-12 pr-12">
+        <div className="flex min-w-px flex-1 flex-col items-start justify-between gap-12 lg:pr-12">
           <Link href="/" aria-label={t("site.title")}>
             <SvgIconWunderlabs className="h-6 w-full max-w-xl text-gray-400" />
           </Link>
-          <Typography variant="body" className="leading-normal whitespace-nowrap text-gray-250">
+          <Typography variant="body" className="whitespace-nowrap leading-normal text-gray-250">
             {t("footer.copyright", { year: new Date().getFullYear() })}
           </Typography>
         </div>
 
-        <div className="flex shrink-0 flex-col gap-6 sm:flex-row sm:gap-12">
+        <div className="flex flex-col shrink-0 gap-6 sm:flex-row sm:gap-12">
           {links.map((section) => (
             <nav key={section.title} className="flex flex-col gap-3">
               <Typography variant="body2" as="h2" className="whitespace-nowrap text-gray-400">

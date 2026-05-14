@@ -42,7 +42,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         "bg-cream-50 font-sans text-gray-400 antialiased scroll-smooth",
       )}
     >
-      <body className="min-h-dvh">
+      <body>
         <NextIntlClientProvider>
           <HomePageAppBar />
           {children}

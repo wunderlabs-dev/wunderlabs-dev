@@ -20,7 +20,7 @@ const HomePageLabItem = ({
   ...props
 }: HomePageLabItemProps) => {
   return (
-    <article className={cn("flex min-w-0 flex-col gap-3 pt-12", className)} {...props}>
+    <article className={cn("flex min-w-0 flex-col gap-3 lg:pt-12", className)} {...props}>
       <div className="flex flex-col gap-3 px-12">
         {startAdornment}
         <Typography variant="body2" as="h3">
@@ -28,7 +28,12 @@ const HomePageLabItem = ({
         </Typography>
       </div>
 
-      <div className={cn("border-l border-gray-100/30 px-12 pb-12", withRightBorder ? "border-r" : undefined)}>
+      <div
+        className={cn(
+          "h-full border-x border-b border-gray-100/30 px-12 pb-12 lg:border-r-0 lg:border-b-0 lg:border-l",
+          withRightBorder ? "lg:border-r" : undefined,
+        )}
+      >
         <Typography variant="body" className="text-gray-250">
           {description}
         </Typography>

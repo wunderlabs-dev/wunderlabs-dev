@@ -29,7 +29,7 @@ const HomePageProjectsItem = ({
 }: HomePageProjectsItemProps) => {
   return (
     <Card className={cn("relative", className)} {...props}>
-      <Badge className="absolute top-0 right-0 -translate-y-1/2 -translate-x-12">{badge}</Badge>
+      <Badge className="absolute top-0 right-0 -translate-x-8 -translate-y-1/2">{badge}</Badge>
 
       <div className="flex flex-col gap-4">
         <div className="flex items-center gap-4">

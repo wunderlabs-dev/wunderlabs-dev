@@ -34,11 +34,11 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="lab" className={cn("flex flex-col gap-24 px-12", className)} {...props}>
+    <Section id="lab" className={cn("flex flex-col gap-24", className)} {...props}>
       <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
 
-      <Container variant="7xl" className="border-b border-gray-100/30">
-        <div className="grid grid-cols-1 md:grid-cols-3">
+      <Container variant="7xl" className="border-gray-100/30 lg:border-b">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-0">
           {sections.map(({ description, Icon, title }, index) => (
             <HomePageLabItem
               key={title}

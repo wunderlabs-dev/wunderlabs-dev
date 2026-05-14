@@ -7,14 +7,14 @@ import { cn } from "@/utils/helpers";
 const typographyClassNames = cva("", {
   variants: {
     variant: {
-      display: "font-sans text-7xl leading-17 font-extrabold",
-      h1: "font-sans text-5xl leading-13 font-extrabold",
+      display: "font-sans text-5xl leading-13 font-extrabold lg:text-7xl lg:leading-17",
+      h1: "font-sans text-3xl leading-8 font-extrabold lg:text-5xl lg:leading-13",
       h2: "font-sans text-3xl leading-8 font-semibold",
       h3: "font-sans text-4xl leading-10 font-semibold",
       body: "font-sans text-base leading-6",
       code: "font-mono text-sm leading-5 font-normal",
-      body2: "font-sans text-2xl leading-6 font-semibold",
-      caption: "font-sans text-xs leading-[18px]",
+      body2: "font-sans text-lg leading-6 font-semibold lg:text-2xl",
+      caption: "font-sans text-xs",
     },
   },
   defaultVariants: {

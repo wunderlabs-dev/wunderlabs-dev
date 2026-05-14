@@ -8,8 +8,8 @@ const navLinkVariants = cva(
   [
     "inline-flex items-center",
     "rounded-4xl px-4 py-3",
-    "text-base leading-6 font-normal",
     "cursor-pointer select-none",
+    "text-base leading-6 font-normal",
     "transition-colors duration-150 ease-in-out",
   ],
   {

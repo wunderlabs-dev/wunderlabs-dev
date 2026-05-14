@@ -1,7 +1,6 @@
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
-import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
 import { Button } from "@/components/ui/button";
@@ -17,10 +16,10 @@ const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="community" pt="none" className={cn("relative px-12", className)} {...props}>
-      <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-8xl -translate-x-1/2 rounded-full border border-gray-100/50" />
+    <Section id="community" pt="none" className={className} {...props}>
+      {/* <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-8xl -translate-x-1/2 rounded-full border border-gray-100/50" /> */}
 
-      <Container variant="4xl" className="relative z-10 flex flex-col gap-16">
+      <Container variant="4xl" className="relative z-10 flex flex-col gap-8 md:gap-16">
         <TitleGroup subtitle={t("community.kicker")} title={t.rich("community.title", renderers)} />
 
         <div className="flex max-w-lg flex-col gap-2">

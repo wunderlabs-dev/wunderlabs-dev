@@ -1,6 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import type { ComponentProps } from "react";
+import { type ComponentProps } from "react";
 
 import { cn } from "@/utils/helpers";
 
@@ -31,13 +33,18 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
           <SvgIconSymbol className="h-6 text-gray-400" />
         </Link>
 
-        <div className="flex items-center gap-12 rounded-4xl bg-gray-150/10 p-1 backdrop-blur-2xl">
+        <div className="flex items-center gap-0 rounded-4xl bg-gray-150/10 p-1 backdrop-blur-2xl lg:gap-12">
           <Nav>
-            {links.map((link) => (
-              <NavLink key={link.href} href={link.href}>
-                {t(link.labelKey)}
-              </NavLink>
-            ))}
+            <div className="hidden md:flex">
+              {links.map((link) => (
+                <NavLink key={link.href} href={link.href}>
+                  {t(link.labelKey)}
+                </NavLink>
+              ))}
+            </div>
+            <span className="cursor-pointer select-none px-4 py-3 text-base leading-6 text-gray-250 hover:text-gray-400 md:hidden">
+              {t("appBar.menu")}
+            </span>
           </Nav>
 
           <Link href="/#contact">

@@ -46,7 +46,7 @@ const Nav = ({ className, children }: NavProps) => {
     <nav
       ref={navRef}
       data-slot="nav"
-      className={cn("relative flex items-center gap-1", className)}
+      className={cn("relative items-center gap-1", className)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
