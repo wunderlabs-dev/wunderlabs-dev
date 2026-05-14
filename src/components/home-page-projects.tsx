@@ -26,7 +26,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
       {...props}
     >
       <TitleGroup
-        className="relative z-10"
+        className="relative z-10 bg-cream-50 sm:bg-transparent pb-8 sm:pb-0"
         subtitle={t("projects.kicker")}
         title={t.rich("projects.title", renderers)}
       />
