@@ -34,7 +34,11 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
   const t = useTranslations();
 
   return (
-    <footer data-slot="footer" className={cn("px-6 pt-6 pb-12 lg:px-12", className)} {...props}>
+    <footer
+      data-slot="footer"
+      className={cn("relative z-10 bg-cream-50 px-6 pt-6 pb-12 lg:px-12", className)}
+      {...props}
+    >
       <Container className="flex w-full flex-col-reverse justify-between gap-12 lg:flex-row">
         <div className="flex min-w-px flex-1 flex-col items-start justify-between gap-12 lg:pr-12">
           <Link href="/" aria-label={t("site.title")}>

@@ -12,7 +12,7 @@ import { Nav, NavLink } from "@/components/ui/nav";
 import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
 
 const links = [
-  { href: "/", labelKey: "appBar.wunderlabs" },
+  { href: "#about", labelKey: "appBar.wunderlabs" },
   { href: "#lab", labelKey: "appBar.lab" },
   { href: "#projects", labelKey: "appBar.projects" },
   { href: "#community", labelKey: "appBar.community" },
@@ -37,7 +37,11 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
           <Nav>
             <div className="hidden md:flex">
               {links.map((link) => (
-                <NavLink key={link.href} href={link.href}>
+                <NavLink
+                  key={link.href}
+                  href={link.href}
+                  className="inline-flex items-center rounded-4xl px-4 py-3 cursor-pointer select-none text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out hover:text-gray-400"
+                >
                   {t(link.labelKey)}
                 </NavLink>
               ))}
@@ -47,9 +51,9 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
             </span>
           </Nav>
 
-          <Link href="/#contact">
+          <NavLink href="#contact">
             <Button startAdornment={<SvgIconContact />}>{t("appBar.cta")}</Button>
-          </Link>
+          </NavLink>
         </div>
       </Container>
     </header>
