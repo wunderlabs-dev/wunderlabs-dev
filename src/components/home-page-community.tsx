@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
@@ -36,12 +37,16 @@ const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
         </div>
 
         <div className="flex flex-wrap items-center gap-3">
-          <Button type="button" startAdornment={<SvgIconGlobe className="size-5" />}>
-            {t("community.join")}
-          </Button>
-          <Button type="button" variant="outlined">
-            {t("community.events")}
-          </Button>
+          <NextLink href="https://agentic.tm" target="_blank" rel="noreferrer">
+            <Button type="button" startAdornment={<SvgIconGlobe className="size-5" />}>
+              {t("community.join")}
+            </Button>
+          </NextLink>
+          <NextLink href="https://luma.com/agentictm" target="_blank" rel="noreferrer">
+            <Button type="button" variant="outlined">
+              {t("community.events")}
+            </Button>
+          </NextLink>
         </div>
       </Container>
     </Section>

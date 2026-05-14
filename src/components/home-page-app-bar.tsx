@@ -28,12 +28,12 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
       <Container variant="4xl" className="flex items-center justify-center gap-3">
         <Link
           href="/"
-          className="rounded-4xl bg-gray-150/10 px-6 py-4 backdrop-blur-2xl transition-colors hover:bg-gray-150/20"
+          className="rounded-4xl bg-cream-100/30 px-6 py-4 backdrop-blur-2xl transition-colors hover:bg-cream-100/50"
         >
           <SvgIconSymbol className="h-6 text-gray-400" />
         </Link>
 
-        <div className="flex items-center gap-0 rounded-4xl bg-gray-150/10 p-1 backdrop-blur-2xl lg:gap-12">
+        <div className="flex items-center gap-0 rounded-4xl bg-cream-100/30 p-1 backdrop-blur-2xl lg:gap-12">
           <Nav>
             <div className="hidden md:flex">
               {links.map((link) => (
