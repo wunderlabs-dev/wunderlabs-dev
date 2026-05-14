@@ -30,7 +30,7 @@ const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
             <Typography variant="h3" className="shrink-0">
               {t("community.stat.value")}
             </Typography>
-            <Typography variant="body" className="min-w-px flex-1">
+            <Typography variant="body" className="min-w-px flex-1 text-pretty">
               {t("community.stat.description")}
             </Typography>
           </div>

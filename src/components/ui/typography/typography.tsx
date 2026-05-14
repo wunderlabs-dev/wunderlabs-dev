@@ -7,7 +7,7 @@ import { cn } from "@/utils/helpers";
 const typographyClassNames = cva("", {
   variants: {
     variant: {
-      display: "font-sans text-5xl leading-13 font-extrabold lg:text-7xl lg:leading-17",
+      display: "font-sans text-3xl leading-8 font-extrabold md:text-5xl md:leading-13 lg:text-7xl lg:leading-17",
       h1: "font-sans text-3xl leading-8 font-extrabold lg:text-5xl lg:leading-13",
       h2: "font-sans text-3xl leading-8 font-semibold",
       h3: "font-sans text-4xl leading-10 font-semibold",

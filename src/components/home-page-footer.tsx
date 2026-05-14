@@ -44,7 +44,7 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
           <Link href="/" aria-label={t("site.title")}>
             <SvgIconWunderlabs className="h-6 w-full max-w-xl text-gray-400" />
           </Link>
-          <Typography variant="body" className="whitespace-nowrap leading-normal text-gray-250">
+          <Typography variant="body" className="leading-normal text-gray-250 sm:whitespace-nowrap">
             {t("footer.copyright", { year: new Date().getFullYear() })}
           </Typography>
         </div>
