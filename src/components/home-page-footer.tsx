@@ -36,7 +36,7 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
   return (
     <footer
       data-slot="footer"
-      className={cn("relative z-10 bg-cream-50 px-6 pt-6 pb-12 lg:px-12", className)}
+      className={cn("relative z-10 bg-cream-50 px-6 pt-6 pb-6 sm:pb-12 lg:px-12", className)}
       {...props}
     >
       <Container className="flex w-full flex-col-reverse justify-between gap-12 lg:flex-row">

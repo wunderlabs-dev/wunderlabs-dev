@@ -24,7 +24,7 @@ const appBar = {
   transition: {
     duration: 0.84,
     ease: [0.16, 1, 0.3, 1],
-    delay: 0,
+    delay: 0.2,
   },
 } as const;
 
@@ -40,7 +40,7 @@ const about = {
   transition: {
     duration: 1,
     ease: [0.16, 1, 0.3, 1],
-    delay: 0.16,
+    delay: 0.44,
   },
 } as const;
 
