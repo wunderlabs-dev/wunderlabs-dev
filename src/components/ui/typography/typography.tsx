@@ -12,8 +12,8 @@ const typographyClassNames = cva("", {
       h2: "font-sans text-3xl leading-8 font-semibold",
       h3: "font-sans text-4xl leading-10 font-semibold",
       body: "font-sans text-base leading-6",
-      code: "font-mono text-sm leading-5 font-normal",
       body2: "font-sans text-lg leading-6 font-semibold lg:text-2xl",
+      code: "font-mono text-sm leading-5 font-normal",
       caption: "font-sans text-xs",
     },
   },
@@ -28,9 +28,9 @@ const typographyVariantElements: TypographyVariantElements = {
   h2: "h2",
   h3: "h3",
   body: "p",
-  code: "p",
   body2: "p",
-  caption: "p",
+  code: "span",
+  caption: "small",
 } as const;
 
 const Typography = <TElement extends TypographyElement = "p">({
