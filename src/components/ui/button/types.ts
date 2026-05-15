@@ -1,7 +1,7 @@
 import type { ButtonProps as BaseButtonProps } from "@base-ui/react/button";
 import type { ReactNode } from "react";
 
-export const ButtonVariants = ["contained", "outlined", "secondary"] as const;
+export const ButtonVariants = ["base", "contained", "outlined", "secondary"] as const;
 
 export type ButtonVariant = (typeof ButtonVariants)[number];
 
