@@ -20,16 +20,16 @@
     "title": "<muted>We are focus on</muted> reliable AI infrastructure",
     "pillars": {
       "eval": {
-        "title": "Eval-Driven Development",
-        "description": "You can't ship agents without knowing when they regress. Most teams run evals once, manually, then iterate blind. We're building eval infrastructure that runs in CI, surfaces failures early, and makes quality gates enforceable."
+        "title": "Harnesses",
+        "description": "Test agent behavior across real workflows, regressions, and long-running tasks with reproducible harnesses."
       },
       "execution": {
-        "title": "Execution Environments",
-        "description": "Long-running agents need sandboxes that don't leak state, can snapshot mid-execution, and recover from failure without losing context. We're focused on the runtime layer that makes multi-step workflows deterministic."
+        "title": "Agentic Dev Envs",
+        "description": "Run and modify generated codebases in isolated, deterministic environments with zero local setup."
       },
       "telemetry": {
-        "title": "Runtime Telemetry",
-        "description": "When an agent fails in production, you need the state trace, not a log line. We're building tooling for inspecting tool calls, prompt histories, and decision trees at the granularity that actually helps you fix the problem."
+        "title": "Human-in-the-Loop",
+        "description": "Inspect traces, review tool calls, replay failures, and keep humans involved where reliability matters."
       }
     }
   },
