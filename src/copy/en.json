@@ -2,7 +2,8 @@
   "site": {
     "title": "W/underlabs",
     "domain": "wunderlabs.dev",
-    "label": "Software lab"
+    "label": "Software lab",
+    "description": "We build tools agents use to ship reliable systems."
   },
   "home": {
     "kicker": "W/underlabs",

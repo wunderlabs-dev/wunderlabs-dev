@@ -24,6 +24,7 @@ const jetBrainsMono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: copy.site.title,
+  description: copy.site.description,
   icons: {
     icon: "/favicon.svg",
   },
