@@ -81,6 +81,9 @@
     "description": "Looking for engineers, researchers, and investors who believe AI infrastructure must be serious, reliable, and production-ready.",
     "cta": "Contact us",
     "email": "contact@wunderlabs.dev",
+    "copyEmail": "Copy",
+    "copiedEmail": "Copied",
+    "copyEmailAria": "Copy contact email",
     "location": "Based in Europe"
   },
   "footer": {

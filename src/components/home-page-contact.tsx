@@ -1,9 +1,11 @@
+import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
 import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
+import { HomePageContactEmail } from "@/components/home-page-contact-email";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -28,14 +30,14 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
           </div>
 
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
-            <a href="mailto:contact@wunderlabs.dev">
+            <NextLink href="mailto:contact@wunderlabs.dev" target="_blank" rel="noreferrer">
               <Button type="button" variant="secondary" startAdornment={<SvgIconContact className="size-5" />}>
                 {t("contact.cta")}
               </Button>
-            </a>
+            </NextLink>
 
             <div className="flex flex-col gap-2 md:items-end">
-              <Typography variant="code">{t("contact.email")}</Typography>
+              <HomePageContactEmail />
               <Typography variant="caption">{t("contact.location")}</Typography>
             </div>
           </div>
