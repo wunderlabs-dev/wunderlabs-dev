@@ -5,9 +5,6 @@ import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
 
-import { HomePageAppBar } from "@/components/home-page-app-bar";
-import { HomePageFooter } from "@/components/home-page-footer";
-
 import copy from "@/copy/en.json";
 import "@/static/css/globals.css";
 
@@ -43,11 +40,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       )}
     >
       <body>
-        <NextIntlClientProvider>
-          <HomePageAppBar />
-          {children}
-          <HomePageFooter />
-        </NextIntlClientProvider>
+        <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
   );

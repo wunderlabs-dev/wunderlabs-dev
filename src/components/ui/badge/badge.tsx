@@ -1,18 +1,26 @@
-import type { BadgeProps } from "./types";
+import type { BadgeProps, BadgeVariantMapping } from "./types";
+
+import { cva } from "class-variance-authority";
 
 import { cn } from "@/utils/helpers";
 
-const Badge = ({ className, ...props }: BadgeProps) => {
-  return (
-    <span
-      data-slot="badge"
-      className={cn(
-        "inline-flex items-center rounded-4xl bg-gray-300 px-2 py-0.5 font-sans text-sm leading-5 text-gray-50",
-        className,
-      )}
-      {...props}
-    />
-  );
+const badgeVariantClassNames: BadgeVariantMapping = {
+  solid: "bg-gray-300 px-2 py-0.5 text-sm leading-5 font-normal text-gray-50",
+  contained: "bg-gray-50 px-2 py-0.5 text-xs leading-4 font-semibold text-gray-400",
+  overlay: "bg-cream-50/80 px-2 py-0.5 text-sm leading-5 font-normal text-gray-400 backdrop-blur-2xl",
+};
+
+const badgeClassNames = cva("inline-flex items-center rounded-4xl font-sans whitespace-nowrap", {
+  variants: {
+    variant: badgeVariantClassNames,
+  },
+  defaultVariants: {
+    variant: "solid",
+  },
+});
+
+const Badge = ({ className, variant = "solid", ...props }: BadgeProps) => {
+  return <span data-slot="badge" className={cn(badgeClassNames({ variant }), className)} {...props} />;
 };
 
 export default Badge;

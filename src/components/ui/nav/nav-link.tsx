@@ -14,7 +14,7 @@ const NavLink = ({ children, className, href, ...props }: NavLinkProps) => {
       href={href}
       {...props}
       className={cn(
-        "inline-flex cursor-pointer items-center rounded-4xl text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out select-none hover:text-gray-400",
+        "inline-flex gap-2 cursor-pointer items-center rounded-4xl text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out select-none hover:text-gray-400",
         className,
       )}
     >

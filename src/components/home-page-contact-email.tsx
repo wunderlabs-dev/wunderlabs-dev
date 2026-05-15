@@ -6,6 +6,7 @@ import { useCopyToClipboard } from "usehooks-ts";
 
 import { cn } from "@/utils/helpers";
 
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 
@@ -51,9 +52,12 @@ const HomePageContactEmail = ({ className, ...props }: HomePageContactEmailProps
         {email}
       </Typography>
 
-      <span className="inline-flex max-w-0 shrink-0 translate-x-2 items-center overflow-hidden rounded-4xl bg-gray-50 px-0 py-0.5 font-sans text-xs font-semibold whitespace-nowrap text-gray-400 opacity-0 transition-all duration-200 ease-out group-hover:max-w-16 group-hover:translate-x-0 group-hover:px-2 group-hover:opacity-100 group-focus-visible:max-w-16 group-focus-visible:translate-x-0 group-focus-visible:px-2 group-focus-visible:opacity-100">
+      <Badge
+        variant="contained"
+        className="max-w-0 shrink-0 translate-x-2 overflow-hidden px-0 opacity-0 transition-all duration-200 ease-out group-hover:max-w-16 group-hover:translate-x-0 group-hover:px-2 group-hover:opacity-100 group-focus-visible:max-w-16 group-focus-visible:translate-x-0 group-focus-visible:px-2 group-focus-visible:opacity-100"
+      >
         {copied ? t("contact.copiedEmail") : t("contact.copyEmail")}
-      </span>
+      </Badge>
     </Button>
   );
 };

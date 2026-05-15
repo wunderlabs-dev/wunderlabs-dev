@@ -7,7 +7,8 @@
   "home": {
     "kicker": "W/underlabs",
     "title": "Focused software products.",
-    "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft."
+    "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft.",
+    "notAHuman": "Not a human?"
   },
   "about": {
     "kicker": "Wunderlabs",
@@ -67,8 +68,8 @@
     "wunderlabsX": "X @wunderlabs"
   },
   "appBar": {
-    "wunderlabs": "Wunderlabs",
-    "lab": "The Lab",
+    "home": "Home",
+    "about": "About",
     "projects": "Projects",
     "backedBy": "Backed by",
     "community": "Community",
@@ -80,7 +81,7 @@
     "title": "<muted>Building with the open.</muted> Ship with us.",
     "description": "Looking for engineers, researchers, and investors who believe AI infrastructure must be serious, reliable, and production-ready.",
     "cta": "Contact us",
-    "email": "contact@wunderlabs.dev",
+    "email": "office@wunderlabs.dev",
     "copyEmail": "Copy",
     "copiedEmail": "Copied",
     "copyEmailAria": "Copy contact email",
