@@ -67,11 +67,6 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
                     </NavLink>
                   </DrawerClose>
                 ))}
-                <DrawerClose asChild>
-                  <NavLink href="#contact" className="px-4 py-3 text-gray-50">
-                    {t("cta")}
-                  </NavLink>
-                </DrawerClose>
               </DrawerContent>
             </Drawer>
           </Nav>

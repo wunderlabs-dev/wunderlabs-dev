@@ -2,7 +2,7 @@ import src1 from "../../public/app-1@2x.webp";
 import src2 from "../../public/app-2@2x.webp";
 
 import { HomePageAbout } from "@/components/home-page-about";
-import HomePageAppImage from "@/components/home-page-app-image";
+import { HomePageAppImage } from "@/components/home-page-app-image";
 import { HomePageContact } from "@/components/home-page-contact";
 import { HomePageCommunity } from "@/components/home-page-community";
 import { HomePageLab } from "@/components/home-page-lab";

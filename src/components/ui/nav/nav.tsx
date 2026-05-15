@@ -54,7 +54,7 @@ const Nav = ({ className, children }: NavProps) => {
       <AnimatePresence>
         {isNil(posX) ? null : (
           <motion.div
-            className="absolute bottom-1 h-0.5 w-1 rounded-full bg-gray-400"
+            className="absolute bottom-1 h-0.5 w-1 rounded-full bg-gray-400 hidden md:block"
             initial={indicator.hidden}
             exit={indicator.hidden}
             transition={indicator.transition}

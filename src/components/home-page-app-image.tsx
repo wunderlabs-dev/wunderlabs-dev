@@ -22,4 +22,4 @@ const HomePageAppImage = ({ className, src }: HomePageAppImageProps) => {
   );
 };
 
-export default HomePageAppImage;
+export { HomePageAppImage };

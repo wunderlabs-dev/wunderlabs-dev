@@ -4,7 +4,7 @@ import type { TypographyElement, TypographyProps, TypographyVariantElements } fr
 
 import { cn } from "@/utils/helpers";
 
-const typographyClassNames = cva("", {
+const typographyClassNames = cva(null, {
   variants: {
     variant: {
       display: "font-sans text-3xl leading-8 font-extrabold md:text-5xl md:leading-13 lg:text-7xl lg:leading-17",

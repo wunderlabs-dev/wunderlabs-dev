@@ -34,12 +34,12 @@ const NavLink = ({ className, href, onClick, ...props }: NavLinkProps) => {
   return (
     <span
       data-slot="nav-link"
+      {...props}
       className={cn(
         "inline-flex cursor-pointer items-center rounded-4xl text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out select-none hover:text-gray-400",
         className,
       )}
       onClick={handleClick}
-      {...props}
     />
   );
 };
