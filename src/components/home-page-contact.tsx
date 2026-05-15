@@ -5,13 +5,13 @@ import type { ComponentProps } from "react";
 import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
-import { HomePageContactEmail } from "@/components/home-page-contact-email";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SvgIconContact } from "@/components/ui/svg-icon";
-import { TitleGroup } from "@/components/ui/title-group";
 import { Typography } from "@/components/ui/typography";
+
+import { HomePageContactEmail } from "@/components/home-page-contact-email";
 
 type HomePageContactProps = ComponentProps<"section">;
 
@@ -24,9 +24,13 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
 
       <Container variant="2xl">
         <div className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
-          <div className="flex flex-col gap-4">
-            <TitleGroup subtitle={t("contact.kicker")} title={t.rich("contact.title", renderers)} />
-            <Typography variant="body">{t("contact.description")}</Typography>
+          <div className="flex flex-col gap-3">
+            <Typography variant="code">{t("contact.kicker")}</Typography>
+
+            <div className="flex flex-col gap-4">
+              <Typography variant="h1">{t.rich("contact.title", renderers)}</Typography>
+              <Typography variant="body">{t("contact.description")}</Typography>
+            </div>
           </div>
 
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
@@ -36,7 +40,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
               </Button>
             </NextLink>
 
-            <div className="flex flex-col gap-2 md:items-end">
+            <div className="flex flex-col gap-1 md:items-end">
               <HomePageContactEmail />
               <Typography variant="caption">{t("contact.location")}</Typography>
             </div>
