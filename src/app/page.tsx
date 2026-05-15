@@ -21,7 +21,7 @@ const Home = () => {
           src={src2}
           alt={copy.site.label}
           sizes="(min-width: 1080px) 1080px, 100vw"
-          className="pointer-events-none w-[1858px] max-w-none shrink-0 select-none"
+          className="pointer-events-none w-auto max-w-8xl shrink-0 select-none"
         />
       </div>
 
@@ -35,7 +35,7 @@ const Home = () => {
           src={src1}
           alt={copy.site.label}
           sizes="(min-width: 1080px) 1080px, 100vw"
-          className="pointer-events-none relative w-[1726px] max-w-none shrink-0 select-none"
+          className="pointer-events-none relative w-auto max-w-8xl shrink-0 select-none"
         />
       </div>
     </main>
