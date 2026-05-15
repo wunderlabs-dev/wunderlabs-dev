@@ -31,7 +31,7 @@ const DrawerContent = ({ className, children, ...props }: ComponentProps<typeof 
         {...props}
       >
         <DrawerPrimitive.Handle className="mx-auto mt-4 h-1.5 w-10 rounded-full bg-cream-50" />
-        {children}
+        <div className="flex flex-col gap-2 p-6">{children}</div>
       </DrawerPrimitive.Content>
     </DrawerPortal>
   );

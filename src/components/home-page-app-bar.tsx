@@ -59,15 +59,19 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
 
               <DrawerContent>
                 <DrawerTitle className="sr-only">{t("menu")}</DrawerTitle>
-                <div className="flex flex-col gap-2 p-6">
-                  {links.map((link) => (
-                    <DrawerClose key={link.href} asChild>
-                      <NavLink href={link.href} className="px-4 py-3 text-gray-50">
-                        {t(link.labelKey)}
-                      </NavLink>
-                    </DrawerClose>
-                  ))}
-                </div>
+
+                {links.map((link) => (
+                  <DrawerClose key={link.href} asChild>
+                    <NavLink href={link.href} className="px-4 py-3 text-gray-50">
+                      {t(link.labelKey)}
+                    </NavLink>
+                  </DrawerClose>
+                ))}
+                <DrawerClose asChild>
+                  <NavLink href="#contact" className="px-4 py-3 text-gray-50">
+                    {t("cta")}
+                  </NavLink>
+                </DrawerClose>
               </DrawerContent>
             </Drawer>
           </Nav>
