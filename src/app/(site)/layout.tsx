@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import { HomePageAppBar } from "@/components/home-page-app-bar";
 import { HomePageFooter } from "@/components/home-page-footer";
+import { HomePageLogoConsole } from "@/components/home-page-logo-console";
 
 const SiteLayout = ({ children }: { children: ReactNode }) => {
   return (
@@ -9,6 +10,7 @@ const SiteLayout = ({ children }: { children: ReactNode }) => {
       <HomePageAppBar />
       {children}
       <HomePageFooter />
+      <HomePageLogoConsole />
     </>
   );
 };

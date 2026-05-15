@@ -2,13 +2,11 @@ import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
 import { cn } from "@/utils/helpers";
-import { renderers } from "@/utils/renderers";
 
 import { HomePageLabItem } from "@/components/home-page-lab-item";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SvgIconBull, SvgIconFile, SvgIconPlay } from "@/components/ui/svg-icon";
-import { TitleGroup } from "@/components/ui/title-group";
 
 type HomePageLabProps = ComponentProps<"section">;
 
@@ -34,11 +32,9 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="lab" className={cn("flex flex-col gap-24", className)} {...props}>
-      <TitleGroup subtitle={t("lab.kicker")} title={t.rich("lab.title", renderers)} />
-
+    <Section id="lab" pt="none" className={cn("flex flex-col gap-24", className)} {...props}>
       <Container variant="7xl" className="border-gray-100/30 lg:border-b">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-0">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0 pt-12">
           {sections.map(({ description, Icon, title }, index) => (
             <HomePageLabItem
               key={title}

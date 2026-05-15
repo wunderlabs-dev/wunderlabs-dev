@@ -31,7 +31,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
         title={t.rich("projects.title", renderers)}
       />
 
-      <Container variant="5xl" className="relative z-10 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-0">
+      <Container variant="5xl" className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
         <div
           className={cn(
             "flex min-w-0 flex-row-reverse items-start",
@@ -42,7 +42,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             badge={t("projects.badge")}
             status={t("projects.cards.claudebin.status")}
             title={t("projects.cards.claudebin.title")}
-            description={t("projects.cards.claudebin.description")}
+            description={t("projects.cards.claudebin.description.p1")}
             launchLabel={t("projects.cards.claudebin.launchLabel")}
             githubLabel={t("projects.cards.claudebin.githubLabel")}
           />

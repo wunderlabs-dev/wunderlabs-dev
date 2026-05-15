@@ -16,7 +16,7 @@
     "title": "<muted>We build tools agents</muted> use to ship reliable systems."
   },
   "lab": {
-    "kicker": "The lab",
+    "kicker": "About",
     "title": "<muted>We are focus on</muted> reliable AI infrastructure",
     "pillars": {
       "eval": {
@@ -35,20 +35,23 @@
   },
   "projects": {
     "kicker": "Projects",
-    "title": "<muted>From research</muted> to production.",
+    "title": "<muted>Tools for</muted> reliable agents.",
     "badge": "Open Source",
     "cards": {
       "claudebin": {
         "status": "All systems operational",
         "title": "Claudebin",
-        "description": "Share Claude conversations with syntax highlighting, version control, and permanent links. Built for debugging, collaboration, and reproducible agent workflows.",
+        "description": {
+          "p1": "Publish Claude Code sessions with a single command and get a shareable link with syntax highlighting, tool calls, and the full conversation thread.",
+          "p2": "Useful for debugging, code review, and reproducible workflows."
+        },
         "launchLabel": "Launch Claudebin",
         "githubLabel": "GitHub"
       },
       "openable": {
         "status": "All systems operational",
         "title": "Openable.dev",
-        "description": "Eval framework for agent reliability. Run structured tests against LLM outputs, track regressions, and ship with confidence that your prompts still work.",
+        "description": "Import, run, and edit full generated codebases without installing Node.js, configuring environments, or using the terminal.",
         "launchLabel": "Launch Openable",
         "githubLabel": "GitHub"
       }
@@ -56,7 +59,7 @@
   },
   "community": {
     "kicker": "Community",
-    "title": "<muted>We are more than a lab</muted> we are a community.",
+    "title": "<muted>A community for</muted> agentic builders.",
     "through": "Through <link>agentic.tm</link>",
     "stat": {
       "value": "200+",
@@ -79,8 +82,8 @@
   },
   "contact": {
     "kicker": "Let’s build together",
-    "title": "<muted>Building with the open.</muted> Ship with us.",
-    "description": "Looking for engineers, researchers, and investors who believe AI infrastructure must be serious, reliable, and production-ready.",
+    "title": "<muted>Open source by default.</muted> Ship with us.",
+    "description": "Hiring agentic native engineers and researchers focused on infrastructure, reliability, and agent systems.",
     "cta": "Contact us",
     "email": "office@wunderlabs.dev",
     "copyEmail": "Copy",
