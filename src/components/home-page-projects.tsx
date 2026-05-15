@@ -19,7 +19,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
       id="projects"
       pb="default"
       className={cn(
-        "relative flex flex-col gap-24",
+        "relative flex flex-col gap-4 sm:gap-24",
         "before:absolute before:inset-y-0 before:left-1/2 before:z-0 before:w-px before:bg-gray-100/50",
         className,
       )}
