@@ -1,12 +1,9 @@
-import Image from "next/image";
-
 import { HomePageAbout } from "@/components/home-page-about";
+import { HomePageAppImage } from "@/components/home-page-app-image";
 import { HomePageContact } from "@/components/home-page-contact";
 import { HomePageCommunity } from "@/components/home-page-community";
 import { HomePageLab } from "@/components/home-page-lab";
 import { HomePageProjects } from "@/components/home-page-projects";
-
-import copy from "@/copy/en.json";
 
 import src1 from "../../public/app-1@2x.webp";
 import src2 from "../../public/app-2@2x.webp";
@@ -16,13 +13,8 @@ const Home = () => {
     <main className="overflow-hidden">
       <HomePageAbout />
 
-      <div className="flex w-full justify-center overflow-hidden">
-        <Image
-          src={src2}
-          alt={copy.site.label}
-          sizes="(min-width: 1080px) 1080px, 100vw"
-          className="pointer-events-none w-auto max-w-8xl shrink-0 select-none"
-        />
+      <div className="flex w-full justify-center overflow-hidden pt-8 sm:pt-0">
+        <HomePageAppImage src={src1} />
       </div>
 
       <HomePageLab />
@@ -31,12 +23,7 @@ const Home = () => {
       <HomePageContact />
 
       <div className="flex w-full justify-center overflow-hidden">
-        <Image
-          src={src1}
-          alt={copy.site.label}
-          sizes="(min-width: 1080px) 1080px, 100vw"
-          className="pointer-events-none relative w-auto max-w-8xl shrink-0 select-none"
-        />
+        <HomePageAppImage src={src2} />
       </div>
     </main>
   );
