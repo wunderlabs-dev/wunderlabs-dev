@@ -1,46 +1,25 @@
-"use client";
-
-import type { ComponentProps, MouseEvent } from "react";
-import { isNil } from "es-toolkit";
+import type { ComponentProps } from "react";
+import NextLink from "next/link";
 
 import { cn } from "@/utils/helpers";
 
-type NavLinkProps = ComponentProps<"span"> & {
-  href?: `#${string}`;
+type NavLinkProps = ComponentProps<"a"> & {
+  href: `#${string}`;
 };
 
-const SCROLL_CENTER_DIVISOR = 2;
-
-const NavLink = ({ className, href, onClick, ...props }: NavLinkProps) => {
-  const handleClick = (event: MouseEvent<HTMLSpanElement>) => {
-    onClick?.(event);
-
-    if (event.defaultPrevented || isNil(href)) {
-      return;
-    }
-
-    const target = document.querySelector(href);
-
-    if (isNil(target)) {
-      return;
-    }
-
-    const targetRect = target.getBoundingClientRect();
-    const top = window.scrollY + targetRect.top - (window.innerHeight - targetRect.height) / SCROLL_CENTER_DIVISOR;
-
-    window.scrollTo({ top, behavior: "smooth" });
-  };
-
+const NavLink = ({ children, className, href, ...props }: NavLinkProps) => {
   return (
-    <span
+    <NextLink
       data-slot="nav-link"
+      href={href}
       {...props}
       className={cn(
         "inline-flex cursor-pointer items-center rounded-4xl text-base leading-6 font-normal text-gray-250 transition-colors duration-150 ease-in-out select-none hover:text-gray-400",
         className,
       )}
-      onClick={handleClick}
-    />
+    >
+      {children}
+    </NextLink>
   );
 };
 
