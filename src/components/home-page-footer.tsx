@@ -49,7 +49,7 @@ const HomePageFooter = ({ className, ...props }: HomePageFooterProps) => {
           </Typography>
         </div>
 
-        <div className="flex flex-col shrink-0 gap-6 sm:flex-row sm:gap-12">
+        <div className="flex shrink-0 flex-col gap-6 sm:flex-row sm:gap-12">
           {links.map((section) => (
             <nav key={section.title} className="flex flex-col gap-3">
               <Typography variant="body2" as="h2" className="whitespace-nowrap text-gray-400">

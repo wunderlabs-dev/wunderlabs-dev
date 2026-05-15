@@ -8,5 +8,5 @@ export const renderers = {
       {chunks}
     </Link>
   ),
-  muted: (chunks: ReactNode) => <span className="inline sm:block text-gray-200">{chunks}</span>,
+  muted: (chunks: ReactNode) => <span className="inline text-gray-200 sm:block">{chunks}</span>,
 };

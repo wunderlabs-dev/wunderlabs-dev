@@ -11,7 +11,7 @@ const buttonClassNames = cva(
   cn(
     "relative isolate inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-4xl border px-5 py-3",
     "text-center text-base leading-6 font-semibold whitespace-nowrap",
-    "select-none transition-all duration-200 ease-out",
+    "transition-all duration-200 ease-out select-none",
     "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200",
     "hover:before:opacity-100 active:scale-97 active:before:opacity-0",
     "disabled:pointer-events-none disabled:opacity-50",
