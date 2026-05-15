@@ -4,14 +4,14 @@ import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import type { ComponentProps } from "react";
 
-import { appBar } from "@/utils/animations";
 import { cn } from "@/utils/helpers";
+import { appBar } from "@/utils/animations";
 
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
 import { Nav, NavLink } from "@/components/ui/nav";
-import { SvgIconContact, SvgIconHome, SvgIconSymbol } from "@/components/ui/svg-icon";
+import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
+import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
 
 const links = [
   { href: "#about", labelKey: "home" },
@@ -49,7 +49,6 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
               <div className="hidden md:flex">
                 {links.map((link) => (
                   <NavLink key={link.href} href={link.href} className="px-4 py-3">
-                    {link.labelKey === "home" ? <SvgIconHome className="text-gray-250" /> : null}
                     {t(link.labelKey)}
                   </NavLink>
                 ))}
@@ -71,7 +70,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
 
                   {links.map((link) => (
                     <DrawerClose key={link.href} asChild>
-                      <NavLink href={link.href} className="px-4 py-3 text-gray-50">
+                      <NavLink href={link.href} className="px-4 py-3 text-gray-50 hover:text-white">
                         {t(link.labelKey)}
                       </NavLink>
                     </DrawerClose>
