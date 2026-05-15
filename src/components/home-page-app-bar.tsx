@@ -24,7 +24,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
   const t = useTranslations("appBar");
 
   return (
-    <header className={cn("sticky top-4 z-50", className)} {...props}>
+    <header className={cn("fixed top-4 inset-x-0 z-50", className)} {...props}>
       <Container variant="4xl" className="flex items-center justify-center gap-3">
         <NavLink
           href="#about"
