@@ -1,0 +1,26 @@
+# W/underlabs
+
+> We build tools agents use to ship reliable systems.
+
+W/underlabs is a software lab focused on infrastructure, reliability, and agent systems.
+
+## Pages
+
+- [Home](https://wunderlabs.dev/): Overview of W/underlabs, current focus areas, projects, community, and contact information.
+- [Agents](https://wunderlabs.dev/agents/): Placeholder page for agent-oriented content.
+
+## Projects
+
+- Claudebin: Publish Claude Code sessions with a single command and get a shareable link with syntax highlighting, tool calls, and the full conversation thread.
+- Openable: Import, run, and edit full generated codebases without installing Node.js, configuring environments, or using the terminal.
+
+## Focus Areas
+
+- Harnesses: Test agent behavior across real workflows, regressions, and long-running tasks with reproducible harnesses.
+- Agentic Dev Envs: Run and modify generated codebases in isolated, deterministic environments with zero local setup.
+- Human-in-the-Loop: Inspect traces, review tool calls, replay failures, and keep humans involved where reliability matters.
+
+## Contact
+
+- Email: office@wunderlabs.dev
+- Website: https://wunderlabs.dev/
