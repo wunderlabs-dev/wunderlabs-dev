@@ -50,7 +50,7 @@
       },
       "openable": {
         "status": "All systems operational",
-        "title": "Openable.dev",
+        "title": "Openable",
         "description": "Import, run, and edit full generated codebases without installing Node.js, configuring environments, or using the terminal.",
         "launchLabel": "Launch Openable",
         "githubLabel": "GitHub"

@@ -37,14 +37,14 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
           <NavLink
             href="#about"
             className={cn(
-              "rounded-4xl bg-cream-100/30 px-6 py-4 backdrop-blur-2xl",
+              "rounded-4xl bg-cream-100/75 px-6 py-4 backdrop-blur-2xl",
               "transition-colors hover:bg-cream-100/50",
             )}
           >
             <SvgIconSymbol className="h-6 text-gray-400" />
           </NavLink>
 
-          <div className="flex items-center gap-0 rounded-4xl bg-cream-100/30 p-1 backdrop-blur-2xl lg:gap-12">
+          <div className="flex items-center gap-0 rounded-4xl bg-cream-100/75 p-1 backdrop-blur-2xl lg:gap-12">
             <Nav>
               <div className="hidden md:flex">
                 {links.map((link) => (
