@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
+import { BASE_URL } from "@/utils/const";
 
 import copy from "@/copy/en.json";
 import "@/static/css/globals.css";
@@ -23,8 +24,25 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: BASE_URL,
   title: copy.site.title,
   description: copy.site.description,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: copy.site.title,
+    description: copy.site.description,
+    url: "/",
+    siteName: copy.site.title,
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary",
+    title: copy.site.title,
+    description: copy.site.description,
+  },
   icons: {
     icon: "/favicon.svg",
   },
