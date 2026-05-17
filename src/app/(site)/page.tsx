@@ -24,7 +24,7 @@ const Home = () => {
         <HomePageAppImage src={src1} />
 
         <NextLink href="/agents" className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2">
-          <Button variant="transparent" size="sm" startAdornment={<SvgIconRobot size="sm" className="text-gray-400" />}>
+          <Button variant="transparent" size="sm" startAdornment={<SvgIconRobot size="sm" className="text-current" />}>
             {t("home.notAHuman")}
           </Button>
         </NextLink>
