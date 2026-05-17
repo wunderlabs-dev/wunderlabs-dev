@@ -20,20 +20,25 @@ const buttonClassNames = cva(
       variant: {
         base: "gap-0 bg-transparent p-0 text-inherit",
         contained: cn(
-          "border border-gray-350 bg-gray-350 px-5 py-3 text-white",
+          "border border-gray-350 bg-gray-350 text-white",
           "before:bg-linear-to-br before:from-gray-350 before:to-gray-400",
           "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
         outlined: cn(
-          "border border-gray-300 bg-transparent px-5 py-3 text-gray-400",
+          "border border-gray-300 bg-transparent text-gray-400",
           "before:bg-gray-150/10",
           "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
         secondary: cn(
-          "border border-gray-300 bg-gray-300 px-5 py-3 text-white hover:border-gray-250",
+          "border border-gray-300 bg-gray-300 text-white hover:border-gray-250",
           "before:bg-linear-to-br before:from-gray-300 before:to-gray-250",
           "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
+        transparent: "border border-transparent bg-cream-100/75 text-gray-400 backdrop-blur-2xl hover:bg-cream-100/50",
+      },
+      size: {
+        sm: "px-4 py-2 text-sm leading-5",
+        md: "px-5 py-3 text-base leading-6",
       },
     },
     defaultVariants: {
@@ -42,9 +47,12 @@ const buttonClassNames = cva(
   },
 );
 
-const Button = ({ children, className, startAdornment, variant, ...props }: ButtonProps) => {
+const Button = ({ children, className, size = "md", startAdornment, variant, ...props }: ButtonProps) => {
   return (
-    <BaseButton className={cn(buttonClassNames({ variant }), className)} {...props}>
+    <BaseButton
+      className={cn(buttonClassNames({ size: variant === "base" ? undefined : size, variant }), className)}
+      {...props}
+    >
       {startAdornment}
       {children}
     </BaseButton>
