@@ -14,10 +14,10 @@ import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "
 import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
 
 const links = [
-  { href: "#about", labelKey: "home" },
-  { href: "#lab", labelKey: "about" },
-  { href: "#projects", labelKey: "projects" },
-  { href: "#community", labelKey: "community" },
+  { href: "/#about", labelKey: "home" },
+  { href: "/#lab", labelKey: "about" },
+  { href: "/#projects", labelKey: "projects" },
+  { href: "/#community", labelKey: "community" },
 ] as const;
 
 type HomePageAppBarProps = ComponentProps<"header">;
@@ -35,7 +35,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
       >
         <Container variant="4xl" className="flex items-center justify-center gap-3">
           <NavLink
-            href="#about"
+            href="/#about"
             className={cn(
               "rounded-4xl bg-cream-100/75 px-6 py-4 backdrop-blur-2xl",
               "transition-colors hover:bg-cream-100/50",
@@ -79,7 +79,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
               </Drawer>
             </Nav>
 
-            <NavLink href="#contact">
+            <NavLink href="/#contact">
               <Button startAdornment={<SvgIconContact />}>{t("cta")}</Button>
             </NavLink>
           </div>
