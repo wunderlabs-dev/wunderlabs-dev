@@ -4,7 +4,7 @@ import type { SectionProps } from "./types";
 
 import { cn } from "@/utils/helpers";
 
-const sectionClassNames = cva("relative px-6 lg:px-12", {
+const sectionClassNames = cva("relative px-6 lg:px-12 scroll-mt-24", {
   variants: {
     pb: {
       default: "pb-28 lg:pb-48",

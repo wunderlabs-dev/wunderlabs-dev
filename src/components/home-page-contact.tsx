@@ -2,7 +2,6 @@ import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 import type { ComponentProps } from "react";
 
-import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
 import { Button } from "@/components/ui/button";
@@ -19,7 +18,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="contact" className={cn("scroll-mt-20", className)} {...props} pb="compact">
+    <Section id="contact" className={className} {...props} pb="compact">
       <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-5xl -translate-x-1/2 rounded-full border border-gray-100/50" />
 
       <Container variant="2xl" className="selection:bg-white selection:text-gray-400">
