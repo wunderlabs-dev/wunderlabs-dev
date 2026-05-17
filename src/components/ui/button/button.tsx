@@ -35,7 +35,7 @@ const buttonClassNames = cva(
           "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
         transparent:
-          "border border-transparent bg-cream-100/75 font-normal text-gray-250 hover:text-gray-400 backdrop-blur-2xl hover:bg-cream-100/50",
+          "border border-transparent bg-cream-100/75 font-normal text-gray-400 backdrop-blur-2xl hover:bg-cream-100/50",
       },
       size: {
         sm: "px-4 py-2 text-sm leading-5",
