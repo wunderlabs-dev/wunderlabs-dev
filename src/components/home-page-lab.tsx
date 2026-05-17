@@ -6,7 +6,7 @@ import { cn } from "@/utils/helpers";
 import { HomePageLabItem } from "@/components/home-page-lab-item";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
-import { SvgIconBull, SvgIconFile, SvgIconPlay } from "@/components/ui/svg-icon";
+import { SvgIconAgenticDevEnvs, SvgIconHarnesses, SvgIconHumanLoop } from "@/components/ui/svg-icon";
 
 type HomePageLabProps = ComponentProps<"section">;
 
@@ -14,17 +14,17 @@ const sections = [
   {
     title: "lab.pillars.eval.title",
     description: "lab.pillars.eval.description",
-    Icon: SvgIconFile,
+    Icon: SvgIconHarnesses,
   },
   {
     title: "lab.pillars.execution.title",
     description: "lab.pillars.execution.description",
-    Icon: SvgIconPlay,
+    Icon: SvgIconAgenticDevEnvs,
   },
   {
     title: "lab.pillars.telemetry.title",
     description: "lab.pillars.telemetry.description",
-    Icon: SvgIconBull,
+    Icon: SvgIconHumanLoop,
   },
 ] as const;
 
