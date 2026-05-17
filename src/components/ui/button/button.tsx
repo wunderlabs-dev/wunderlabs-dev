@@ -7,9 +7,6 @@ import type { ButtonProps } from "./types";
 
 import { cn } from "@/utils/helpers";
 
-const buttonOverlayClassNames =
-  "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0";
-
 const buttonClassNames = cva(
   cn(
     "relative isolate inline-flex shrink-0 cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-4xl",
@@ -25,17 +22,17 @@ const buttonClassNames = cva(
         contained: cn(
           "border border-gray-350 bg-gray-350 px-5 py-3 text-white",
           "before:bg-linear-to-br before:from-gray-350 before:to-gray-400",
-          buttonOverlayClassNames,
+          "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
         outlined: cn(
           "border border-gray-300 bg-transparent px-5 py-3 text-gray-400",
           "before:bg-gray-150/10",
-          buttonOverlayClassNames,
+          "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
         secondary: cn(
           "border border-gray-300 bg-gray-300 px-5 py-3 text-white hover:border-gray-250",
           "before:bg-linear-to-br before:from-gray-300 before:to-gray-250",
-          buttonOverlayClassNames,
+          "before:absolute before:inset-0 before:-z-10 before:opacity-0 before:transition-opacity before:duration-200 hover:before:opacity-100 active:before:opacity-0",
         ),
       },
     },
