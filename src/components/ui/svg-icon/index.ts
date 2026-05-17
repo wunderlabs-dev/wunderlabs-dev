@@ -6,6 +6,7 @@ export { default as SvgIconGlobe } from "./svg-icon-globe";
 export { default as SvgIconHarnesses } from "./svg-icon-harnesses";
 export { default as SvgIconHome } from "./svg-icon-home";
 export { default as SvgIconHumanLoop } from "./svg-icon-human-loop";
+export { default as SvgIconRobot } from "./svg-icon-robot";
 export { default as SvgIconStatus } from "./svg-icon-status";
 export { default as SvgIconSymbol } from "./svg-icon-symbol";
 export { default as SvgIconWunderlabs } from "./svg-icon-wunderlabs";

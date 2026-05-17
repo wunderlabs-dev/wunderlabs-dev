@@ -1,6 +1,6 @@
 import type { ComponentProps } from "react";
 
-export const BadgeVariants = ["solid", "contained", "overlay"] as const;
+export const BadgeVariants = ["solid", "contained"] as const;
 export type BadgeVariant = (typeof BadgeVariants)[number];
 export type BadgeVariantMapping = Record<BadgeVariant, string>;
 
