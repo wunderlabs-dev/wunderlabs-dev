@@ -14,16 +14,16 @@ import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "
 import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
 
 const links = [
-  { href: "/#about", labelKey: "home" },
-  { href: "/#lab", labelKey: "about" },
-  { href: "/#projects", labelKey: "projects" },
-  { href: "/#community", labelKey: "community" },
+  { href: "/#about", labelKey: "appBar.home" },
+  { href: "/#lab", labelKey: "appBar.about" },
+  { href: "/#projects", labelKey: "appBar.projects" },
+  { href: "/#community", labelKey: "appBar.community" },
 ] as const;
 
 type HomePageAppBarProps = ComponentProps<"header">;
 
 const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
-  const t = useTranslations("appBar");
+  const t = useTranslations();
 
   return (
     <header className={cn("fixed inset-x-0 top-4 z-50", className)} {...props}>
@@ -62,11 +62,11 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
                     "border-0 bg-transparent",
                   )}
                 >
-                  {t("menu")}
+                  {t("appBar.menu")}
                 </DrawerTrigger>
 
                 <DrawerContent>
-                  <DrawerTitle className="sr-only">{t("menu")}</DrawerTitle>
+                  <DrawerTitle className="sr-only">{t("appBar.menu")}</DrawerTitle>
 
                   {links.map((link) => (
                     <DrawerClose key={link.href} asChild>
@@ -80,7 +80,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
             </Nav>
 
             <NavLink href="/#contact">
-              <Button startAdornment={<SvgIconContact />}>{t("cta")}</Button>
+              <Button startAdornment={<SvgIconContact />}>{t("appBar.cta")}</Button>
             </NavLink>
           </div>
         </Container>
