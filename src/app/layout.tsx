@@ -55,7 +55,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       className={cn(
         hostGrotesk.variable,
         jetBrainsMono.variable,
-        "scroll-smooth bg-cream-50 font-sans text-gray-400 antialiased",
+        "scroll-smooth bg-cream-50 font-sans text-gray-400 antialiased selection:bg-gray-400 selection:text-gray-50",
       )}
     >
       <body>

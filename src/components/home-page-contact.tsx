@@ -22,7 +22,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
     <Section id="contact" className={cn("scroll-mt-20", className)} {...props} pb="compact">
       <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-5xl -translate-x-1/2 rounded-full border border-gray-100/50" />
 
-      <Container variant="2xl">
+      <Container variant="2xl" className="selection:bg-white selection:text-gray-400">
         <div className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
           <div className="flex flex-col gap-3">
             <Typography variant="code">{t("contact.kicker")}</Typography>
