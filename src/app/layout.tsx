@@ -1,13 +1,14 @@
+import "@/static/css/globals.css";
+
+import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
-import type { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
 import { BASE_URL } from "@/utils/const";
 
 import copy from "@/copy/en.json";
-import "@/static/css/globals.css";
 
 const OG_IMAGE_WIDTH = 1200;
 const OG_IMAGE_HEIGHT = 630;
