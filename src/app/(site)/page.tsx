@@ -4,14 +4,15 @@ import src2 from "../../../public/app-2@2x.webp";
 import NextLink from "next/link";
 import { useTranslations } from "next-intl";
 
+import { Button } from "@/components/ui/button";
+import { SvgIconRobot } from "@/components/ui/svg-icon";
+
 import { HomePageAbout } from "@/components/home-page-about";
 import { HomePageAppImage } from "@/components/home-page-app-image";
 import { HomePageContact } from "@/components/home-page-contact";
 import { HomePageCommunity } from "@/components/home-page-community";
 import { HomePageLab } from "@/components/home-page-lab";
 import { HomePageProjects } from "@/components/home-page-projects";
-import { Button } from "@/components/ui/button";
-import { SvgIconRobot } from "@/components/ui/svg-icon";
 
 const Home = () => {
   const t = useTranslations();

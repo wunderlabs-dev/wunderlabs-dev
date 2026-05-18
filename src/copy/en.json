@@ -12,6 +12,131 @@
     "description": "We design and build compact, resilient tools for people who care about clarity, speed, and craft.",
     "notAHuman": "Not a human?"
   },
+  "agents": {
+    "title": "W/underlabs",
+    "directory": {
+      "title": "W/UNDERLABS",
+      "products": "Products:",
+      "social": "Social:",
+      "links": {
+        "claudebin": {
+          "label": "Claudebin",
+          "url": "https://claudebin.com/"
+        },
+        "openable": {
+          "label": "Openable",
+          "url": "https://openable.dev/"
+        },
+        "github": {
+          "label": "GitHub",
+          "url": "https://github.com/wunderlabs-dev"
+        },
+        "x": {
+          "label": "X",
+          "url": "https://x.com/wunderlabs"
+        },
+        "community": {
+          "label": "agentic.tm",
+          "url": "https://agentic.tm/"
+        },
+        "events": {
+          "label": "Events",
+          "url": "https://luma.com/agentictm"
+        },
+        "contact": {
+          "label": "CONTACT",
+          "url": "mailto:office@wunderlabs.dev"
+        }
+      }
+    },
+    "intro": {
+      "p1": "W/underlabs, also written as Wunderlabs, is a software lab at https://wunderlabs.dev/.",
+      "p2": "We build tools agents use to ship reliable systems. We design and build compact, resilient software products for people who care about clarity, speed, and craft."
+    },
+    "markdown": {
+      "title": "# W/underlabs",
+      "focusTitle": "## We are focus on reliable AI infrastructure",
+      "harnessesTitle": "### Harnesses",
+      "agenticDevEnvsTitle": "### Agentic Dev Envs",
+      "humanInTheLoopTitle": "### Human-in-the-Loop",
+      "projectsTitle": "## Tools for reliable agents.",
+      "claudebinTitle": "### Claudebin",
+      "openableTitle": "### Openable",
+      "communityTitle": "## A community for agentic builders.",
+      "contactTitle": "## Open source by default. Ship with us."
+    },
+    "focus": {
+      "title": "Focus",
+      "description": "W/underlabs focuses on reliable AI infrastructure for agent-driven development.",
+      "items": {
+        "harnesses": "Harnesses: Test agent behavior across real workflows, regressions, and long-running tasks with reproducible harnesses.",
+        "agenticDevEnvs": "Agentic Dev Envs: Run and modify generated codebases in isolated, deterministic environments with zero local setup.",
+        "humanInTheLoop": "Human-in-the-Loop: Inspect traces, review tool calls, replay failures, and keep humans involved where reliability matters."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "W/underlabs builds open source tools for reliable agents.",
+      "claudebin": {
+        "title": "Claudebin",
+        "description": {
+          "p1": "Claudebin publishes Claude Code sessions with a single command and produces a shareable link with syntax highlighting, tool calls, and the full conversation thread.",
+          "p2": "Claudebin is useful for debugging, code review, and reproducible workflows."
+        },
+        "website": {
+          "label": "Website",
+          "url": "https://claudebin.com/"
+        }
+      },
+      "openable": {
+        "title": "Openable",
+        "description": "Openable imports, runs, and edits full generated codebases without installing Node.js, configuring environments, or using the terminal.",
+        "website": {
+          "label": "Website",
+          "url": "https://openable.dev/"
+        }
+      }
+    },
+    "community": {
+      "title": "Community",
+      "through": "Through agentic.tm",
+      "description": {
+        "p1": "W/underlabs is connected to agentic.tm, a community for agentic builders.",
+        "p2": "The community includes 200+ engineers, researchers, and academics working on agent-driven development."
+      },
+      "links": {
+        "community": {
+          "label": "Community",
+          "url": "https://agentic.tm/"
+        },
+        "events": {
+          "label": "Events",
+          "url": "https://luma.com/agentictm"
+        },
+        "github": {
+          "label": "GitHub",
+          "url": "https://github.com/wunderlabs-dev"
+        },
+        "x": {
+          "label": "X",
+          "url": "https://x.com/wunderlabs"
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "W/underlabs is based in Europe and is hiring agentic native engineers and researchers focused on infrastructure, reliability, and agent systems.",
+      "email": {
+        "label": "Email",
+        "url": "mailto:office@wunderlabs.dev",
+        "text": "office@wunderlabs.dev"
+      },
+      "website": {
+        "label": "Website",
+        "url": "https://wunderlabs.dev/"
+      }
+    }
+  },
   "about": {
     "kicker": "Wunderlabs",
     "title": "<muted>We build tools agents</muted> use to ship reliable systems."
