@@ -99,6 +99,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={cn(
         hostGrotesk.variable,
         jetBrainsMono.variable,
