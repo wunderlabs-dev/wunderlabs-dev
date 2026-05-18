@@ -1,0 +1,20 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "oxc", "react", "jsx-a11y", "nextjs"],
+  "categories": {
+    "correctness": "error",
+    "suspicious": "error"
+  },
+  "rules": {
+    "react-in-jsx-scope": "off",
+    "click-events-have-key-events": "off",
+    "no-static-element-interactions": "off",
+    "no-array-index-key": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2024": true,
+    "builtin": true
+  }
+}
