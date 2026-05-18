@@ -4,8 +4,8 @@ const Agents = () => {
   const t = useTranslations();
 
   return (
-    <main className="flex flex-col gap-16 py-10 text-sm leading-5 text-gray-100">
-      <section className="flex flex-col gap-2 px-6 py-2">
+    <main className="flex flex-col gap-16 text-sm leading-5 text-gray-100">
+      <section className="flex flex-col gap-2">
         <h1 className="text-gray-50">{t("agents.markdown.title")}</h1>
         <p className="max-w-lg text-gray-200">
           {t("site.description")} {t("home.description")}
@@ -85,7 +85,7 @@ const Agents = () => {
         </div>
       </section>
 
-      <section className="flex flex-col gap-8 px-6 py-2">
+      <section className="flex flex-col gap-8">
         <h2 className="text-gray-50">{t("agents.markdown.focusTitle")}</h2>
 
         <article className="flex flex-col gap-1">
@@ -104,7 +104,7 @@ const Agents = () => {
         </article>
       </section>
 
-      <section className="flex flex-col gap-8 px-6 py-2">
+      <section className="flex flex-col gap-8">
         <h2 className="text-gray-50">{t("agents.markdown.projectsTitle")}</h2>
 
         <article className="flex flex-col gap-1">
@@ -140,7 +140,7 @@ const Agents = () => {
         </article>
       </section>
 
-      <section className="flex flex-col gap-1 px-6 py-2">
+      <section className="flex flex-col gap-1">
         <h2 className="text-gray-50">{t("agents.markdown.communityTitle")}</h2>
         <p className="max-w-lg text-gray-200">{t("agents.community.through")}</p>
         <p className="max-w-lg text-gray-200">
@@ -179,7 +179,7 @@ const Agents = () => {
         </div>
       </section>
 
-      <section className="flex flex-col gap-1 px-6 py-2">
+      <section className="flex flex-col gap-1">
         <h2 className="text-gray-50">{t("agents.markdown.contactTitle")}</h2>
         <p className="max-w-lg text-gray-200">{t("contact.description")}</p>
         <p>
