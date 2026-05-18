@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { toString } from "es-toolkit/compat";
 
 import { BASE_URL } from "@/utils/const";
 
@@ -10,13 +11,13 @@ export const dynamic = "force-static";
 const sitemap = (): MetadataRoute.Sitemap => {
   return [
     {
-      url: new URL("/", BASE_URL).toString(),
+      url: toString(new URL("/", BASE_URL)),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: HOME_PRIORITY,
     },
     {
-      url: new URL("/agents/", BASE_URL).toString(),
+      url: toString(new URL("/agents/", BASE_URL)),
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: AGENTS_PRIORITY,

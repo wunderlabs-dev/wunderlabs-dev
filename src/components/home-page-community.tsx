@@ -21,7 +21,7 @@ const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
       <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-8xl -translate-x-1/2 rounded-full border border-gray-100/50" />
 
       <Container variant="4xl" className="relative z-10 flex flex-col gap-8 md:gap-16">
-        <TitleGroup subtitle={t("community.kicker")} title={t.rich("community.title", renderers)} />
+        <TitleGroup subtitle={t("community.kicker")} title={t.rich("community.title", renderers)} titleAs="h2" />
 
         <div className="flex max-w-lg flex-col gap-2">
           <Typography variant="body">{t.rich("community.through", renderers)}</Typography>

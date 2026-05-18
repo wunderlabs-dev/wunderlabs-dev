@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { toString } from "es-toolkit/compat";
 
 import { BASE_URL } from "@/utils/const";
 
@@ -10,7 +11,7 @@ const robots = (): MetadataRoute.Robots => {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: new URL("/sitemap.xml", BASE_URL).toString(),
+    sitemap: toString(new URL("/sitemap.xml", BASE_URL)),
   };
 };
 

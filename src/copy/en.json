@@ -1,6 +1,7 @@
 {
   "site": {
     "title": "W/underlabs",
+    "alternateName": "Wunderlabs",
     "domain": "wunderlabs.dev",
     "label": "Software lab",
     "description": "We build tools agents use to ship reliable systems."

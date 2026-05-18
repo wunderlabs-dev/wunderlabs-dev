@@ -29,6 +29,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
         className="relative z-10 bg-cream-50 pb-8 sm:bg-transparent sm:pb-0"
         subtitle={t("projects.kicker")}
         title={t.rich("projects.title", renderers)}
+        titleAs="h2"
       />
 
       <Container variant="5xl" className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">

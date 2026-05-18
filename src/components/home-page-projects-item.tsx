@@ -38,7 +38,9 @@ const HomePageProjectsItem = ({
         </div>
 
         <div className="flex flex-col gap-2">
-          <Typography variant="h2">{title}</Typography>
+          <Typography as="h3" variant="h2">
+            {title}
+          </Typography>
           <Typography variant="body" className="text-gray-250">
             {description}
           </Typography>

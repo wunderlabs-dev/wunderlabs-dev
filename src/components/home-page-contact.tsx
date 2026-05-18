@@ -27,7 +27,9 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
             <Typography variant="code">{t("contact.kicker")}</Typography>
 
             <div className="flex flex-col gap-4">
-              <Typography variant="h1">{t.rich("contact.title", renderers)}</Typography>
+              <Typography as="h2" variant="h1">
+                {t.rich("contact.title", renderers)}
+              </Typography>
               <Typography variant="body">{t("contact.description")}</Typography>
             </div>
           </div>

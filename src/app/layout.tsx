@@ -3,6 +3,7 @@ import "@/static/css/globals.css";
 import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
+import { toString } from "es-toolkit/compat";
 import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
@@ -32,6 +33,39 @@ const ogImage = {
   width: OG_IMAGE_WIDTH,
   height: OG_IMAGE_HEIGHT,
   alt: copy.site.title,
+};
+
+const siteUrl = toString(new URL("/", BASE_URL));
+const organizationId = toString(new URL("/#organization", BASE_URL));
+const websiteId = toString(new URL("/#website", BASE_URL));
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@id": organizationId,
+      "@type": "Organization",
+      name: copy.site.title,
+      alternateName: copy.site.alternateName,
+      url: siteUrl,
+      logo: toString(new URL("/favicon.svg", BASE_URL)),
+      image: toString(new URL(ogImage.url, BASE_URL)),
+      description: copy.site.description,
+      email: copy.contact.email,
+      sameAs: ["https://github.com/wunderlabs-dev", "https://x.com/wunderlabs", "https://agentic.tm"],
+    },
+    {
+      "@id": websiteId,
+      "@type": "WebSite",
+      name: copy.site.title,
+      url: siteUrl,
+      description: copy.site.description,
+      inLanguage: "en-US",
+      publisher: {
+        "@id": organizationId,
+      },
+    },
+  ],
 };
 
 export const metadata: Metadata = {
@@ -72,6 +106,12 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
       )}
     >
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
       </body>
     </html>
