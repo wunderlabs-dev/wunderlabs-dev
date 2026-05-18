@@ -9,6 +9,9 @@ import { BASE_URL } from "@/utils/const";
 import copy from "@/copy/en.json";
 import "@/static/css/globals.css";
 
+const OG_IMAGE_WIDTH = 1200;
+const OG_IMAGE_HEIGHT = 630;
+
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
   weight: "variable",
@@ -22,6 +25,13 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
   variable: "--font-jetbrains-mono",
 });
+
+const ogImage = {
+  url: "/og-image-1200x630.png",
+  width: OG_IMAGE_WIDTH,
+  height: OG_IMAGE_HEIGHT,
+  alt: copy.site.title,
+};
 
 export const metadata: Metadata = {
   metadataBase: BASE_URL,
@@ -37,11 +47,13 @@ export const metadata: Metadata = {
     siteName: copy.site.title,
     type: "website",
     locale: "en_US",
+    images: [ogImage],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: copy.site.title,
     description: copy.site.description,
+    images: [ogImage],
   },
   icons: {
     icon: "/favicon.svg",
