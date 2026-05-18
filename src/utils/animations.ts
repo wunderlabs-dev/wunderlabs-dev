@@ -12,36 +12,4 @@ const indicator = {
   },
 } as const;
 
-const appBar = {
-  initial: {
-    opacity: 0,
-    y: -12,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
-  transition: {
-    duration: 0.84,
-    ease: [0.16, 1, 0.3, 1],
-    delay: 0.2,
-  },
-} as const;
-
-const about = {
-  initial: {
-    opacity: 0,
-    y: -4,
-  },
-  animate: {
-    opacity: 1,
-    y: 0,
-  },
-  transition: {
-    duration: 1,
-    ease: [0.16, 1, 0.3, 1],
-    delay: 0.44,
-  },
-} as const;
-
-export { about, appBar, indicator };
+export { indicator };

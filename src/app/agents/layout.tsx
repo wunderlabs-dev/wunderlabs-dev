@@ -1,4 +1,11 @@
 import type { ReactNode } from "react";
+import type { Metadata } from "next";
+
+import copy from "@/copy/en.json";
+
+export const metadata: Metadata = {
+  title: copy.agents.metadata.title,
+};
 
 const AgentsLayout = ({ children }: { children: ReactNode }) => {
   return (
