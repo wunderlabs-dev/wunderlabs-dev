@@ -1,5 +1,9 @@
 const Agents = () => {
-  return <main />;
+  return (
+    <main>
+      <h1>Agents</h1>
+    </main>
+  );
 };
 
 export default Agents;

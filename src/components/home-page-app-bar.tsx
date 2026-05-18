@@ -1,8 +1,8 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import { motion } from "motion/react";
-import type { ComponentProps } from "react";
+import { motion, useAnimationControls } from "motion/react";
+import { useEffect, type ComponentProps } from "react";
 
 import { cn } from "@/utils/helpers";
 import { appBar } from "@/utils/animations";
@@ -23,16 +23,38 @@ const links = [
 type HomePageAppBarProps = ComponentProps<"header">;
 
 const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
+  const controls = useAnimationControls();
   const t = useTranslations();
+
+  useEffect(() => {
+    const replayAnimation = () => {
+      if (window.location.pathname !== "/") {
+        return;
+      }
+
+      controls.set(appBar.initial);
+      requestAnimationFrame(() => {
+        void controls.start({
+          ...appBar.animate,
+          transition: appBar.transition,
+        });
+      });
+    };
+
+    replayAnimation();
+
+    window.addEventListener("pageshow", replayAnimation);
+    window.addEventListener("popstate", replayAnimation);
+
+    return () => {
+      window.removeEventListener("pageshow", replayAnimation);
+      window.removeEventListener("popstate", replayAnimation);
+    };
+  }, [controls]);
 
   return (
     <header className={cn("fixed inset-x-0 top-4 z-50", className)} {...props}>
-      <motion.div
-        initial={appBar.initial}
-        animate={appBar.animate}
-        transition={appBar.transition}
-        className="will-change-transform will-change-opacity"
-      >
+      <motion.div initial={appBar.initial} animate={controls} className="will-change-transform will-change-opacity">
         <Container variant="4xl" className="flex items-center justify-center gap-3">
           <NavLink
             href="/#about"
