@@ -1,3 +1,4 @@
+import NextLink from "next/link";
 import type { ComponentProps } from "react";
 
 import { cn } from "@/utils/helpers";
@@ -12,7 +13,9 @@ type HomePageProjectsItemProps = ComponentProps<typeof Card> & {
   badge: string;
   description: string;
   githubLabel: string;
+  githubUrl: string;
   launchLabel: string;
+  launchUrl: string;
   status: string;
   title: string;
 };
@@ -22,7 +25,9 @@ const HomePageProjectsItem = ({
   className,
   description,
   githubLabel,
+  githubUrl,
   launchLabel,
+  launchUrl,
   status,
   title,
   ...props
@@ -48,12 +53,16 @@ const HomePageProjectsItem = ({
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
-        <Button type="button" startAdornment={<SvgIconArrowLink className="size-5" />}>
-          {launchLabel}
-        </Button>
-        <Button type="button" variant="outlined">
-          {githubLabel}
-        </Button>
+        <NextLink href={launchUrl} target="_blank" rel="noreferrer">
+          <Button type="button" startAdornment={<SvgIconArrowLink className="size-5" />}>
+            {launchLabel}
+          </Button>
+        </NextLink>
+        <NextLink href={githubUrl} target="_blank" rel="noreferrer">
+          <Button type="button" variant="outlined">
+            {githubLabel}
+          </Button>
+        </NextLink>
       </div>
     </Card>
   );

@@ -175,14 +175,18 @@
           "p2": "Useful for debugging, code review, and reproducible workflows."
         },
         "launchLabel": "Launch Claudebin",
-        "githubLabel": "GitHub"
+        "launchUrl": "https://claudebin.com",
+        "githubLabel": "GitHub",
+        "githubUrl": "https://github.com/wunderlabs-dev/claudebin.com"
       },
       "openable": {
         "status": "All systems operational",
         "title": "Openable",
         "description": "Import, run, and edit full generated codebases without installing Node.js, configuring environments, or using the terminal.",
         "launchLabel": "Launch Openable",
-        "githubLabel": "GitHub"
+        "launchUrl": "https://openable.dev",
+        "githubLabel": "GitHub",
+        "githubUrl": "https://github.com/wunderlabs-dev/openable.dev"
       }
     }
   },
