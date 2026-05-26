@@ -10,6 +10,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { cn } from "@/utils/helpers";
 import { BASE_URL } from "@/utils/const";
 
+import { RouteTransition } from "@/components/ui/route-transition";
+
 import copy from "@/copy/en.json";
 
 const OG_IMAGE_WIDTH = 1200;
@@ -124,7 +126,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <NextIntlClientProvider>
           <GlimmProvider palette={palette}>
             <InterceptLinks />
-            {children}
+            <RouteTransition>{children}</RouteTransition>
           </GlimmProvider>
         </NextIntlClientProvider>
       </body>
