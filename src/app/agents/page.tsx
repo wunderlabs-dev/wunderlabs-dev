@@ -94,17 +94,17 @@ const Agents = () => {
       <section className="flex flex-col gap-8">
         <h2 className="text-gray-50">{t("agents.focus.title")}</h2>
 
-        <article className="flex flex-col gap-1">
+        <article className="flex flex-col gap-2">
           <p className="font-semibold text-gray-50">{t("agents.markdown.harnessesTitle")}</p>
           <p className="max-w-lg text-gray-200">{t("agents.focus.items.harnesses")}</p>
         </article>
 
-        <article className="flex flex-col gap-1">
+        <article className="flex flex-col gap-2">
           <p className="font-semibold text-gray-50">{t("agents.markdown.agenticDevEnvsTitle")}</p>
           <p className="max-w-lg text-gray-200">{t("agents.focus.items.agenticDevEnvs")}</p>
         </article>
 
-        <article className="flex flex-col gap-1">
+        <article className="flex flex-col gap-2">
           <p className="font-semibold text-gray-50">{t("agents.markdown.humanInTheLoopTitle")}</p>
           <p className="max-w-lg text-gray-200">{t("agents.focus.items.humanInTheLoop")}</p>
         </article>
@@ -113,7 +113,7 @@ const Agents = () => {
       <section className="flex flex-col gap-8">
         <h2 className="text-gray-50">{t("agents.markdown.projectsTitle")}</h2>
 
-        <article className="flex flex-col gap-1">
+        <article className="flex flex-col gap-2">
           <h3 className="font-semibold text-gray-50">{t("agents.markdown.claudebinTitle")}</h3>
           <p className="max-w-lg text-gray-200">{t("agents.projects.claudebin.description.p1")}</p>
           <p>
@@ -129,7 +129,7 @@ const Agents = () => {
           </p>
         </article>
 
-        <article className="flex flex-col gap-1">
+        <article className="flex flex-col gap-2">
           <h3 className="font-semibold text-gray-50">{t("agents.markdown.openableTitle")}</h3>
           <p className="max-w-lg text-gray-200">{t("agents.projects.openable.description")}</p>
           <p>
@@ -152,7 +152,7 @@ const Agents = () => {
           <p className="max-w-lg text-gray-200">{t("agents.community.description.p1")}</p>
           <p className="max-w-lg text-gray-200">{t("agents.community.description.p2")}</p>
         </div>
-        <div className="flex flex-col">
+        <div>
           <p>
             <a
               href={t("agents.community.links.community.url")}
@@ -187,8 +187,8 @@ const Agents = () => {
 
       <section className="flex flex-col gap-2">
         <h3 className="font-semibold text-gray-50">{t("agents.markdown.contactTitle")}</h3>
-        <div className="flex flex-col gap-1">
-          <p className="max-w-lg text-gray-200">{t("agents.contact.description")}</p>
+        <p className="max-w-lg text-gray-200">{t("agents.contact.description")}</p>
+        <div>
           <p>
             <a href={t("agents.contact.email.url")} className="text-gray-50">
               [{t("agents.contact.email.label")}]
