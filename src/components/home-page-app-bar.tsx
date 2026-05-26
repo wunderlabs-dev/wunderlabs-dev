@@ -12,10 +12,10 @@ import { Drawer, DrawerClose, DrawerContent, DrawerTitle, DrawerTrigger } from "
 import { SvgIconContact, SvgIconSymbol } from "@/components/ui/svg-icon";
 
 const links = [
-  { href: "/#about", labelKey: "appBar.home" },
-  { href: "/#lab", labelKey: "appBar.about" },
-  { href: "/#projects", labelKey: "appBar.projects" },
-  { href: "/#community", labelKey: "appBar.community" },
+  { href: "#home", labelKey: "appBar.home" },
+  { href: "#about", labelKey: "appBar.about" },
+  { href: "#projects", labelKey: "appBar.projects" },
+  { href: "#community", labelKey: "appBar.community" },
 ] as const;
 
 type HomePageAppBarProps = ComponentProps<"header">;
@@ -27,7 +27,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
     <header className={cn("fixed inset-x-0 top-4 z-50", className)} {...props}>
       <Container variant="4xl" className="flex items-center justify-center gap-3">
         <NavLink
-          href="/#about"
+          href="#home"
           className={cn(
             "rounded-4xl bg-cream-100/75 px-6 py-4 backdrop-blur-2xl",
             "transition-colors hover:bg-cream-100/50",
@@ -71,7 +71,7 @@ const HomePageAppBar = ({ className, ...props }: HomePageAppBarProps) => {
             </Drawer>
           </Nav>
 
-          <NavLink href="/#contact">
+          <NavLink href="#contact">
             <Button startAdornment={<SvgIconContact />}>{t("appBar.cta")}</Button>
           </NavLink>
         </div>

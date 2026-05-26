@@ -4,7 +4,7 @@ import NextLink from "next/link";
 import { cn } from "@/utils/helpers";
 
 type NavLinkProps = ComponentProps<"a"> & {
-  href: `/#${string}`;
+  href: `#${string}`;
 };
 
 const NavLink = ({ children, className, href, ...props }: NavLinkProps) => {

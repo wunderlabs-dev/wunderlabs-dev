@@ -32,7 +32,7 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
   const t = useTranslations();
 
   return (
-    <Section id="lab" pt="none" className={cn("flex flex-col gap-24", className)} {...props}>
+    <Section id="about" pt="none" className={cn("flex flex-col gap-24", className)} {...props}>
       <Container variant="7xl" className="border-gray-100/30 lg:border-b">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-0 pt-12">
           {sections.map(({ description, Icon, title }, index) => (
