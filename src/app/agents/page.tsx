@@ -86,8 +86,6 @@ const Agents = () => {
       </section>
 
       <section className="flex flex-col gap-8">
-        <h2 className="text-gray-50">{t("agents.markdown.focusTitle")}</h2>
-
         <article className="flex flex-col gap-1">
           <p className="font-semibold text-gray-50">{t("agents.markdown.harnessesTitle")}</p>
           <p className="max-w-lg text-gray-200">{t("lab.pillars.eval.description")}</p>

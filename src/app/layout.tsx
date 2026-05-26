@@ -4,7 +4,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
 import { toString } from "es-toolkit/compat";
-import { GlimmProvider, InterceptLinks } from "glimm/next";
+import { GlimmProvider, InterceptLinks, type Palette } from "glimm/next";
 import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
@@ -28,6 +28,13 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
   variable: "--font-jetbrains-mono",
 });
+
+const palette = {
+  a: [0.7270762082133189, 0.7189040895546981, 0.7007919925126606],
+  b: [0.2642885270697761, 0.2602615380989282, 0.2516157019216029],
+  c: [0.5, 0.5, 0.5],
+  d: [0.9859578090219716, 0.9838341686916666, 0.9780346309902491],
+} satisfies Palette;
 
 const ogImage = {
   url: "/og-image-1200x630.png",
@@ -115,7 +122,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
           }}
         />
         <NextIntlClientProvider>
-          <GlimmProvider palette="lagoon">
+          <GlimmProvider palette={palette}>
             <InterceptLinks />
             {children}
           </GlimmProvider>
