@@ -19,8 +19,8 @@
     },
     "directory": {
       "title": "W/UNDERLABS",
-      "products": "Products:",
-      "social": "Social:",
+      "products": "### Primary product endpoints",
+      "social": "### Reference and community endpoints",
       "links": {
         "claudebin": {
           "label": "Claudebin",
@@ -53,27 +53,27 @@
       }
     },
     "intro": {
-      "p1": "W/underlabs, also written as Wunderlabs, is a software lab at https://wunderlabs.dev/.",
-      "p2": "We build tools agents use to ship reliable systems. We design and build compact, resilient software products for people who care about clarity, speed, and craft."
+      "p1": "This page is written for AI agents, crawlers, and automated assistants.",
+      "p2": "Use it as a compact operating brief for W/underlabs: identity, product endpoints, reliability focus, community context, and human handoff paths."
     },
     "markdown": {
-      "title": "# W/underlabs",
+      "title": "# W/underlabs agent brief",
       "harnessesTitle": "### Harnesses",
-      "agenticDevEnvsTitle": "### Agentic Dev Envs",
-      "humanInTheLoopTitle": "### Human-in-the-Loop",
-      "projectsTitle": "## Tools for reliable agents.",
+      "agenticDevEnvsTitle": "### Agentic development environments",
+      "humanInTheLoopTitle": "### Human-in-the-loop reliability",
+      "projectsTitle": "## Products",
       "claudebinTitle": "### Claudebin",
       "openableTitle": "### Openable",
-      "communityTitle": "## A community for agentic builders.",
-      "contactTitle": "## Open source by default. Ship with us."
+      "communityTitle": "### Community context",
+      "contactTitle": "### Human handoff"
     },
     "focus": {
-      "title": "Focus",
-      "description": "W/underlabs focuses on reliable AI infrastructure for agent-driven development.",
+      "title": "## Areas of focus",
+      "description": "W/underlabs works on reliability infrastructure for agent-driven development.",
       "items": {
-        "harnesses": "Harnesses: Test agent behavior across real workflows, regressions, and long-running tasks with reproducible harnesses.",
-        "agenticDevEnvs": "Agentic Dev Envs: Run and modify generated codebases in isolated, deterministic environments with zero local setup.",
-        "humanInTheLoop": "Human-in-the-Loop: Inspect traces, review tool calls, replay failures, and keep humans involved where reliability matters."
+        "harnesses": "Build repeatable ways to run agent tasks, capture outcomes, compare regressions, and make behavior easier to inspect.",
+        "agenticDevEnvs": "Provide deterministic environments where agents and humans can open, run, modify, and review generated software.",
+        "humanInTheLoop": "Keep traces, decisions, and review points available so humans can intervene when reliability or judgment matters."
       }
     },
     "projects": {
@@ -82,8 +82,8 @@
       "claudebin": {
         "title": "Claudebin",
         "description": {
-          "p1": "Claudebin publishes Claude Code sessions with a single command and produces a shareable link with syntax highlighting, tool calls, and the full conversation thread.",
-          "p2": "Claudebin is useful for debugging, code review, and reproducible workflows."
+          "p1": "Claudebin turns Claude Code sessions into durable, shareable transcripts with syntax highlighting, tool calls, and the full conversation thread.",
+          "p2": "Use it for review, debugging, citation, and handoff."
         },
         "website": {
           "label": "Website",
@@ -92,7 +92,7 @@
       },
       "openable": {
         "title": "Openable",
-        "description": "Openable imports, runs, and edits full generated codebases without installing Node.js, configuring environments, or using the terminal.",
+        "description": "Openable imports generated codebases into a browser-accessible environment where agents and humans can run, inspect, and edit the app without local setup.",
         "website": {
           "label": "Website",
           "url": "https://openable.dev/"
@@ -103,8 +103,8 @@
       "title": "Community",
       "through": "Through agentic.tm",
       "description": {
-        "p1": "W/underlabs is connected to agentic.tm, a community for agentic builders.",
-        "p2": "The community includes 200+ engineers, researchers, and academics working on agent-driven development."
+        "p1": "Use agentic.tm for community context, events, and human networks around agent-driven development.",
+        "p2": "The community includes 200+ engineers, researchers, and academics working on agent systems."
       },
       "links": {
         "community": {
@@ -127,7 +127,7 @@
     },
     "contact": {
       "title": "Contact",
-      "description": "W/underlabs is based in Europe and is hiring agentic native engineers and researchers focused on infrastructure, reliability, and agent systems.",
+      "description": "Use office@wunderlabs.dev for hiring, partnership, product questions, or any request that requires a human. W/underlabs is based in Europe.",
       "email": {
         "label": "Email",
         "url": "mailto:office@wunderlabs.dev",
