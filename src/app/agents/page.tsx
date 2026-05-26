@@ -8,85 +8,81 @@ const Agents = () => {
       <section className="flex flex-col gap-8">
         <h1 className="text-gray-50">{t("agents.markdown.title")}</h1>
 
-        <div className="flex flex-col gap-5">
-          <div className="flex flex-col gap-2">
-            <p className="max-w-lg text-gray-200">{t("agents.intro.p1")}</p>
-            <p className="max-w-lg text-gray-200">{t("agents.intro.p2")}</p>
+        <div className="flex flex-col gap-2">
+          <p className="max-w-lg text-gray-200">{t("agents.intro.p1")}</p>
+          <p className="max-w-lg text-gray-200">{t("agents.intro.p2")}</p>
+        </div>
+
+        <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-gray-50">{t("agents.directory.products")}</h3>
+          <div>
+            <p>
+              <a
+                href={t("agents.directory.links.claudebin.url")}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-50"
+              >
+                [{t("agents.directory.links.claudebin.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.claudebin.url")})</span>
+              </a>
+            </p>
+            <p>
+              <a
+                href={t("agents.directory.links.openable.url")}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-50"
+              >
+                [{t("agents.directory.links.openable.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.openable.url")})</span>
+              </a>
+            </p>
           </div>
+        </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="flex flex-col gap-2">
-              <h3 className="font-semibold text-gray-50">{t("agents.directory.products")}</h3>
-              <div>
-                <p>
-                  <a
-                    href={t("agents.directory.links.claudebin.url")}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-50"
-                  >
-                    [{t("agents.directory.links.claudebin.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.claudebin.url")})</span>
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href={t("agents.directory.links.openable.url")}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-50"
-                  >
-                    [{t("agents.directory.links.openable.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.openable.url")})</span>
-                  </a>
-                </p>
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-2">
-              <h3 className="font-semibold text-gray-50">{t("agents.directory.social")}</h3>
-              <div>
-                <p>
-                  <a
-                    href={t("agents.directory.links.github.url")}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-50"
-                  >
-                    [{t("agents.directory.links.github.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.github.url")})</span>
-                  </a>
-                </p>
-                <p>
-                  <a href={t("agents.directory.links.x.url")} target="_blank" rel="noreferrer" className="text-gray-50">
-                    [{t("agents.directory.links.x.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.x.url")})</span>
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href={t("agents.directory.links.community.url")}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-50"
-                  >
-                    [{t("agents.directory.links.community.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.community.url")})</span>
-                  </a>
-                </p>
-                <p>
-                  <a
-                    href={t("agents.directory.links.events.url")}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-gray-50"
-                  >
-                    [{t("agents.directory.links.events.label")}]
-                    <span className="text-gray-200">({t("agents.directory.links.events.url")})</span>
-                  </a>
-                </p>
-              </div>
-            </div>
+        <div className="flex flex-col gap-2">
+          <h3 className="font-semibold text-gray-50">{t("agents.directory.social")}</h3>
+          <div>
+            <p>
+              <a
+                href={t("agents.directory.links.github.url")}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-50"
+              >
+                [{t("agents.directory.links.github.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.github.url")})</span>
+              </a>
+            </p>
+            <p>
+              <a href={t("agents.directory.links.x.url")} target="_blank" rel="noreferrer" className="text-gray-50">
+                [{t("agents.directory.links.x.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.x.url")})</span>
+              </a>
+            </p>
+            <p>
+              <a
+                href={t("agents.directory.links.community.url")}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-50"
+              >
+                [{t("agents.directory.links.community.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.community.url")})</span>
+              </a>
+            </p>
+            <p>
+              <a
+                href={t("agents.directory.links.events.url")}
+                target="_blank"
+                rel="noreferrer"
+                className="text-gray-50"
+              >
+                [{t("agents.directory.links.events.label")}]
+                <span className="text-gray-200">({t("agents.directory.links.events.url")})</span>
+              </a>
+            </p>
           </div>
         </div>
       </section>
