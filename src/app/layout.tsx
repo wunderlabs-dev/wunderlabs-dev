@@ -115,7 +115,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
           }}
         />
         <NextIntlClientProvider>
-          <GlimmProvider palette="prism">
+          <GlimmProvider palette="lagoon">
             <InterceptLinks />
             {children}
           </GlimmProvider>
