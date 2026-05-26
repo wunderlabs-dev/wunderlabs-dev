@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import type { Metadata } from "next";
 import { Host_Grotesk, JetBrains_Mono } from "next/font/google";
 import { toString } from "es-toolkit/compat";
+import { GlimmProvider, InterceptLinks } from "glimm/next";
 import { NextIntlClientProvider } from "next-intl";
 
 import { cn } from "@/utils/helpers";
@@ -39,7 +40,7 @@ const siteUrl = toString(new URL("/", BASE_URL));
 const organizationId = toString(new URL("/#organization", BASE_URL));
 const websiteId = toString(new URL("/#website", BASE_URL));
 
-const structuredData = {
+const data = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -110,10 +111,15 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(structuredData),
+            __html: JSON.stringify(data),
           }}
         />
-        <NextIntlClientProvider>{children}</NextIntlClientProvider>
+        <NextIntlClientProvider>
+          <GlimmProvider palette="prism">
+            <InterceptLinks />
+            {children}
+          </GlimmProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

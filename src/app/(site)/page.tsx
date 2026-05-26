@@ -1,7 +1,7 @@
 import src1 from "../../../public/app-1@2x.webp";
 import src2 from "../../../public/app-2@2x.webp";
 
-import NextLink from "next/link";
+import { TransitionLink } from "glimm/next";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
@@ -24,11 +24,11 @@ const Home = () => {
       <div className="relative pt-8 sm:pt-0">
         <HomePageAppImage src={src1} />
 
-        <NextLink href="/agents" className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2">
+        <TransitionLink href="/agents" className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2">
           <Button variant="transparent" size="sm" startAdornment={<SvgIconRobot size="sm" className="text-current" />}>
             {t("home.notAHuman")}
           </Button>
-        </NextLink>
+        </TransitionLink>
       </div>
 
       <HomePageLab />
