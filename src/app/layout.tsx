@@ -79,6 +79,30 @@ const data = {
         "@id": organizationSchemaId,
       },
     },
+    {
+      "@type": "WebApplication",
+      "@id": "https://claudebin.com/#webapplication",
+      name: copy.projects.cards.claudebin.title,
+      description: copy.projects.cards.claudebin.description.p1,
+      url: copy.projects.cards.claudebin.launchUrl,
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Web",
+      creator: {
+        "@id": organizationSchemaId,
+      },
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://openable.dev/#webapplication",
+      name: copy.projects.cards.openable.title,
+      description: copy.projects.cards.openable.description,
+      url: copy.projects.cards.openable.launchUrl,
+      applicationCategory: "DeveloperApplication",
+      operatingSystem: "Web",
+      creator: {
+        "@id": organizationSchemaId,
+      },
+    },
   ],
 };
 
