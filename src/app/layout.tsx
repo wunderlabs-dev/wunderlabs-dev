@@ -38,41 +38,45 @@ const palette = {
   d: [0.9859578090219716, 0.9838341686916666, 0.9780346309902491],
 } satisfies Palette;
 
-const ogImage = {
+const openGraphSrc = {
   url: "/og-image-1200x630.png",
   width: OG_IMAGE_WIDTH,
   height: OG_IMAGE_HEIGHT,
   alt: copy.site.title,
 };
 
-const siteUrl = toString(new URL("/", BASE_URL));
-const organizationId = toString(new URL("/#organization", BASE_URL));
-const websiteId = toString(new URL("/#website", BASE_URL));
+const canonicalSiteUrl = toString(new URL("/", BASE_URL));
+const organizationSchemaId = toString(new URL("/#about", BASE_URL));
+const websiteSchemaId = toString(new URL("/#home", BASE_URL));
 
 const data = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@id": organizationId,
       "@type": "Organization",
+      "@id": organizationSchemaId,
       name: copy.site.title,
-      description: copy.site.description,
       alternateName: copy.site.alternateName,
-      url: siteUrl,
+      description: copy.site.description,
+      url: canonicalSiteUrl,
+      sameAs: ["https://github.com/wunderlabs-dev", "https://agentic.tm"],
       email: copy.contact.email,
       logo: toString(new URL("/favicon.svg", BASE_URL)),
-      image: toString(new URL(ogImage.url, BASE_URL)),
-      sameAs: ["https://github.com/wunderlabs-dev", "https://x.com/wunderlabs", "https://agentic.tm"],
+      image: toString(new URL(openGraphSrc.url, BASE_URL)),
+      founder: [
+        { "@type": "Person", name: "Marius Bălaj", jobTitle: "Co-Founder", url: "https://balajmarius.com/" },
+        { "@type": "Person", name: "Vlad Temian", jobTitle: "Co-Founder", url: "https://blog.vtemian.com/" },
+      ],
     },
     {
-      "@id": websiteId,
       "@type": "WebSite",
+      "@id": websiteSchemaId,
       name: copy.site.title,
-      url: siteUrl,
       description: copy.site.description,
       inLanguage: "en-US",
+      url: canonicalSiteUrl,
       publisher: {
-        "@id": organizationId,
+        "@id": organizationSchemaId,
       },
     },
   ],
@@ -92,13 +96,13 @@ export const metadata: Metadata = {
     siteName: copy.site.title,
     type: "website",
     locale: "en_US",
-    images: [ogImage],
+    images: [openGraphSrc],
   },
   twitter: {
     card: "summary_large_image",
     title: copy.site.title,
     description: copy.site.description,
-    images: [ogImage],
+    images: [openGraphSrc],
   },
   icons: {
     icon: "/favicon.svg",
