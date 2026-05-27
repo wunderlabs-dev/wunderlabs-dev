@@ -17,6 +17,13 @@ import copy from "@/copy/en.json";
 const OG_IMAGE_WIDTH = 1200;
 const OG_IMAGE_HEIGHT = 630;
 
+const palette = {
+  a: [0.7270762082133189, 0.7189040895546981, 0.7007919925126606],
+  b: [0.2642885270697761, 0.2602615380989282, 0.2516157019216029],
+  c: [0.5, 0.5, 0.5],
+  d: [0.9859578090219716, 0.9838341686916666, 0.9780346309902491],
+} satisfies Palette;
+
 const hostGrotesk = Host_Grotesk({
   subsets: ["latin"],
   weight: "variable",
@@ -30,13 +37,6 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
   variable: "--font-jetbrains-mono",
 });
-
-const palette = {
-  a: [0.7270762082133189, 0.7189040895546981, 0.7007919925126606],
-  b: [0.2642885270697761, 0.2602615380989282, 0.2516157019216029],
-  c: [0.5, 0.5, 0.5],
-  d: [0.9859578090219716, 0.9838341686916666, 0.9780346309902491],
-} satisfies Palette;
 
 const openGraphSrc = {
   url: "/og-image-1200x630.png",
