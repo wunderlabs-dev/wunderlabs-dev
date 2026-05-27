@@ -4,7 +4,7 @@
     "alternateName": "Wunderlabs",
     "domain": "wunderlabs.dev",
     "label": "Software lab",
-    "description": "We build tools agents use to ship reliable systems."
+    "description": "We build tools that agents use to ship reliable systems."
   },
   "home": {
     "kicker": "W/underlabs",
@@ -141,7 +141,7 @@
   },
   "about": {
     "kicker": "Wunderlabs",
-    "title": "<muted>We build tools</muted> agents use to ship reliable systems."
+    "title": "<muted>We build tools</muted> that agents use to ship reliable systems."
   },
   "lab": {
     "kicker": "About",
