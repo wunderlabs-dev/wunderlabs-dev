@@ -22,5 +22,5 @@ W/underlabs is a software lab focused on infrastructure, reliability, and agent 
 
 ## Contact
 
-- Email: office@wunderlabs.dev
+- Email: contact@wunderlabs.dev
 - Website: https://wunderlabs.dev/

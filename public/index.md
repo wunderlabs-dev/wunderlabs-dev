@@ -45,5 +45,5 @@ The community includes 200+ engineers, researchers, and academics working on age
 
 W/underlabs is based in Europe and is hiring agentic native engineers and researchers focused on infrastructure, reliability, and agent systems.
 
-- Email: office@wunderlabs.dev
+- Email: contact@wunderlabs.dev
 - Website: https://wunderlabs.dev/

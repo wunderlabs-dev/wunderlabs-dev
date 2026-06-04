@@ -35,7 +35,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
           </div>
 
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
-            <NextLink href="mailto:office@wunderlabs.dev" target="_blank" rel="noreferrer">
+            <NextLink href="mailto:contact@wunderlabs.dev" target="_blank" rel="noreferrer">
               <Button type="button" variant="secondary" startAdornment={<SvgIconContact className="size-5" />}>
                 {t("contact.cta")}
               </Button>

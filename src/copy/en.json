@@ -48,7 +48,7 @@
         },
         "contact": {
           "label": "CONTACT",
-          "url": "mailto:office@wunderlabs.dev"
+          "url": "mailto:contact@wunderlabs.dev"
         }
       }
     },
@@ -127,11 +127,11 @@
     },
     "contact": {
       "title": "Contact",
-      "description": "Use office@wunderlabs.dev for hiring, partnership, product questions, or any request that requires a human. W/underlabs is based in Europe.",
+      "description": "Use contact@wunderlabs.dev for hiring, partnership, product questions, or any request that requires a human. W/underlabs is based in Europe.",
       "email": {
         "label": "Email",
-        "url": "mailto:office@wunderlabs.dev",
-        "text": "office@wunderlabs.dev"
+        "url": "mailto:contact@wunderlabs.dev",
+        "text": "contact@wunderlabs.dev"
       },
       "website": {
         "label": "Website",
@@ -217,7 +217,7 @@
     "title": "<muted>Open source by default.</muted> Ship with us.",
     "description": "Hiring agentic native engineers and researchers focused on infrastructure, reliability, and agent systems.",
     "cta": "Contact us",
-    "email": "office@wunderlabs.dev",
+    "email": "contact@wunderlabs.dev",
     "copyEmail": "Copy",
     "copiedEmail": "Copied",
     "copyEmailAria": "Copy contact email",
