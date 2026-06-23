@@ -1,7 +1,7 @@
 ---
 version: alpha
 name: Wunderlabs
-description: Concise design reference for the W/underlabs website.
+description: Concise visual design reference for the W/underlabs website.
 colors:
   cream-50: "#fffcf5"
   cream-100: "#f4f1eb"
@@ -25,9 +25,8 @@ rounded:
 
 # W/underlabs Design
 
-W/underlabs is a software lab for reliable agent infrastructure. The site should feel
-compact, precise, warm, and engineered: cream surfaces, near-black text, restrained line
-work, monospaced labels, and real product screenshots.
+Visual direction: compact, precise, warm, and engineered. Use cream surfaces,
+near-black text, restrained line work, monospaced labels, and real product screenshots.
 
 Live tokens are defined in `src/static/css/globals.css` with Tailwind CSS v4
 `@theme inline`. Prefer those tokens over raw values.
@@ -64,7 +63,7 @@ Use centered containers and large vertical rhythm.
 - Page padding: `px-6 lg:px-12`.
 - Section padding: `pt-28 lg:pt-48`, compact sections `pt-20 lg:pt-40`.
 - Containers: `max-w-2xl`, `max-w-4xl`, `max-w-5xl`, `max-w-7xl`.
-- Screenshots: centered, oversized, real product imagery.
+- Screenshots: centered, oversized, concrete product imagery.
 - Structure: pale borders, center rules, and large outline rings; no heavy shadows.
 
 ## Components
@@ -88,21 +87,11 @@ Motion should clarify state, not decorate.
 - Nav indicator: spring with `stiffness: 150`, `damping: 18`.
 - Always honor reduced motion.
 
-## Voice
-
-Brand line: "We build tools agents use to ship reliable systems."
-
-Write like an infrastructure team: concrete, inspectable, and low on hype. Prefer terms
-like agents, systems, traces, harnesses, environments, regressions, reproducibility, and
-human review. Use `W/underlabs` for display brand moments and `Wunderlabs` where slash
-punctuation would be awkward.
-
 ## Rules
 
 - Use live Tailwind tokens from `globals.css`; avoid one-off hex values in components.
-- Keep visible UI copy in `src/copy/en.json`.
 - Use `cn(...)` for composed classes.
 - Default to Server Components; add `"use client"` only for state, effects, motion hooks,
   or browser APIs.
 - Keep cards and panels scoped; do not put cards inside cards.
-- Show real products and endpoints; avoid abstract placeholder visuals.
+- Use product screenshots or concrete UI imagery; avoid abstract placeholder visuals.
