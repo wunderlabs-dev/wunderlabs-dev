@@ -9,7 +9,6 @@ import { startWebGlCurtain } from "@/utils/home-page-curtain";
 
 import { HomePageCurtainContextProvider } from "@/context/home-page-curtain-context";
 import { useHtmlInCanvasSupport } from "@/context/html-in-canvas-context";
-import { useSmoothScroll } from "@/context/smooth-scroll-context";
 
 import { HomePageCurtainStates, type HomePageCurtainProps, type HomePageCurtainState } from "./types";
 
@@ -87,7 +86,6 @@ const prepareCanvas = (canvas: LayoutSubtreeCanvas, site: HTMLElement, scrollOff
 
 const HomePageCurtain = ({ children, underlay }: HomePageCurtainProps) => {
   const { supported: isHtmlInCanvasSupported } = useHtmlInCanvasSupport();
-  const { start: startSmoothScroll, stop: stopSmoothScroll } = useSmoothScroll();
   const [curtainState, setCurtainState] = useState<HomePageCurtainState>(HomePageCurtainStates.closed);
   const captureRef = useRef(INITIAL_CAPTURE);
   const siteRef = useRef<HTMLDivElement>(null);
@@ -118,7 +116,6 @@ const HomePageCurtain = ({ children, underlay }: HomePageCurtainProps) => {
         clickX: resolveClickX(clickX, viewportWidth),
         scrollOffset: window.scrollY,
       };
-      stopSmoothScroll();
       document.documentElement.classList.add("overflow-hidden");
 
       if (isHtmlInCanvasSupported) {
@@ -128,15 +125,14 @@ const HomePageCurtain = ({ children, underlay }: HomePageCurtainProps) => {
 
       completeReveal();
     },
-    [completeReveal, hasRevealStarted, isHtmlInCanvasSupported, stopSmoothScroll],
+    [completeReveal, hasRevealStarted, isHtmlInCanvasSupported],
   );
 
   useEffect(() => {
     return () => {
       document.documentElement.classList.remove("overflow-hidden");
-      startSmoothScroll();
     };
-  }, [startSmoothScroll]);
+  }, []);
 
   useEffect(() => {
     if (not(isCanvasActive)) {
@@ -186,7 +182,6 @@ const HomePageCurtain = ({ children, underlay }: HomePageCurtainProps) => {
         <div
           ref={underlayRef}
           className="fixed inset-0 z-0 overflow-hidden bg-gray-400 outline-none"
-          data-lenis-prevent
           aria-hidden={isUnderlayHidden}
           inert={isUnderlayHidden}
           tabIndex={PROGRAMMATIC_TAB_INDEX}
