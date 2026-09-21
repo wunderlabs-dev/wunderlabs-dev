@@ -5,11 +5,14 @@ import { cn } from "@/utils/helpers";
 import { renderers } from "@/utils/renderers";
 
 import { HomePageProjectsItem } from "@/components/home-page-projects-item";
+import { Reveal } from "@/components/reveal";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { TitleGroup } from "@/components/ui/title-group";
 
 type HomePageProjectsProps = ComponentProps<"section">;
+
+const SECOND_CARD_DELAY = 0.08;
 
 const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   const t = useTranslations();
@@ -33,7 +36,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
       />
 
       <Container variant="5xl" className="relative z-10 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-0">
-        <div
+        <Reveal
           className={cn(
             "flex min-w-0 flex-row-reverse items-start",
             "lg:before:mt-12 lg:before:w-16 lg:before:shrink-0 lg:before:border-t lg:before:border-gray-100/50",
@@ -49,9 +52,10 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             githubLabel={t("projects.cards.claudebin.githubLabel")}
             githubUrl={t("projects.cards.claudebin.githubUrl")}
           />
-        </div>
+        </Reveal>
 
-        <div
+        <Reveal
+          delay={SECOND_CARD_DELAY}
           className={cn(
             "flex min-w-0 items-start lg:pt-48",
             "lg:before:mt-12 lg:before:w-16 lg:before:shrink-0 lg:before:border-t lg:before:border-gray-100/50",
@@ -67,7 +71,7 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
             githubLabel={t("projects.cards.openable.githubLabel")}
             githubUrl={t("projects.cards.openable.githubUrl")}
           />
-        </div>
+        </Reveal>
       </Container>
     </Section>
   );

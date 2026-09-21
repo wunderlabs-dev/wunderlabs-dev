@@ -12,6 +12,7 @@ import { HomePageCurtainButton } from "@/components/home-page-curtain-button";
 import { HomePageFooter } from "@/components/home-page-footer";
 import { HomePageLab } from "@/components/home-page-lab";
 import { HomePageProjects } from "@/components/home-page-projects";
+import { Reveal } from "@/components/reveal";
 
 const Home = () => {
   return (
@@ -22,7 +23,9 @@ const Home = () => {
         <HomePageAbout />
 
         <div className="relative pt-8 sm:pt-0">
-          <HomePageAppImage src={src1} />
+          <Reveal>
+            <HomePageAppImage src={src1} />
+          </Reveal>
 
           <HomePageCurtainButton className="absolute bottom-12 left-1/2 z-10 -translate-x-1/2" />
         </div>
@@ -32,7 +35,9 @@ const Home = () => {
         <HomePageCommunity />
         <HomePageContact />
 
-        <HomePageAppImage src={src2} />
+        <Reveal>
+          <HomePageAppImage src={src2} />
+        </Reveal>
       </main>
 
       <HomePageFooter />

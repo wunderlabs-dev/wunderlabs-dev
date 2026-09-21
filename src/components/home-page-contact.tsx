@@ -4,6 +4,7 @@ import type { ComponentProps } from "react";
 
 import { renderers } from "@/utils/renderers";
 
+import { Reveal, RevealTitle } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -13,6 +14,10 @@ import { Typography } from "@/components/ui/typography";
 import { HomePageContactEmail } from "@/components/home-page-contact-email";
 
 type HomePageContactProps = ComponentProps<"section">;
+
+const TITLE_DELAY = 0.08;
+const DESCRIPTION_DELAY = 0.16;
+const ACTIONS_DELAY = 0.24;
 
 const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
   const t = useTranslations();
@@ -24,17 +29,22 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
       <Container variant="2xl" className="selection:bg-white selection:text-gray-400">
         <div className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
           <div className="flex flex-col gap-3">
-            <Typography variant="code">{t("contact.kicker")}</Typography>
+            <RevealTitle variant="code">{t("contact.kicker")}</RevealTitle>
 
             <div className="flex flex-col gap-4">
-              <Typography as="h2" variant="h1">
+              <RevealTitle as="h2" variant="h1" delay={TITLE_DELAY}>
                 {t.rich("contact.title", renderers)}
-              </Typography>
-              <Typography variant="body">{t("contact.description")}</Typography>
+              </RevealTitle>
+              <Reveal delay={DESCRIPTION_DELAY}>
+                <Typography variant="body">{t("contact.description")}</Typography>
+              </Reveal>
             </div>
           </div>
 
-          <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0">
+          <Reveal
+            delay={ACTIONS_DELAY}
+            className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-center md:gap-0"
+          >
             <NextLink href="mailto:contact@wunderlabs.dev" target="_blank" rel="noreferrer">
               <Button type="button" variant="secondary" startAdornment={<SvgIconContact className="size-5" />}>
                 {t("contact.cta")}
@@ -45,7 +55,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
               <HomePageContactEmail />
               <Typography variant="caption">{t("contact.location")}</Typography>
             </div>
-          </div>
+          </Reveal>
         </div>
       </Container>
     </Section>

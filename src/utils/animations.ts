@@ -14,6 +14,42 @@ const indicator = {
   },
 } as const;
 
+const revealEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const revealKeyframes = {
+  concealed: {
+    opacity: 0,
+    y: 24,
+  },
+  revealed: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+      duration: 0.5,
+      ease: revealEase,
+    },
+  }),
+} satisfies Variants;
+
+const revealWordKeyframes = {
+  concealed: {
+    opacity: 0,
+    y: "0.3em",
+    filter: "blur(5px)",
+  },
+  revealed: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      delay,
+      duration: 0.55,
+      ease: revealEase,
+    },
+  }),
+} satisfies Variants;
+
 const routeTransitionKeyframes = {
   hidden: {
     opacity: 0,
@@ -34,4 +70,4 @@ const routeTransitionKeyframes = {
   },
 } satisfies Variants;
 
-export { indicator, routeTransitionKeyframes };
+export { indicator, revealKeyframes, revealWordKeyframes, routeTransitionKeyframes };

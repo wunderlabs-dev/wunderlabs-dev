@@ -4,11 +4,14 @@ import type { ComponentProps } from "react";
 import { cn } from "@/utils/helpers";
 
 import { HomePageLabItem } from "@/components/home-page-lab-item";
+import { Reveal } from "@/components/reveal";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
 import { SvgIconAgenticDevEnvs, SvgIconHarnesses, SvgIconHumanLoop } from "@/components/ui/svg-icon";
 
 type HomePageLabProps = ComponentProps<"section">;
+
+const CARD_STAGGER = 0.08;
 
 const sections = [
   {
@@ -36,13 +39,15 @@ const HomePageLab = ({ className, ...props }: HomePageLabProps) => {
       <Container variant="7xl" className="border-gray-100/30 lg:border-b">
         <div className="grid grid-cols-1 gap-8 pt-12 lg:grid-cols-3 lg:gap-0">
           {sections.map(({ description, Icon, title }, index) => (
-            <HomePageLabItem
-              key={title}
-              title={t(title)}
-              description={t(description)}
-              withRightBorder={index === sections.length - 1}
-              startAdornment={<Icon size="lg" className="shrink-0 text-gray-400" />}
-            />
+            <Reveal key={title} delay={index * CARD_STAGGER} className="h-full">
+              <HomePageLabItem
+                className="h-full"
+                title={t(title)}
+                description={t(description)}
+                withRightBorder={index === sections.length - 1}
+                startAdornment={<Icon size="lg" className="shrink-0 text-gray-400" />}
+              />
+            </Reveal>
           ))}
         </div>
       </Container>
