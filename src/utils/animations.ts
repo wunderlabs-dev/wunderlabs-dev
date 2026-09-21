@@ -14,6 +14,59 @@ const indicator = {
   },
 } as const;
 
+const revealEase: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const revealKeyframes = {
+  concealed: {
+    opacity: 0,
+    y: 16,
+  },
+  revealed: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+      duration: 0.4,
+      ease: revealEase,
+    },
+  }),
+} satisfies Variants;
+
+const revealWordKeyframes = {
+  concealed: {
+    opacity: 0,
+    y: "0.3em",
+  },
+  revealed: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay,
+      duration: 0.42,
+      ease: revealEase,
+    },
+  }),
+} satisfies Variants;
+
+// ABOUTME: blur only reads as motion at display sizes; on small text it looks like a rendering glitch.
+const revealBlurredWordKeyframes = {
+  concealed: {
+    opacity: 0,
+    y: "0.3em",
+    filter: "blur(5px)",
+  },
+  revealed: (delay: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      delay,
+      duration: 0.42,
+      ease: revealEase,
+    },
+  }),
+} satisfies Variants;
+
 const routeTransitionKeyframes = {
   hidden: {
     opacity: 0,
@@ -34,4 +87,4 @@ const routeTransitionKeyframes = {
   },
 } satisfies Variants;
 
-export { indicator, routeTransitionKeyframes };
+export { indicator, revealBlurredWordKeyframes, revealKeyframes, revealWordKeyframes, routeTransitionKeyframes };

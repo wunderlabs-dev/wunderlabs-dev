@@ -10,6 +10,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { cn } from "@/utils/helpers";
 import { BASE_URL } from "@/utils/const";
 
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { RouteTransition } from "@/components/ui/route-transition";
 
 import copy from "@/copy/en.json";
@@ -137,11 +138,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html
       lang="en"
-      data-scroll-behavior="smooth"
       className={cn(
         hostGrotesk.variable,
         jetBrainsMono.variable,
-        "scroll-smooth bg-cream-50 font-sans text-gray-400 antialiased selection:bg-gray-400 selection:text-gray-50",
+        "bg-cream-50 font-sans text-gray-400 antialiased selection:bg-gray-400 selection:text-gray-50",
       )}
     >
       <body>
@@ -153,8 +153,10 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         />
         <NextIntlClientProvider>
           <GlimmProvider palette={palette}>
-            <InterceptLinks />
-            <RouteTransition>{children}</RouteTransition>
+            <SmoothScroll>
+              <InterceptLinks />
+              <RouteTransition>{children}</RouteTransition>
+            </SmoothScroll>
           </GlimmProvider>
         </NextIntlClientProvider>
       </body>
