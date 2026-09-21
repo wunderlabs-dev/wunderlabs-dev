@@ -14,7 +14,7 @@ import { SvgIconGlobe } from "@/components/ui/svg-icon";
 
 type HomePageCommunityProps = ComponentProps<"section">;
 
-const ACTIONS_DELAY = 0.08;
+const ACTIONS_DELAY = 0.06;
 
 const HomePageCommunity = ({ className, ...props }: HomePageCommunityProps) => {
   const t = useTranslations();

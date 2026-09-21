@@ -4,7 +4,7 @@ import type { ComponentProps } from "react";
 
 import { renderers } from "@/utils/renderers";
 
-import { Reveal, RevealTitle } from "@/components/reveal";
+import { Reveal, RevealGroup, RevealTitle } from "@/components/reveal";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { Section } from "@/components/ui/section";
@@ -15,9 +15,9 @@ import { HomePageContactEmail } from "@/components/home-page-contact-email";
 
 type HomePageContactProps = ComponentProps<"section">;
 
-const TITLE_DELAY = 0.08;
-const DESCRIPTION_DELAY = 0.16;
-const ACTIONS_DELAY = 0.24;
+const TITLE_DELAY = 0.06;
+const DESCRIPTION_DELAY = 0.12;
+const ACTIONS_DELAY = 0.18;
 
 const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
   const t = useTranslations();
@@ -27,9 +27,11 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
       <div className="pointer-events-none absolute top-0 left-1/2 z-0 aspect-square w-5xl -translate-x-1/2 rounded-full border border-gray-100/50" />
 
       <Container variant="2xl" className="selection:bg-white selection:text-gray-400">
-        <div className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
+        <RevealGroup className="flex flex-col justify-between gap-8 overflow-hidden rounded-3xl bg-gray-400 p-8 text-white md:gap-16">
           <div className="flex flex-col gap-3">
-            <RevealTitle variant="code">{t("contact.kicker")}</RevealTitle>
+            <RevealTitle variant="code" withBlur={false}>
+              {t("contact.kicker")}
+            </RevealTitle>
 
             <div className="flex flex-col gap-4">
               <RevealTitle as="h2" variant="h1" delay={TITLE_DELAY}>
@@ -56,7 +58,7 @@ const HomePageContact = ({ className, ...props }: HomePageContactProps) => {
               <Typography variant="caption">{t("contact.location")}</Typography>
             </div>
           </Reveal>
-        </div>
+        </RevealGroup>
       </Container>
     </Section>
   );

@@ -1,11 +1,9 @@
 "use client";
 
 import { Children, cloneElement, isValidElement, type ReactElement, type ReactNode } from "react";
-import { motion } from "motion/react";
+import { motion, type Variants } from "motion/react";
 
-import { revealWordKeyframes } from "@/utils/animations";
-
-import { REVEAL_WORD_STAGGER } from "./const";
+import { REVEAL_WORD_STAGGER, REVEAL_WORD_STAGGER_LIMIT } from "./const";
 
 const WHITESPACE_PATTERN = /(\s+)/;
 
@@ -13,6 +11,7 @@ type WordCursor = {
   delay: number;
   index: number;
   isRevealed: boolean;
+  keyframes: Variants;
 };
 
 const splitTextIntoWords = (text: string, cursor: WordCursor) =>
@@ -21,7 +20,7 @@ const splitTextIntoWords = (text: string, cursor: WordCursor) =>
       return chunk;
     }
 
-    const delay = cursor.delay + cursor.index * REVEAL_WORD_STAGGER;
+    const delay = cursor.delay + Math.min(cursor.index * REVEAL_WORD_STAGGER, REVEAL_WORD_STAGGER_LIMIT);
     cursor.index += 1;
 
     return (
@@ -29,7 +28,7 @@ const splitTextIntoWords = (text: string, cursor: WordCursor) =>
         key={`${chunk}-${chunkIndex}`}
         className="inline-block whitespace-pre"
         custom={delay}
-        variants={revealWordKeyframes}
+        variants={cursor.keyframes}
         initial="concealed"
         animate={cursor.isRevealed ? "revealed" : "concealed"}
       >

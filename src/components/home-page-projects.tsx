@@ -12,8 +12,6 @@ import { TitleGroup } from "@/components/ui/title-group";
 
 type HomePageProjectsProps = ComponentProps<"section">;
 
-const SECOND_CARD_DELAY = 0.08;
-
 const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
   const t = useTranslations();
 
@@ -55,7 +53,6 @@ const HomePageProjects = ({ className, ...props }: HomePageProjectsProps) => {
         </Reveal>
 
         <Reveal
-          delay={SECOND_CARD_DELAY}
           className={cn(
             "flex min-w-0 items-start lg:pt-48",
             "lg:before:mt-12 lg:before:w-16 lg:before:shrink-0 lg:before:border-t lg:before:border-gray-100/50",

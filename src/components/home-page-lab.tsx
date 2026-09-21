@@ -11,7 +11,7 @@ import { SvgIconAgenticDevEnvs, SvgIconHarnesses, SvgIconHumanLoop } from "@/com
 
 type HomePageLabProps = ComponentProps<"section">;
 
-const CARD_STAGGER = 0.08;
+const CARD_STAGGER = 0.05;
 
 const sections = [
   {
