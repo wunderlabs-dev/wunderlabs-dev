@@ -15,6 +15,7 @@ const HomePageAgents = ({ className, ...props }: HomePageAgentsProps) => {
         "absolute inset-0 overflow-y-auto bg-gray-400 px-6 py-12 font-mono text-sm leading-5 text-gray-100 selection:bg-white selection:text-gray-400 md:px-12 md:py-24",
         className,
       )}
+      data-lenis-prevent
       {...props}
     >
       <div className="mx-auto flex max-w-xl flex-col gap-16">
